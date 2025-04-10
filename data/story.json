@@ -1,0 +1,23 @@
+[
+  {
+    "id": "intro-1",
+    "text": ">>> Inicjalizacja systemu...",
+    "delay": 1000
+  },
+  {
+    "id": "intro-2",
+    "text": ">>> Ładowanie loga cyfrowej świadomości...",
+    "delay": 1500
+  },
+  {
+    "id": "intro-3",
+    "text": ">>> Synchronizacja rdzenia AI.",
+    "delay": 2000
+  },
+  {
+    "id": "prompt",
+    "text": ">>> Wprowadź kod dostępu, by przejść dalej.",
+    "delay": 1000,
+    "showInput": true
+  }
+]
