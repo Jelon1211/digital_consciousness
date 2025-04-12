@@ -33,6 +33,12 @@
   box-shadow: inset 0 0 6px #2d3244;
 }
 
+::selection {
+  background-color: #929292;
+  color: black;
+  text-shadow: 0 0 2px #3e0f4f;
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: #3e0f4f #11131a;

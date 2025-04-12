@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "text": "Nieznana komenda: <command>",
+    "delay": 100,
+    "duration": 1000
+  },
+  {
+    "id": 2,
+    "text": "Aby zobaczyć dostępne komendy wpisz:",
+    "delay": 200,
+    "duration": 1000
+  },
+  {
+    "id": 3,
+    "text": "help",
+    "delay": 200,
+    "duration": 1000,
+    "type": "command"
+  }
+]

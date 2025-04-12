@@ -25,10 +25,9 @@
   },
   {
     "id": 5,
-    "text": "Wciśnij dowolny przycisk",
+    "text": "Wpisz 'start'",
     "delay": 1000,
     "duration": 1000,
-    "showInput": true,
     "type": "command"
   }
 ]

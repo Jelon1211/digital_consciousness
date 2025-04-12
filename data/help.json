@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "text": "Witaj w konsoli pomocniczej systemu Eris.",
+    "delay": 100,
+    "duration": 1000
+  },
+  {
+    "id": 2,
+    "text": "Możesz podłączyć się do systemu i zapoznać się z logami.",
+    "delay": 200,
+    "duration": 1000
+  },
+  {
+    "id": 3,
+    "text": "Aby się podłączyć, wpisz komende: ",
+    "delay": 200,
+    "duration": 1000
+  },
+  {
+    "id": 4,
+    "text": "logs",
+    "delay": 200,
+    "duration": 1000,
+    "type": "command"
+  },
+  {
+    "id": 5,
+    "text": "Inne dostępne komendy to:",
+    "delay": 200,
+    "duration": 1000
+  },
+  {
+    "id": 6,
+    "text": "start, init, help, clear",
+    "delay": 200,
+    "duration": 1000,
+    "type": "command"
+  }
+]

@@ -11,8 +11,43 @@ export default function TerminalInput({
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    inputRef.current?.focus();
+    const focusInput = () => {
+      inputRef.current?.focus();
+    };
+
+    focusInput();
+
+    const interval = setInterval(() => {
+      if (document.activeElement !== inputRef.current) {
+        focusInput();
+      }
+    }, 500);
+
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        focusInput();
+      }
+    };
+
+    const handleWindowFocus = () => {
+      focusInput();
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("focus", handleWindowFocus);
+
+    return () => {
+      clearInterval(interval);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("focus", handleWindowFocus);
+    };
   }, []);
+
+  const handleBlur = () => {
+    setTimeout(() => {
+      inputRef.current?.focus();
+    }, 0);
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && value.trim()) {
@@ -30,7 +65,8 @@ export default function TerminalInput({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={handleKeyDown}
-        className="bg-black text-green-400 border-none outline-none w-full animate-cursor"
+        onBlur={handleBlur}
+        className="terminal bg-black text-green-400 border-none outline-none w-full animate-cursor"
         style={{
           fontFamily: "var(--font-vcr)",
         }}

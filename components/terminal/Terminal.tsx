@@ -4,15 +4,22 @@ import { useEffect, useState } from "react";
 import { JsonInterface } from "@/types/JsonInterface";
 import TerminalLine from "./TerminalLine";
 import TerminalInput from "./TerminalInput";
+import { basicCommandMap } from "@/lib/commandMap";
+import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 
-export default function Terminal({ story }: { story: JsonInterface[] }) {
+export default function Terminal({
+  story: initialStory,
+}: {
+  story: JsonInterface[];
+}) {
+  const [story, setStory] = useState<JsonInterface[]>(initialStory);
   const [visibleLines, setVisibleLines] = useState<number>(0);
-  const lastVisibleItem = story[visibleLines - 1];
-  const shouldShowInput = lastVisibleItem?.showInput;
+  const [storyKey, setStoryKey] = useState<number>(0);
 
   useEffect(() => {
     if (!story || story.length === 0) return;
 
+    setVisibleLines(0);
     let totalTime = 0;
 
     const timeouts = story.map((item) => {
@@ -29,15 +36,38 @@ export default function Terminal({ story }: { story: JsonInterface[] }) {
     return () => {
       timeouts.forEach(clearTimeout);
     };
-  }, [story]);
+  }, [storyKey]);
 
-  const handleSubmit = async (input: string) => {
-    console.log(input);
+  const handleCommand = async (input: string) => {
+    const command = input.trim().toLowerCase();
+    const commandAction = basicCommandMap[command];
+
+    if (commandAction) {
+      localStorage.setItem("lastCommand", command);
+      const newStory = await commandAction();
+      if (newStory) {
+        setStory(newStory);
+        setStoryKey((prev) => prev + 1);
+      }
+      return;
+    }
+
+    const errorStory = await getStoryFromServer("/error.json");
+
+    if (errorStory) {
+      const parsedErrorStory = errorStory.map((item) => ({
+        ...item,
+        text: item.text.replace("<command>", input),
+      }));
+
+      setStory(parsedErrorStory);
+      setStoryKey((prev) => prev + 1);
+    }
   };
 
   return (
     <div
-      className="terminal-container bg-black text-green-500 p-4 rounded-xl shadow-lg max-w-xl mx-auto mt-10 w-full h-64 overflow-auto"
+      className="terminal bg-black text-green-500 p-4 rounded-xl shadow-lg max-w-xl mx-auto mt-10 w-full h-64 overflow-auto"
       style={{
         fontFamily: "var(--font-vcr)",
       }}
@@ -51,12 +81,8 @@ export default function Terminal({ story }: { story: JsonInterface[] }) {
           />
         ))}
 
-        {shouldShowInput && (
-          <TerminalInput
-            onSubmit={(value) => {
-              handleSubmit(value);
-            }}
-          />
+        {(visibleLines === story.length || story.length === 0) && (
+          <TerminalInput onSubmit={handleCommand} />
         )}
       </div>
     </div>

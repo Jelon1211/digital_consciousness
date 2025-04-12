@@ -5,7 +5,6 @@ export interface JsonInterface {
   text: string;
   delay: number;
   duration: number;
-  showInput?: boolean;
   group?: number;
   type?: JsonType;
 }

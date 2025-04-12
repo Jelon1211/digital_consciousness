@@ -1,15 +1,9 @@
-import Terminal from "@/components/terminal/Terminal";
-import { GetStory } from "@/lib/GetStory";
-import { JsonInterface } from "@/types/JsonInterface";
+import TerminalWrapper from "@/components/terminal/TerminalWrapper";
 
 export default async function Home() {
-  const story = await GetStory.loadJson<JsonInterface[]>("/story.json");
-  if (!story) {
-    return null;
-  }
   return (
     <main>
-      <Terminal story={story} />
+      <TerminalWrapper />
     </main>
   );
 }
