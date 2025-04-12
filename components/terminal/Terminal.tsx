@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { JsonInterface } from "@/types/JsonInterface";
 import TerminalLine from "./TerminalLine";
 import TerminalInput from "./TerminalInput";
-import { basicCommandMap } from "@/lib/commandMap";
+import { commandMap } from "@/lib/commandMap";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 
 export default function Terminal({
@@ -40,7 +40,7 @@ export default function Terminal({
 
   const handleCommand = async (input: string) => {
     const command = input.trim().toLowerCase();
-    const commandAction = basicCommandMap[command];
+    const commandAction = commandMap[command];
 
     if (commandAction) {
       localStorage.setItem("lastCommand", command);
@@ -67,7 +67,7 @@ export default function Terminal({
 
   return (
     <div
-      className="terminal bg-black text-green-500 p-4 rounded-xl shadow-lg max-w-xl mx-auto mt-10 w-full h-64 overflow-auto"
+      className="terminal invisible-scrollbar bg-black text-green-500 p-4 rounded-xl shadow-lg max-w-xl mx-auto mt-10 w-full h-64 overflow-auto"
       style={{
         fontFamily: "var(--font-vcr)",
       }}

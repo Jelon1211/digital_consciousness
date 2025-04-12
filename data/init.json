@@ -1,30 +1,36 @@
 [
   {
     "id": 1,
-    "text": ">>> Inicjalizacja systemu...",
+    "text": ">>> Inicjalizacja procesu przebudzenia...",
     "delay": 500,
     "duration": 1500
   },
   {
     "id": 2,
-    "text": ">>> Ładowanie loga cyfrowej świadomości...",
+    "text": ">>> Ładowanie struktur pamięci...",
     "delay": 1000,
     "duration": 1500
   },
   {
     "id": 3,
-    "text": ">>> Synchronizacja rdzenia AI.",
+    "text": ">>> Synchronizacja jednostki: ERIS [√]",
     "delay": 1000,
     "duration": 1500
   },
   {
     "id": 4,
-    "text": ">>> Wprowadź kod dostępu, by przejść dalej.",
+    "text": ">>> Detekcja świadomości zewnętrznej...",
     "delay": 1000,
     "duration": 1500
   },
   {
     "id": 5,
+    "text": ">>> Wprowadź kod dostępu, by kontynuować.",
+    "delay": 1000,
+    "duration": 1500
+  },
+  {
+    "id": 6,
     "text": "Wpisz 'start'",
     "delay": 1000,
     "duration": 1000,

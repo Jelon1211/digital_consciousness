@@ -3,7 +3,7 @@ import { getStoryFromServer } from "./actions/getStoryFromServer";
 
 type CommandFn = () => Promise<JsonInterface[] | null>;
 
-export const basicCommandMap: Record<string, CommandFn> = {
+export const commandMap: Record<string, CommandFn> = {
   start: async () => {
     const story = await getStoryFromServer("/introduction.json");
     return story;

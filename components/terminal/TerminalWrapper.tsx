@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Terminal from "@/components/terminal/Terminal";
 import { JsonInterface } from "@/types/JsonInterface";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
-import { basicCommandMap } from "@/lib/commandMap";
+import { commandMap } from "@/lib/commandMap";
 
 export default function TerminalWrapper() {
   const [story, setStory] = useState<JsonInterface[] | null>(null);
@@ -17,8 +17,8 @@ export default function TerminalWrapper() {
   const handleInitialLoad = async () => {
     const lastCommand = localStorage.getItem("lastCommand");
 
-    if (lastCommand && basicCommandMap[lastCommand]) {
-      const storyFromCommand = await basicCommandMap[lastCommand]();
+    if (lastCommand && commandMap[lastCommand]) {
+      const storyFromCommand = await commandMap[lastCommand]();
       if (storyFromCommand) {
         setStory(storyFromCommand);
         return;

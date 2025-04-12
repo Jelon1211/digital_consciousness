@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "text": "Witaj w konsoli pomocniczej systemu Eris.",
+    "text": ">>> ERIS: Konsola pomocnicza aktywna.",
     "delay": 100,
     "duration": 1000
   },
   {
     "id": 2,
-    "text": "Możesz podłączyć się do systemu i zapoznać się z logami.",
+    "text": "Możesz połączyć się z systemem pamięci.",
     "delay": 200,
     "duration": 1000
   },
   {
     "id": 3,
-    "text": "Aby się podłączyć, wpisz komende: ",
+    "text": "Aby rozpocząć synchronizację wpisz:",
     "delay": 200,
     "duration": 1000
   },
@@ -24,15 +24,10 @@
     "duration": 1000,
     "type": "command"
   },
-  {
-    "id": 5,
-    "text": "Inne dostępne komendy to:",
-    "delay": 200,
-    "duration": 1000
-  },
+  { "id": 5, "text": "Dostępne komendy:", "delay": 200, "duration": 1000 },
   {
     "id": 6,
-    "text": "start, init, help, clear",
+    "text": "start, logs, help, clear",
     "delay": 200,
     "duration": 1000,
     "type": "command"
