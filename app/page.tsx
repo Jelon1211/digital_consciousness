@@ -1,9 +1,15 @@
-import TerminalTextarea from "@/components/textarea/TerminalTextarea";
+import Terminal from "@/components/terminal/Terminal";
+import { GetStory } from "@/lib/GetStory";
+import { JsonInterface } from "@/types/JsonInterface";
 
-export default function Home() {
+export default async function Home() {
+  const story = await GetStory.loadJson<JsonInterface[]>("/story.json");
+  if (!story) {
+    return null;
+  }
   return (
     <main>
-      <TerminalTextarea />
+      <Terminal story={story} />
     </main>
   );
 }

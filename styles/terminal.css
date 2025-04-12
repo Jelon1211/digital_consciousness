@@ -1,53 +1,21 @@
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-1px, 1px);
-  }
-  40% {
-    transform: translate(-2px, -1px);
-  }
-  60% {
-    transform: translate(1px, 2px);
-  }
-  80% {
-    transform: translate(-1px, -1px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+.terminal {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
 }
 
 @keyframes blink {
-  0%,
-  100% {
-    border-color: green;
+  0% {
+    border-color: #929292;
   }
   50% {
     border-color: transparent;
   }
-}
-
-.terminal-line {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid green;
-  animation: typing 3s steps(40, end), blink 0.8s step-end infinite;
-  font-family: "VCR OSD Mono", monospace;
-  font-size: 1.2rem;
-  color: #39ff14;
-}
-hth .glitch-text {
-  animation: glitch 1s infinite;
+  100% {
+    border-color: #929292;
+  }
 }
