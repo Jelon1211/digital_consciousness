@@ -9,13 +9,15 @@
 }
 
 @keyframes blink {
-  0% {
-    border-color: #929292;
+  0%,
+  100% {
+    visibility: hidden;
   }
   50% {
-    border-color: transparent;
+    visibility: visible;
   }
-  100% {
-    border-color: #929292;
-  }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
 }

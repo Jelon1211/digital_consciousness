@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "../styles/terminal.css";
 import "../styles/glitch.css";
-import "../styles/typewriter.css";
 import "../styles/gridLines.css";
 import "../styles/crt.css";
 import "../styles/teaser.css";

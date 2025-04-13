@@ -5,6 +5,7 @@ import Terminal from "@/components/terminal/Terminal";
 import { JsonInterface } from "@/types/JsonInterface";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 import { commandMap } from "@/lib/commandMap";
+import { TerminalProvider } from "@/context/TerminalContext";
 
 export default function TerminalWrapper() {
   const [story, setStory] = useState<JsonInterface[] | null>(null);
@@ -47,7 +48,6 @@ export default function TerminalWrapper() {
     );
   }
 
-  // 👇 po zainicjalizowaniu terminala, czekaj na story
   if (!story) {
     return (
       <div className="glitch flex justify-center items-center h-36">
@@ -58,7 +58,9 @@ export default function TerminalWrapper() {
 
   return (
     <>
-      <Terminal story={story!} />
+      <TerminalProvider>
+        <Terminal story={story!} />
+      </TerminalProvider>
     </>
   );
 }

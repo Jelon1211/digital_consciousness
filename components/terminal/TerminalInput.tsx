@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTerminal } from "@/context/TerminalContext";
 
 export default function TerminalInput({
   onSubmit,
@@ -9,6 +10,7 @@ export default function TerminalInput({
 }) {
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const { setInputFocused } = useTerminal();
 
   useEffect(() => {
     const focusInput = () => {
@@ -65,11 +67,12 @@ export default function TerminalInput({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={handleKeyDown}
-        onBlur={handleBlur}
-        className="terminal bg-black text-green-400 border-none outline-none w-full animate-cursor"
-        style={{
-          fontFamily: "var(--font-vcr)",
+        onBlur={() => {
+          setInputFocused(false);
+          handleBlur();
         }}
+        onFocus={() => setInputFocused(true)}
+        className="terminal bg-black text-green-400 border-none outline-none w-full"
       />
     </div>
   );
