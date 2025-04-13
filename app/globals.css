@@ -3,14 +3,22 @@
 :root {
   --background: #0a0d13;
   --foreground: #143b4d;
-  --textColor: ;
+  --textNeonColor: #24f29c;
+  --textNeonColorSecondary: #00ff99;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+}
+
+@font-face {
+  font-family: "Mega Man 10";
+  src: url("https://assets.website-files.com/62d585353749ccfb3f8020fd/62d6f53707ac08630dd59cb3_MegaMan10Regular-mJA5.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 ::-webkit-scrollbar {
@@ -56,7 +64,7 @@ body {
   background-image: repeating-linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.01),
-    rgba(255, 255, 255, 0.01) 1px,
+    rgba(255, 255, 255, 0.09) 1px,
     transparent 1px,
     transparent 2px
   );

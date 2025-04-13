@@ -69,7 +69,7 @@ export default function Terminal({
     <div
       className="terminal invisible-scrollbar bg-black text-green-500 p-4 rounded-xl shadow-lg max-w-xl mx-auto mt-10 w-full h-64 overflow-auto"
       style={{
-        fontFamily: "var(--font-vcr)",
+        fontFamily: " ",
       }}
     >
       <div className="flex flex-col">

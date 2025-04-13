@@ -8,6 +8,12 @@ import { commandMap } from "@/lib/commandMap";
 
 export default function TerminalWrapper() {
   const [story, setStory] = useState<JsonInterface[] | null>(null);
+  const [isTerminalInitalized, setIsTerminalInitalized] =
+    useState<boolean>(false);
+
+  useEffect(() => {
+    handleInitialLoad();
+  }, []);
 
   const loadStory = async (path: string) => {
     const result = await getStoryFromServer(path);
@@ -28,20 +34,31 @@ export default function TerminalWrapper() {
     loadStory("/init.json");
   };
 
-  useEffect(() => {
-    handleInitialLoad();
-  }, []);
+  if (!isTerminalInitalized) {
+    return (
+      <div className="flex justify-center">
+        <button
+          className="teaser-component teaser-btn crt-text"
+          onClick={() => setIsTerminalInitalized(true)}
+        >
+          ENTER
+        </button>
+      </div>
+    );
+  }
 
-  if (!story)
+  // 👇 po zainicjalizowaniu terminala, czekaj na story
+  if (!story) {
     return (
       <div className="glitch flex justify-center items-center h-36">
         Loading...
       </div>
     );
+  }
 
   return (
     <>
-      <Terminal story={story} />
+      <Terminal story={story!} />
     </>
   );
 }

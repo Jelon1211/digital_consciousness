@@ -57,7 +57,7 @@ export default function TerminalLine({
 
   return (
     <p
-      className={`inline-block overflow-hidden whitespace-nowrap ${getClassName()}`}
+      className={`inline-block overflow-hidden whitespace-nowrap  ${getClassName()}`}
       style={baseStyle}
     >
       {formatText()}
