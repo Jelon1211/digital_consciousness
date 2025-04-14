@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "text": ">>> Dostęp do Sektora 1: OSAD DANYCH – potwierdzony.",
+    "delay": 500,
+    "duration": 1000
+  },
+  {
+    "id": 2,
+    "text": ">>> Przestrzeń pamięci zdegradowana. Struktury niestabilne.",
+    "delay": 1000,
+    "duration": 1500
+  },
+  {
+    "id": 3,
+    "text": ">>> Dostępne nody eksploracyjne:",
+    "delay": 1000,
+    "duration": 1000
+  },
+  {
+    "id": 4,
+    "text": "[node_00] Sekwencja wejścia",
+    "delay": 1000,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 5,
+    "text": "[node_01] Dźwięk z przeszłości",
+    "delay": 1000,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 6,
+    "text": "'node_0X'",
+    "delay": 1000,
+    "duration": 300,
+    "type": "command"
+  }
+]

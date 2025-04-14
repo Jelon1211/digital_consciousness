@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-export class GetStory {
+export class GetJson {
   public static async loadJson<T>(relativePath: string): Promise<T | null> {
     const filePath = path.join(process.cwd(), "data", relativePath);
 

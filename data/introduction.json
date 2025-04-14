@@ -34,7 +34,7 @@
     "id": 7,
     "text": "logs",
     "delay": 1000,
-    "duration": 1000,
+    "duration": 300,
     "type": "command"
   }
 ]

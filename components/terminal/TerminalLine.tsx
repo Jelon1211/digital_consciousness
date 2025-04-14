@@ -43,13 +43,11 @@ export default function TerminalLine({
     return visibleText;
   };
 
-  console.log(inputFocused);
-
   return (
     <p className={getClassName()}>
       {formatText()}
       {isLast && !inputFocused && (
-        <span className="inline-block w-[2px] h-[1em] bg-white animate-blink translate-y-[2px] ml-0.5" />
+        <span className="inline-block w-[2px] h-[1em] bg-white animate-blink translate-y-[3px] ml-0.5" />
       )}
     </p>
   );

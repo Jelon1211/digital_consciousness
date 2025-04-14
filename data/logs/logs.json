@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "text": ">>> Połączenie z bazą archiwalną: ustanowione. Połączenie z bazą archiwalną: ustanowione.",
+    "text": ">>> Połączenie z bazą archiwalną: ustanowione.",
     "delay": 500,
     "duration": 1500
   },
@@ -13,7 +13,7 @@
   },
   {
     "id": 3,
-    "text": ">>> Zlokalizowano 3 aktywne sektory danych:",
+    "text": ">>> Zlokalizowano 3 aktywne moduły danych:",
     "delay": 1000,
     "duration": 1500
   },
@@ -33,7 +33,7 @@
   },
   {
     "id": 6,
-    "text": "-- Zapiski świadomości AEL_09",
+    "text": "-- Zapiski świadomości z sektorów",
     "delay": 1000,
     "duration": 1000,
     "type": "system_message"
@@ -52,7 +52,7 @@
   },
   {
     "id": 9,
-    "text": "'history', 'map', 'AEL_09'",
+    "text": "'history', 'map', 'sectors'",
     "delay": 1000,
     "duration": 1000,
     "type": "command"

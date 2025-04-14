@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "text": ">>> Inicjalizacja interfejsu eksploracyjnego...",
+    "delay": 500,
+    "duration": 1500
+  },
+  {
+    "id": 2,
+    "text": ">>> Dostępne sektory miasta Eris zidentyfikowane:",
+    "delay": 1000,
+    "duration": 1500
+  },
+  {
+    "id": 3,
+    "text": "-- Osad Danych",
+    "delay": 1000,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 9,
+    "text": "'sector_01'",
+    "delay": 1000,
+    "duration": 300,
+    "type": "command"
+  }
+]

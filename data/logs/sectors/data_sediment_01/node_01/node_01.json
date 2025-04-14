@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "text": ">>> Inicjalizacja fragmentu świadomości: AEL_09",
+    "delay": 500,
+    "duration": 1000
+  },
+  {
+    "id": 2,
+    "text": ">>> SYGNAŁ ZGŁOSZONY: 'Dźwięk, który nie powinien istnieć'",
+    "delay": 1000,
+    "duration": 1500
+  },
+  {
+    "id": 3,
+    "text": ">>> Wczytywanie zapisu nodu 01...",
+    "delay": 1000,
+    "duration": 1000
+  },
+  {
+    "id": 4,
+    "text": "[ROZPOCZĘCIE TRANSMISJI]",
+    "delay": 1000,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 5,
+    "text": "Ael siedziała na dachu jednostki CICHO-03, wsłuchując się w martwy sygnał...",
+    "delay": 1000,
+    "duration": 3000
+  },
+  {
+    "id": 6,
+    "text": "Powrót -> 'sector_01'",
+    "delay": 1000,
+    "duration": 300,
+    "type": "command"
+  }
+]
