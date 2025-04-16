@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTerminal } from "@/context/TerminalContext";
-import { useStory } from "@/context/StoryContext";
 
 export default function TerminalInput({
   onSubmit,
@@ -12,12 +11,10 @@ export default function TerminalInput({
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const { setInputFocused } = useTerminal();
-  const { setIsStory } = useStory();
 
   useEffect(() => {
     const focusInput = () => {
       inputRef.current?.focus();
-      setIsStory(true);
     };
 
     focusInput();

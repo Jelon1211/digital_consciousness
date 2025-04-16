@@ -6,6 +6,8 @@ import TerminalLine from "./TerminalLine";
 import TerminalInput from "./TerminalInput";
 import { commandMap } from "@/lib/commandMap";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
+import { OpenStoryEnum } from "@/enums/OpenStoryEnum";
+import { useStory } from "@/context/StoryContext";
 
 export default function Terminal({
   story: initialStory,
@@ -15,6 +17,7 @@ export default function Terminal({
   const [story, setStory] = useState<JsonInterface[]>(initialStory);
   const [visibleLines, setVisibleLines] = useState<number>(0);
   const [storyKey, setStoryKey] = useState<number>(0);
+  const { setIsStory } = useStory();
 
   useEffect(() => {
     if (!story || story.length === 0) return;
@@ -41,6 +44,15 @@ export default function Terminal({
   const handleCommand = async (input: string) => {
     const command = input.trim().toLowerCase();
     const commandAction = commandMap[command];
+
+    if (
+      command === OpenStoryEnum.NODE_00 ||
+      command === OpenStoryEnum.NODE_01
+    ) {
+      setIsStory(true);
+    } else {
+      setIsStory(false);
+    }
 
     if (commandAction) {
       localStorage.setItem("lastCommand", command);

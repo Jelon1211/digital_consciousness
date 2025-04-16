@@ -15,6 +15,8 @@ const StoryContext = createContext<StoryContextType>({
 export const StoryProvider = ({ children }: { children: React.ReactNode }) => {
   const [isStory, setIsStory] = useState(false);
 
+  console.log(isStory);
+
   return (
     <StoryContext.Provider value={{ isStory, setIsStory }}>
       {children}
