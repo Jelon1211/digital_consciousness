@@ -1,4 +1,5 @@
 import Grid from "@/components/grid/Grid";
+import Story from "@/components/story/Story";
 import TerminalWrapper from "@/components/terminal/TerminalWrapper";
 
 export default async function Home() {
@@ -20,6 +21,7 @@ export default async function Home() {
       <main>
         <Grid />
         <TerminalWrapper />
+        <Story />
       </main>
     </>
   );

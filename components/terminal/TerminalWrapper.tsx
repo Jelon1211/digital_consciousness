@@ -6,6 +6,7 @@ import { JsonInterface } from "@/types/JsonInterface";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 import { commandMap } from "@/lib/commandMap";
 import { TerminalProvider } from "@/context/TerminalContext";
+import { StoryProvider } from "@/context/StoryContext";
 
 export default function TerminalWrapper() {
   const [story, setStory] = useState<JsonInterface[] | null>(null);
@@ -58,9 +59,11 @@ export default function TerminalWrapper() {
 
   return (
     <>
-      <TerminalProvider>
-        <Terminal story={story!} />
-      </TerminalProvider>
+      <StoryProvider>
+        <TerminalProvider>
+          <Terminal story={story!} />
+        </TerminalProvider>
+      </StoryProvider>
     </>
   );
 }
