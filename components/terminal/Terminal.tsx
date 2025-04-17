@@ -1,13 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { JsonInterface } from "@/types/JsonInterface";
 import TerminalLine from "./TerminalLine";
 import TerminalInput from "./TerminalInput";
-import { commandMap } from "@/lib/commandMap";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
-import { OpenStoryEnum } from "@/enums/OpenStoryEnum";
-import { useStory } from "@/context/StoryContext";
+import { useAppMode } from "@/context/AppModeContext";
+import { CommandRegistry } from "@/lib/command/CommandRegistry";
+import { CommandParser } from "@/lib/command/CommandParser";
+import { StartCommand } from "@/lib/command/commands/StartCommand";
+import { saveLastSession } from "@/lib/utils/sessionStoraage";
+import { AppMode } from "@/enums/AppMode";
 
 export default function Terminal({
   story: initialStory,
@@ -17,7 +20,21 @@ export default function Terminal({
   const [story, setStory] = useState<JsonInterface[]>(initialStory);
   const [visibleLines, setVisibleLines] = useState<number>(0);
   const [storyKey, setStoryKey] = useState<number>(0);
-  const { setIsStory } = useStory();
+
+  const { appMode, setAppMode, currentChapter, currentNode } = useAppMode();
+  const registryRef = useRef<CommandRegistry>(new CommandRegistry());
+  const parserRef = useRef<CommandParser | null>(null);
+
+  useEffect(() => {
+    const registry = registryRef.current;
+
+    registry.register(new StartCommand());
+
+    parserRef.current = new CommandParser(registry, {
+      appMode,
+      setAppMode,
+    });
+  }, [appMode, setAppMode]);
 
   useEffect(() => {
     if (!story || story.length === 0) return;
@@ -39,51 +56,40 @@ export default function Terminal({
     return () => {
       timeouts.forEach(clearTimeout);
     };
-  }, [storyKey]);
+  }, [story, storyKey]);
 
   const handleCommand = async (input: string) => {
-    const command = input.trim().toLowerCase();
-    const commandAction = commandMap[command];
+    console.log(appMode);
 
-    if (
-      command === OpenStoryEnum.NODE_00 ||
-      command === OpenStoryEnum.NODE_01
-    ) {
-      setIsStory(true);
+    const parser = parserRef.current;
+    if (!parser) return;
+
+    const result = await parser.parse(input);
+
+    if (result.success && result.story) {
+      setStory(result.story);
+      setStoryKey((prev) => prev + 1);
+      saveLastSession({
+        command: input,
+        appMode: parserRef.current?.getContext().appMode ?? AppMode.INIT,
+        currentChapter,
+        currentNode,
+      });
     } else {
-      setIsStory(false);
-    }
-
-    if (commandAction) {
-      localStorage.setItem("lastCommand", command);
-      const newStory = await commandAction();
-      if (newStory) {
-        setStory(newStory);
+      const errorStory = await getStoryFromServer("/error.json");
+      if (errorStory) {
+        const parsedErrorStory = errorStory.map((item) => ({
+          ...item,
+          text: item.text.replace("<command>", input),
+        }));
+        setStory(parsedErrorStory);
         setStoryKey((prev) => prev + 1);
       }
-      return;
-    }
-
-    const errorStory = await getStoryFromServer("/error.json");
-
-    if (errorStory) {
-      const parsedErrorStory = errorStory.map((item) => ({
-        ...item,
-        text: item.text.replace("<command>", input),
-      }));
-
-      setStory(parsedErrorStory);
-      setStoryKey((prev) => prev + 1);
     }
   };
 
   return (
-    <div
-      className="terminal invisible-scrollbar bg-black text-green-500 p-4 rounded-xl shadow-lg max-w-xl mx-auto mt-10 w-full h-64 overflow-auto"
-      style={{
-        fontFamily: " ",
-      }}
-    >
+    <div className="terminal invisible-scrollbar bg-black text-green-500 p-4 rounded-xl shadow-lg max-w-xl mx-auto mt-10 w-full h-64 overflow-auto">
       <div className="flex flex-col">
         {story.slice(0, visibleLines).map((item, index) => (
           <TerminalLine

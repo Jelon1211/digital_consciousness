@@ -19,12 +19,6 @@ export default function TerminalInput({
 
     focusInput();
 
-    const interval = setInterval(() => {
-      if (document.activeElement !== inputRef.current) {
-        focusInput();
-      }
-    }, 500);
-
     const handleVisibilityChange = () => {
       if (!document.hidden) {
         focusInput();
@@ -39,16 +33,13 @@ export default function TerminalInput({
     window.addEventListener("focus", handleWindowFocus);
 
     return () => {
-      clearInterval(interval);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("focus", handleWindowFocus);
     };
   }, []);
 
   const handleBlur = () => {
-    setTimeout(() => {
-      inputRef.current?.focus();
-    }, 0);
+    inputRef.current?.focus();
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

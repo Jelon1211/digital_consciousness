@@ -2,38 +2,38 @@
   {
     "id": 1,
     "text": ">>> Inicjalizacja procesu przebudzenia...",
-    "delay": 500,
-    "duration": 1500
+    "delay": 1,
+    "duration": 1
   },
   {
     "id": 2,
     "text": ">>> Ładowanie struktur pamięci...",
-    "delay": 1000,
-    "duration": 1500
+    "delay": 1,
+    "duration": 1
   },
   {
     "id": 3,
     "text": ">>> Synchronizacja jednostki: ERIS [√]",
-    "delay": 1000,
-    "duration": 1500
+    "delay": 1,
+    "duration": 1
   },
   {
     "id": 4,
     "text": ">>> Detekcja świadomości zewnętrznej...",
-    "delay": 1000,
-    "duration": 1500
+    "delay": 1,
+    "duration": 1
   },
   {
     "id": 5,
     "text": ">>> Wprowadź kod dostępu, by kontynuować.",
-    "delay": 1000,
-    "duration": 1500
+    "delay": 1,
+    "duration": 1
   },
   {
     "id": 6,
     "text": "Wpisz 'start'",
-    "delay": 1000,
-    "duration": 1000,
+    "delay": 1,
+    "duration": 1,
     "type": "command"
   }
 ]
