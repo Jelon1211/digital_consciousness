@@ -1,39 +1,21 @@
-import { AppCommandContext } from "@/types/Command";
-import { JsonInterface } from "@/types/JsonInterface";
+import { eventBus } from "../events/EventBus";
 import { CommandRegistry } from "./CommandRegistry";
+import { AppContext } from "@/types/AppContext";
 
 export class CommandParser {
-  constructor(
-    private registry: CommandRegistry,
-    private context: AppCommandContext
-  ) {}
+  constructor(private registry: CommandRegistry, private context: AppContext) {}
 
-  async parse(input: string): Promise<{
-    success: boolean;
-    story: JsonInterface[] | null;
-  }> {
-    const [cmdName, ...args] = input.trim().split(" ");
-    const command = this.registry.findMatching(cmdName);
+  async parse(input: string) {
+    const command = this.registry.findMatching(input);
+    if (!command) return;
 
-    if (!command) {
-      return {
-        success: false,
-        story: null,
-      };
+    if (!command.canExecute(this.context)) return;
+
+    const story = await command.execute();
+    eventBus.emit("command:executed", { input });
+
+    if (story) {
+      eventBus.emit("story:loaded", { story });
     }
-
-    if (!command.canExecute(this.context)) {
-      return {
-        success: false,
-        story: null,
-      };
-    }
-
-    const story = await command.execute(args, this.context, cmdName);
-    return { success: true, story };
-  }
-
-  getContext() {
-    return this.context;
   }
 }

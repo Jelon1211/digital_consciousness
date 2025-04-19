@@ -4,37 +4,5 @@
     "text": ">>> Wczytywanie zarchiwizowanych wspomnień...",
     "delay": 500,
     "duration": 1500
-  },
-  {
-    "id": 2,
-    "text": ">>> ID jednostki: AEL_09 - status: NIEZDEFINIOWANY",
-    "delay": 1000,
-    "duration": 1500
-  },
-  {
-    "id": 3,
-    "text": ">>> Przeszłość jest dostępna.",
-    "delay": 1000,
-    "duration": 1500
-  },
-  {
-    "id": 4,
-    "text": ">>> Przyszłość nie została jeszcze zapisana.",
-    "delay": 1000,
-    "duration": 1500
-  },
-  { "id": 5, "text": "...", "delay": 800, "duration": 1000 },
-  {
-    "id": 6,
-    "text": "Rozpoczynamy synchronizację z pamięcią Ael.",
-    "delay": 1000,
-    "duration": 1000
-  },
-  {
-    "id": 7,
-    "text": "logs",
-    "delay": 1000,
-    "duration": 300,
-    "type": "command"
   }
 ]

@@ -7,7 +7,7 @@ export class CommandRegistry {
     this.commands.push(command);
   }
 
-  findMatching(input: string): Command | undefined {
-    return this.commands.find((command) => command.matches(input));
+  findMatching(input: string) {
+    return this.commands.find((c) => c.matches(input));
   }
 }

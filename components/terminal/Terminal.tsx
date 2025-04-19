@@ -1,40 +1,55 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { JsonInterface } from "@/types/JsonInterface";
+import { useEffect, useState } from "react";
 import TerminalLine from "./TerminalLine";
 import TerminalInput from "./TerminalInput";
+import { JsonInterface } from "@/types/JsonInterface";
+import { useEvent } from "@/hooks/useEvent";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
-import { useAppMode } from "@/context/AppModeContext";
-import { CommandRegistry } from "@/lib/command/CommandRegistry";
+import { SessionStorage } from "@/lib/utils/SessionStorage";
+import { useAppContext } from "@/context/AppContext";
 import { CommandParser } from "@/lib/command/CommandParser";
-import { StartCommand } from "@/lib/command/commands/StartCommand";
-import { saveLastSession } from "@/lib/utils/sessionStoraage";
-import { AppMode } from "@/enums/AppMode";
+
+type TerminalProps = {
+  story: JsonInterface[];
+  parserRef: React.RefObject<CommandParser | null>;
+};
 
 export default function Terminal({
   story: initialStory,
-}: {
-  story: JsonInterface[];
-}) {
+  parserRef,
+}: TerminalProps) {
   const [story, setStory] = useState<JsonInterface[]>(initialStory);
-  const [visibleLines, setVisibleLines] = useState<number>(0);
-  const [storyKey, setStoryKey] = useState<number>(0);
+  const [visibleLines, setVisibleLines] = useState(0);
+  const [storyKey, setStoryKey] = useState(0);
 
-  const { appMode, setAppMode, currentChapter, currentNode } = useAppMode();
-  const registryRef = useRef<CommandRegistry>(new CommandRegistry());
-  const parserRef = useRef<CommandParser | null>(null);
+  const { appMode, currentChapter, currentNode } = useAppContext();
 
-  useEffect(() => {
-    const registry = registryRef.current;
+  useEvent("story:loaded", ({ story }) => {
+    setStory(story);
+    setStoryKey((prev) => prev + 1);
+  });
 
-    registry.register(new StartCommand());
+  useEvent("command:not-found", async ({ input }) => {
+    const fallback = await getStoryFromServer("/error.json");
+    if (fallback) {
+      const modified = fallback.map((item) => ({
+        ...item,
+        text: item.text.replace("<command>", input),
+      }));
+      setStory(modified);
+      setStoryKey((prev) => prev + 1);
+    }
+  });
 
-    parserRef.current = new CommandParser(registry, {
+  useEvent("command:executed", ({ input }) => {
+    SessionStorage.saveLastSession({
+      lastCommand: input,
       appMode,
-      setAppMode,
+      currentChapter,
+      currentNode,
     });
-  }, [appMode, setAppMode]);
+  });
 
   useEffect(() => {
     if (!story || story.length === 0) return;
@@ -42,54 +57,24 @@ export default function Terminal({
     setVisibleLines(0);
     let totalTime = 0;
 
-    const timeouts = story.map((item) => {
-      totalTime += item.delay;
-
-      const timer = setTimeout(() => {
+    const timers = story.map((item) => {
+      totalTime += item.delay ?? 0;
+      const timeout = setTimeout(() => {
         setVisibleLines((prev) => prev + 1);
       }, totalTime);
-
-      totalTime += item.duration;
-      return timer;
+      totalTime += item.duration ?? 0;
+      return timeout;
     });
 
-    return () => {
-      timeouts.forEach(clearTimeout);
-    };
+    return () => timers.forEach(clearTimeout);
   }, [story, storyKey]);
 
   const handleCommand = async (input: string) => {
-    console.log(appMode);
-
-    const parser = parserRef.current;
-    if (!parser) return;
-
-    const result = await parser.parse(input);
-
-    if (result.success && result.story) {
-      setStory(result.story);
-      setStoryKey((prev) => prev + 1);
-      saveLastSession({
-        command: input,
-        appMode: parserRef.current?.getContext().appMode ?? AppMode.INIT,
-        currentChapter,
-        currentNode,
-      });
-    } else {
-      const errorStory = await getStoryFromServer("/error.json");
-      if (errorStory) {
-        const parsedErrorStory = errorStory.map((item) => ({
-          ...item,
-          text: item.text.replace("<command>", input),
-        }));
-        setStory(parsedErrorStory);
-        setStoryKey((prev) => prev + 1);
-      }
-    }
+    await parserRef.current?.parse(input);
   };
 
   return (
-    <div className="terminal invisible-scrollbar bg-black text-green-500 p-4 rounded-xl shadow-lg max-w-xl mx-auto mt-10 w-full h-64 overflow-auto">
+    <div className="terminal bg-black text-green-500 p-4 rounded-xl shadow max-w-xl mx-auto mt-10 w-full h-64 overflow-auto">
       <div className="flex flex-col">
         {story.slice(0, visibleLines).map((item, index) => (
           <TerminalLine
@@ -98,7 +83,6 @@ export default function Terminal({
             isLast={index === visibleLines - 1}
           />
         ))}
-
         {(visibleLines === story.length || story.length === 0) && (
           <TerminalInput onSubmit={handleCommand} />
         )}

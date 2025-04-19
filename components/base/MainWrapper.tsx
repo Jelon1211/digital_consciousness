@@ -1,17 +1,21 @@
 "use client";
-import { AppModeProvider } from "@/context/AppModeContext";
 import Grid from "../grid/Grid";
 import Story from "../story/Story";
 import TerminalWrapper from "../terminal/TerminalWrapper";
+import { EventBridge } from "./EventBridge";
+import { AppProvider } from "@/context/AppContext";
+import EventDebugger from "./EventDebugger";
 
 export default function MainWrapper() {
   return (
     <>
-      <Grid />
-      <AppModeProvider>
+      <AppProvider>
+        <EventDebugger />
+        <Grid />
+        <EventBridge />
         <TerminalWrapper />
         <Story />
-      </AppModeProvider>
+      </AppProvider>
     </>
   );
 }

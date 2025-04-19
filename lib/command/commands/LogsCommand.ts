@@ -4,20 +4,20 @@ import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 import { AppMode } from "@/enums/AppMode";
 import { eventBus } from "@/lib/events/EventBus";
 
-export class StartCommand implements Command {
-  name = "start";
+export class LogsCommand implements Command {
+  name = "logs";
 
   matches(input: string) {
     return input.trim().toLowerCase() === this.name;
   }
 
   canExecute(context: AppContext) {
-    return context.appMode === AppMode.INIT;
+    return context.appMode === AppMode.TERMINAL;
   }
 
   async execute() {
     eventBus.emit("mode:change", { mode: AppMode.TERMINAL });
-    return await getStoryFromServer("/introduction.json");
+    return await getStoryFromServer("/logs/logs.json");
   }
 
   help() {
