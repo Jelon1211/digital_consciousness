@@ -1,6 +1,6 @@
 export enum AppMode {
   INIT = "init",
   TERMINAL = "terminal",
-  CHAPTER = "chapter",
+  SECTOR = "sector",
   NODE = "node",
 }

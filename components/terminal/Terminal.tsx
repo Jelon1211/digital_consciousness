@@ -4,52 +4,12 @@ import { useEffect, useState } from "react";
 import TerminalLine from "./TerminalLine";
 import TerminalInput from "./TerminalInput";
 import { JsonInterface } from "@/types/JsonInterface";
-import { useEvent } from "@/hooks/useEvent";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
-import { SessionStorage } from "@/lib/utils/SessionStorage";
-import { useAppContext } from "@/context/AppContext";
-import { CommandParser } from "@/lib/command/CommandParser";
 
-type TerminalProps = {
-  story: JsonInterface[];
-  parserRef: React.RefObject<CommandParser | null>;
-};
-
-export default function Terminal({
-  story: initialStory,
-  parserRef,
-}: TerminalProps) {
-  const [story, setStory] = useState<JsonInterface[]>(initialStory);
+export default function Terminal() {
+  const [story, setStory] = useState<JsonInterface[] | null>(null);
   const [visibleLines, setVisibleLines] = useState(0);
   const [storyKey, setStoryKey] = useState(0);
-
-  const { appMode, currentChapter, currentNode } = useAppContext();
-
-  useEvent("story:loaded", ({ story }) => {
-    setStory(story);
-    setStoryKey((prev) => prev + 1);
-  });
-
-  useEvent("command:not-found", async ({ input }) => {
-    const fallback = await getStoryFromServer("/error.json");
-    if (fallback) {
-      const modified = fallback.map((item) => ({
-        ...item,
-        text: item.text.replace("<command>", input),
-      }));
-      setStory(modified);
-      setStoryKey((prev) => prev + 1);
-    }
-  });
-
-  useEvent("command:executed", ({ input }) => {
-    SessionStorage.saveLastSession({
-      lastCommand: input,
-      appMode,
-      currentChapter,
-      currentNode,
-    });
-  });
 
   useEffect(() => {
     if (!story || story.length === 0) return;
@@ -69,9 +29,25 @@ export default function Terminal({
     return () => timers.forEach(clearTimeout);
   }, [story, storyKey]);
 
-  const handleCommand = async (input: string) => {
-    await parserRef.current?.parse(input);
+  const handleCommand = async (input: string) => {};
+
+  const handleInit = async () => {
+    const storyInit = await getStoryFromServer("/init.json");
+    setStory(storyInit);
   };
+
+  if (!Array.isArray(story) || story.length === 0) {
+    return (
+      <div className="flex justify-center mt-10">
+        <button
+          className="teaser-component teaser-btn crt-text"
+          onClick={handleInit}
+        >
+          ENTER
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="terminal bg-black text-green-500 p-4 rounded-xl shadow max-w-xl mx-auto mt-10 w-full h-64 overflow-auto">
@@ -83,7 +59,7 @@ export default function Terminal({
             isLast={index === visibleLines - 1}
           />
         ))}
-        {(visibleLines === story.length || story.length === 0) && (
+        {visibleLines === story.length && (
           <TerminalInput onSubmit={handleCommand} />
         )}
       </div>

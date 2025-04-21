@@ -2,39 +2,39 @@
   {
     "id": 1,
     "text": ">>> Wczytywanie zarchiwizowanych wspomnień...",
-    "delay": 500,
-    "duration": 1500
+    "delay": 5,
+    "duration": 15
   },
   {
     "id": 2,
     "text": ">>> ID jednostki: AEL_09 - status: NIEZDEFINIOWANY",
-    "delay": 1000,
-    "duration": 1500
+    "delay": 10,
+    "duration": 15
   },
   {
     "id": 3,
     "text": ">>> Przeszłość jest dostępna.",
-    "delay": 1000,
-    "duration": 1500
+    "delay": 10,
+    "duration": 15
   },
   {
     "id": 4,
     "text": ">>> Przyszłość nie została jeszcze zapisana.",
-    "delay": 1000,
-    "duration": 1500
+    "delay": 10,
+    "duration": 15
   },
-  { "id": 5, "text": "...", "delay": 800, "duration": 1000 },
+  { "id": 5, "text": "...", "delay": 8, "duration": 10 },
   {
     "id": 6,
     "text": "Rozpoczynamy synchronizację z pamięcią Ael.",
-    "delay": 1000,
-    "duration": 1000
+    "delay": 10,
+    "duration": 10
   },
   {
     "id": 7,
     "text": "logs",
-    "delay": 1000,
-    "duration": 300,
+    "delay": 10,
+    "duration": 3,
     "type": "command"
   }
 ]
