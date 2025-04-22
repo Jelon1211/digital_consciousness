@@ -13,14 +13,21 @@
   },
   {
     "id": 3,
-    "text": "-- Osad Danych",
+    "text": "[sector_01] Osad Danych",
     "delay": 10,
     "duration": 10,
     "type": "system_message"
   },
   {
-    "id": 9,
+    "id": 4,
     "text": "'sector_01'",
+    "delay": 10,
+    "duration": 3,
+    "type": "command"
+  },
+  {
+    "id": 5,
+    "text": "Powrót -> 'logs'",
     "delay": 10,
     "duration": 3,
     "type": "command"

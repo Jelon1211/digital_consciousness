@@ -19,21 +19,21 @@
   },
   {
     "id": 4,
-    "text": "-- Historia świata po Upadku",
+    "text": "[history] Historia świata po Upadku",
     "delay": 10,
     "duration": 10,
     "type": "system_message"
   },
   {
     "id": 5,
-    "text": "-- Mapa sektorów głębi",
+    "text": "[map] Mapa sektorów głębi",
     "delay": 10,
     "duration": 10,
     "type": "system_message"
   },
   {
     "id": 6,
-    "text": "-- Zapiski świadomości z sektorów",
+    "text": "[sectors] Zapiski świadomości z sektorów",
     "delay": 10,
     "duration": 10,
     "type": "system_message"

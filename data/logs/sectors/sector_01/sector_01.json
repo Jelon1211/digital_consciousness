@@ -37,5 +37,12 @@
     "delay": 10,
     "duration": 3,
     "type": "command"
+  },
+  {
+    "id": 7,
+    "text": "Powrót -> 'sectors', 'logs'",
+    "delay": 10,
+    "duration": 3,
+    "type": "command"
   }
 ]
