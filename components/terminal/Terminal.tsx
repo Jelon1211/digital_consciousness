@@ -3,13 +3,18 @@
 import { useEffect, useState } from "react";
 import TerminalLine from "./TerminalLine";
 import TerminalInput from "./TerminalInput";
-import { JsonInterface } from "@/types/JsonInterface";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
+import { TerminalProvider } from "@/context/TerminalContext";
+import { useEngineStore } from "@/store/useEngineStore";
+import { engine } from "@/lib/utils/engineInstance";
 
 export default function Terminal() {
-  const [story, setStory] = useState<JsonInterface[] | null>(null);
-  const [visibleLines, setVisibleLines] = useState(0);
-  const [storyKey, setStoryKey] = useState(0);
+  const story = useEngineStore((state) => state.story);
+
+  const [isTerminalInitialized, setIsTerminalInitialized] =
+    useState<boolean>(false);
+  const [terminalLoading, setTerminalLoading] = useState(false);
+  const [visibleLines, setVisibleLines] = useState<number>(0);
 
   useEffect(() => {
     if (!story || story.length === 0) return;
@@ -27,42 +32,64 @@ export default function Terminal() {
     });
 
     return () => timers.forEach(clearTimeout);
-  }, [story, storyKey]);
+  }, [story]);
 
-  const handleCommand = async (input: string) => {};
-
-  const handleInit = async () => {
-    const storyInit = await getStoryFromServer("/init.json");
-    setStory(storyInit);
+  const handleCommand = async (input: string) => {
+    await engine.run(input);
   };
 
-  if (!Array.isArray(story) || story.length === 0) {
+  const handleInit = async () => {
+    setTerminalLoading(true);
+
+    if (Array.isArray(story) && story.length > 0) {
+      setIsTerminalInitialized(true);
+      return;
+    }
+
+    const initStory = await getStoryFromServer("/init.json");
+    if (initStory) {
+      useEngineStore.getState().setStory(initStory);
+      setIsTerminalInitialized(true);
+    }
+    setTerminalLoading(false);
+  };
+
+  if (!isTerminalInitialized) {
     return (
       <div className="flex justify-center mt-10">
-        <button
-          className="teaser-component teaser-btn crt-text"
-          onClick={handleInit}
-        >
-          ENTER
-        </button>
+        {terminalLoading ? (
+          <div className="crt-text">Loading...</div>
+        ) : (
+          <button
+            className="teaser-component teaser-btn crt-text"
+            onClick={handleInit}
+          >
+            ENTER
+          </button>
+        )}
       </div>
     );
   }
 
   return (
-    <div className="terminal bg-black text-green-500 p-4 rounded-xl shadow max-w-xl mx-auto mt-10 w-full h-64 overflow-auto">
-      <div className="flex flex-col">
-        {story.slice(0, visibleLines).map((item, index) => (
-          <TerminalLine
-            key={item.id ?? index}
-            item={item}
-            isLast={index === visibleLines - 1}
-          />
-        ))}
-        {visibleLines === story.length && (
-          <TerminalInput onSubmit={handleCommand} />
-        )}
+    <TerminalProvider>
+      <div className="terminal bg-black text-green-500 p-4 rounded-xl shadow max-w-xl mx-auto mt-10 w-full h-64 overflow-auto">
+        <div className="flex flex-col">
+          {story &&
+            story
+              .slice(0, visibleLines)
+              .map((item, index) => (
+                <TerminalLine
+                  key={item.id ?? index}
+                  item={item}
+                  isLast={index === visibleLines - 1}
+                />
+              ))}
+          {story && visibleLines === story.length && (
+            <TerminalInput onSubmit={handleCommand} />
+          )}
+        </div>
       </div>
-    </div>
+    </TerminalProvider>
   );
 }
