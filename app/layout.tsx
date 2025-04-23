@@ -6,6 +6,7 @@ import "../styles/glitch.css";
 import "../styles/gridLines.css";
 import "../styles/crt.css";
 import "../styles/teaser.css";
+import "../styles/story.css";
 
 const orbitron = localFont({
   src: "../fonts/Orbitron-Regular.ttf",
@@ -41,9 +42,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${orbitron.variable} ${vcr.variable} ${mega.variable} antialiased min-h-dvh`}
+        className={`${orbitron.variable} ${vcr.variable} ${mega.variable} antialiased min-h-dvh mt-20`}
       >
-        <h4
+        {/* <h4
           style={{
             fontFamily: "var(--font-orbitron)",
             fontSize: "3rem",
@@ -69,7 +70,7 @@ export default function RootLayout({
           }}
         >
           MEGA MAN
-        </h4>
+        </h4> */}
         {children}
       </body>
     </html>

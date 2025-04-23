@@ -56,7 +56,7 @@ export default function Terminal() {
 
   if (!isTerminalInitialized) {
     return (
-      <div className="flex justify-center mt-10">
+      <div className="mt-10 flex lg:block justify-center">
         {terminalLoading ? (
           <div className="crt-text">Loading...</div>
         ) : (
@@ -73,7 +73,7 @@ export default function Terminal() {
 
   return (
     <TerminalProvider>
-      <div className="terminal bg-black text-green-500 p-4 rounded-xl shadow max-w-xl mx-auto mt-10 w-full h-64 overflow-auto">
+      <div className="terminal w-full lg:w-2/5 bg-black text-green-500 p-4 rounded-xl shadow h-64 overflow-auto">
         <div className="flex flex-col">
           {story &&
             story

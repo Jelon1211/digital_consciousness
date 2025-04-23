@@ -1,6 +1,8 @@
 import { useEngineStore } from "@/store/useEngineStore";
 import { CommandRegistry } from "../commands/CommandRegistry";
 import { EngineState } from "./EngineState";
+import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
+import { replaceCommand } from "@/lib/utils/replaceCommand";
 
 export class Engine {
   constructor(private registry: CommandRegistry) {}
@@ -17,6 +19,14 @@ export class Engine {
     const command = this.registry.findMatching(input.trim());
     if (!command) {
       this.update({ currentCommand: input });
+
+      const errorStory = await getStoryFromServer("/error.json");
+
+      if (errorStory) {
+        const replacedStory = replaceCommand(errorStory, input);
+        this.update({ story: replacedStory });
+      }
+
       return;
     }
 

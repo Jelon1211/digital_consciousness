@@ -1,3 +1,4 @@
+import { HelpCommand } from "./commands/HelpCommand";
 import { LogsCommand } from "./commands/LogsCommand";
 import { Node00Command } from "./commands/sectors/sector01/nodes/Node00Command";
 import { Node01Command } from "./commands/sectors/sector01/nodes/Node01Command";
@@ -12,4 +13,5 @@ export const allCommands = [
   new Sector01Command(),
   new Node00Command(),
   new Node01Command(),
+  new HelpCommand(),
 ];

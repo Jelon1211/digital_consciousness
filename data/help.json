@@ -21,13 +21,19 @@
     "id": 4,
     "text": "logs",
     "delay": 200,
-    "duration": 1000,
+    "duration": 400,
     "type": "command"
   },
-  { "id": 5, "text": "Dostępne komendy:", "delay": 200, "duration": 1000 },
   {
-    "id": 6,
-    "text": "start, logs, help, clear",
+    "id": 5,
+    "text": "W każdej chwili możesz podjerzeć dostepne komendy, zaznaczone są kwadratowymi nawiasami [command]:",
+    "delay": 200,
+    "duration": 1000
+  },
+  { "id": 6, "text": "Dostępne komendy:", "delay": 200, "duration": 500 },
+  {
+    "id": 7,
+    "text": "start, logs, help",
     "delay": 200,
     "duration": 1000,
     "type": "command"
