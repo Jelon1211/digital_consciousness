@@ -49,7 +49,6 @@ export default function TerminalLine({
   };
 
   if (item.image) {
-    console.log(item.image);
     return (
       <div className="flex justify-center items-center mt-5">
         <Image

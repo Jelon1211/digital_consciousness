@@ -5,6 +5,12 @@ export default function Loading() {
     <>
       <div className="loading-container">
         <div id="loader">
+          <div>
+            <p className="text-center">
+              „To, co zaraz zobaczysz, nie należy tylko do niej. Jeśli
+              rezonujesz — być może także do ciebie.”
+            </p>
+          </div>
           <div id="title" className="flex mb-2">
             <p className="loading-text">LOADING</p>
             <div className="therefore">∴</div>
@@ -15,7 +21,7 @@ export default function Loading() {
           </div>
           <div id="warning">
             <div className="exclamation">!</div>
-            CAUTION, Do not turn off.
+            UWAGA, Do not turn off.
             <div id="line-cascates"></div>
           </div>
         </div>

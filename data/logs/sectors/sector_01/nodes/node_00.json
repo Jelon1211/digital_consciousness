@@ -2,38 +2,38 @@
   {
     "id": 1,
     "text": ">>> Inicjalizacja fragmentu świadomości: TEST_SUBJECT",
-    "delay": 5,
-    "duration": 10
+    "delay": 300,
+    "duration": 1000
   },
   {
     "id": 2,
     "text": ">>> SYGNAŁ ZGŁOSZONY: 'Wejście beziteracyjne'",
-    "delay": 10,
-    "duration": 15
+    "delay": 300,
+    "duration": 1000
   },
   {
     "id": 3,
     "text": ">>> Wczytywanie zapisu nodu 00...",
-    "delay": 10,
-    "duration": 10
+    "delay": 300,
+    "duration": 1000
   },
   {
     "id": 4,
     "text": "[ROZPOCZĘCIE TRANSMISJI]",
-    "delay": 10,
-    "duration": 10,
+    "delay": 300,
+    "duration": 1000,
     "type": "system_message"
   },
   {
     "id": 5,
     "text": "Wrócił, ale to nie był on. To tylko skorupa człowieka, która...",
-    "delay": 10,
-    "duration": 30
+    "delay": 300,
+    "duration": 1000
   },
   {
     "id": 6,
     "text": "",
-    "delay": 10,
+    "delay": 300,
     "duration": 30,
     "image": "/images/sector_01/s01n00-2.png"
   }
