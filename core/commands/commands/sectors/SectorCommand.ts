@@ -2,30 +2,31 @@ import { EngineState, Phase } from "@/core/engine/EngineState";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 import { Command } from "@/types/Command";
 
-export class Sector01Command implements Command {
-  private readonly allowedPhases: Phase[] = [Phase.SECTOR, Phase.NODE];
+export class SectorCommand implements Command {
+  public readonly name: string;
 
-  name = "sector_01";
+  constructor(private sector: string) {
+    this.name = sector.toLowerCase();
+  }
 
   matches(input: string) {
     return input.trim().toLowerCase() === this.name;
   }
 
   canExecute(state: EngineState) {
-    return this.allowedPhases.includes(state.phase);
+    return [Phase.SECTOR, Phase.NODE].includes(state.phase);
   }
 
   async execute(
     _state: EngineState,
     update: (partial: Partial<EngineState>) => void
   ) {
-    const story = await getStoryFromServer(
-      "/logs/sectors/sector_01/sector_01.json"
-    );
+    const path = `/logs/sectors/${this.sector}/${this.sector}.json`;
+    const story = await getStoryFromServer(path);
 
     update({
       phase: Phase.SECTOR,
-      currentSector: this.name,
+      currentSector: this.sector,
       story,
     });
   }

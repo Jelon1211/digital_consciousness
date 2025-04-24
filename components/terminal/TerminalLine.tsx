@@ -51,12 +51,13 @@ export default function TerminalLine({
   if (item.image) {
     console.log(item.image);
     return (
-      <div>
+      <div className="flex justify-center items-center mt-5">
         <Image
           src={item.image}
           alt="Terminal Image"
           className="max-w-full rounded-lg shadow-md"
-          width={500}
+          priority={false}
+          width={300}
           height={300}
         />
       </div>

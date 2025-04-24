@@ -33,7 +33,7 @@
   { "id": 6, "text": "Dostępne komendy:", "delay": 200, "duration": 500 },
   {
     "id": 7,
-    "text": "start, logs, help",
+    "text": "start, logs, sectors, help",
     "delay": 200,
     "duration": 1000,
     "type": "command"

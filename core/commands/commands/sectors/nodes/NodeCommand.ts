@@ -2,9 +2,12 @@ import { EngineState, Phase } from "@/core/engine/EngineState";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 import { Command } from "@/types/Command";
 
-export class Node01Command implements Command {
-  private readonly sector = "sector_01";
-  name = "node_01";
+export class NodeCommand implements Command {
+  public readonly name: string;
+
+  constructor(private sector: string, private node: string) {
+    this.name = node.toLowerCase();
+  }
 
   matches(input: string) {
     return input.trim().toLowerCase() === this.name;
@@ -18,14 +21,13 @@ export class Node01Command implements Command {
     _state: EngineState,
     update: (partial: Partial<EngineState>) => void
   ) {
-    const story = await getStoryFromServer(
-      "/logs/sectors/sector_01/nodes/node_01.json"
-    );
+    const path = `/logs/sectors/${this.sector}/nodes/${this.node}.json`;
+    const story = await getStoryFromServer(path);
 
     update({
       phase: Phase.NODE,
       currentSector: this.sector,
-      currentNode: this.name,
+      currentNode: this.node,
       story,
     });
   }
