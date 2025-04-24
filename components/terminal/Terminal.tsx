@@ -73,21 +73,23 @@ export default function Terminal() {
 
   return (
     <TerminalProvider>
-      <div className="terminal w-full lg:w-2/5 bg-black text-green-500 p-4 rounded-xl shadow h-64 overflow-auto">
-        <div className="flex flex-col">
-          {story &&
-            story
-              .slice(0, visibleLines)
-              .map((item, index) => (
-                <TerminalLine
-                  key={item.id ?? index}
-                  item={item}
-                  isLast={index === visibleLines - 1}
-                />
-              ))}
-          {story && visibleLines === story.length && (
-            <TerminalInput onSubmit={handleCommand} />
-          )}
+      <div className="flex justify-center mt-6">
+        <div className="terminal w-full lg:w-2/5 bg-black text-green-500 p-4 rounded-xl shadow h-64 overflow-auto">
+          <div className="flex flex-col">
+            {story &&
+              story
+                .slice(0, visibleLines)
+                .map((item, index) => (
+                  <TerminalLine
+                    key={item.id ?? index}
+                    item={item}
+                    isLast={index === visibleLines - 1}
+                  />
+                ))}
+            {story && visibleLines === story.length && (
+              <TerminalInput onSubmit={handleCommand} />
+            )}
+          </div>
         </div>
       </div>
     </TerminalProvider>

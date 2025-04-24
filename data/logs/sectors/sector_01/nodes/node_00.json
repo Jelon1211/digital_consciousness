@@ -32,9 +32,9 @@
   },
   {
     "id": 6,
-    "text": "Powrót -> 'sector_01'",
+    "text": "",
     "delay": 10,
-    "duration": 3,
-    "type": "command"
+    "duration": 30,
+    "image": "/images/sector_01/s01n00-2.png"
   }
 ]

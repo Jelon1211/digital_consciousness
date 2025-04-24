@@ -12,14 +12,7 @@ export default function MainWrapper() {
   return (
     <>
       <Grid />
-      <div
-        className={`flex flex-col lg:flex-row px-10 gap-10 mt-15 ${
-          isPhaseNode ? "justify-center lg:justify-between" : "justify-center"
-        }`}
-      >
-        <Terminal />
-        {isPhaseNode ? <Story /> : null}
-      </div>
+      {isPhaseNode ? <Story /> : <Terminal />}
     </>
   );
 }

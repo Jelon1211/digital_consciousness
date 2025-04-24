@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { JsonInterface } from "@/types/JsonInterface";
 import { JsonType } from "@/enums/JsonEnum";
 import { useTerminal } from "@/context/TerminalContext";
@@ -17,6 +18,10 @@ export default function TerminalLine({
   const { inputFocused } = useTerminal();
 
   useEffect(() => {
+    if (item.image) {
+      return;
+    }
+
     let i = 0;
     const interval = setInterval(() => {
       setVisibleText(text.slice(0, i + 1));
@@ -27,7 +32,7 @@ export default function TerminalLine({
     }, item.duration / Math.max(1, text.length));
 
     return () => clearInterval(interval);
-  }, [text, item.duration]);
+  }, [text, item.duration, item.image]);
 
   const getClassName = () => {
     let base = "inline-block whitespace-pre-wrap break-words";
@@ -42,6 +47,21 @@ export default function TerminalLine({
     if (item.type === JsonType.ERROR) return `❌ ${visibleText}`;
     return visibleText;
   };
+
+  if (item.image) {
+    console.log(item.image);
+    return (
+      <div>
+        <Image
+          src={item.image}
+          alt="Terminal Image"
+          className="max-w-full rounded-lg shadow-md"
+          width={500}
+          height={300}
+        />
+      </div>
+    );
+  }
 
   return (
     <p className={getClassName()}>

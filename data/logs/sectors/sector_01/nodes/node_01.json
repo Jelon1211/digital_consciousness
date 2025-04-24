@@ -29,12 +29,5 @@
     "text": "Ael siedziała na dachu jednostki CICHO-03, wsłuchując się w martwy sygnał...",
     "delay": 10,
     "duration": 30
-  },
-  {
-    "id": 6,
-    "text": "Powrót -> 'sector_01'",
-    "delay": 10,
-    "duration": 3,
-    "type": "command"
   }
 ]

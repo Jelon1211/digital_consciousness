@@ -7,6 +7,7 @@ import "../styles/gridLines.css";
 import "../styles/crt.css";
 import "../styles/teaser.css";
 import "../styles/story.css";
+import "../styles/loading.css";
 
 const orbitron = localFont({
   src: "../fonts/Orbitron-Regular.ttf",

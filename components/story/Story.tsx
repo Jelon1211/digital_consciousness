@@ -1,64 +1,90 @@
 "use client";
 
+import { engine } from "@/lib/utils/engineInstance";
+import { useEffect, useState } from "react";
+import Loading from "../base/Loading";
+import { useEngineStore } from "@/store/useEngineStore";
+import { JsonInterface } from "@/types/JsonInterface";
+import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
+import TerminalLine from "../terminal/TerminalLine";
+
 export default function Story() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [visibleLines, setVisibleLines] = useState<number>(0);
+  const [story, setStory] = useState<JsonInterface[] | null>(null);
+
+  const state = useEngineStore.getState();
+
+  useEffect(() => {
+    const fetchStory = async () => {
+      const storyData = await getStoryFromServer(
+        `/logs/sectors/${state.currentSector}/nodes/${state.currentNode}.json`
+      );
+      if (storyData) {
+        setStory(storyData);
+        state.setStory(storyData);
+      }
+    };
+
+    fetchStory();
+  }, []);
+
+  useEffect(() => {
+    if (!story || story.length === 0) return;
+
+    setVisibleLines(0);
+    let totalTime = 0;
+
+    const timers = story.map((item) => {
+      totalTime += item.delay ?? 0;
+      const timeout = setTimeout(() => {
+        setVisibleLines((prev) => prev + 1);
+      }, totalTime);
+      totalTime += item.duration ?? 0;
+      return timeout;
+    });
+
+    return () => timers.forEach(clearTimeout);
+  }, [story]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  const handleBack = async () => {
+    await engine.run("back");
+  };
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
-    <>
-      <div className=" p-4 rounded-xl shadow h-74 lg:h-136 overflow-auto story-panel w-full lg:w-3/4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-          dolorum obcaecati enim. Harum excepturi consequuntur nihil accusantium
-          sunt. Mollitia, sint! Amet officiis voluptatem vel porro? Maxime iusto
-          cupiditate impedit quod perspiciatis deleniti ipsum voluptates
-          repellat necessitatibus quis, sit nesciunt esse amet velit officiis
-          est nulla, ab excepturi! Perferendis, odit. Aspernatur maxime, maiores
-          debitis voluptate tempore deleniti voluptatem odit ex non animi id
-          sunt quidem corporis, eligendi praesentium quaerat, sed nisi officia.
-          Assumenda facere explicabo voluptatibus enim aliquam obcaecati
-          molestias at asperiores quod modi libero molestiae, consequatur,
-          recusandae voluptatem quam porro, deleniti perspiciatis fugit!
-          Reiciendis dolores ipsam mollitia vero fuga aut numquam accusantium
-          eveniet est libero, asperiores veniam deleniti quae id vel in eum
-          distinctio magnam eos officia! Culpa quas delectus voluptatibus a
-          error distinctio debitis corrupti doloribus! Ducimus, dolores
-          doloremque! Ipsam sed non eaque? Molestias repellendus laudantium
-          nostrum quia, ad accusamus iusto omnis eum obcaecati itaque expedita
-          nisi, magnam incidunt ea voluptate rem totam ex, eveniet id natus! Sit
-          repellendus aliquid dolor eligendi, quibusdam temporibus doloribus
-          tempore quo deleniti sapiente ullam nostrum, esse a magnam saepe sunt
-          unde. Voluptatum aspernatur reprehenderit doloremque deleniti velit
-          commodi accusantium a numquam. Temporibus, magni repellat sint
-          laboriosam atque adipisci error officiis in quae qui quibusdam earum
-          facere inventore architecto minus reiciendis excepturi. Animi et eaque
-          nobis corporis obcaecati fuga quae earum quia, tenetur cumque
-          reiciendis. Ea molestiae dolor ut minima iste voluptas harum incidunt
-          nostrum susci Culpa quas delectus voluptatibus a error distinctio
-          debitis corrupti doloribus! Ducimus, dolores doloremque! Ipsam sed non
-          eaque? Molestias repellendus laudantium nostrum quia, ad accusamus
-          iusto omnis eum obcaecati itaque expedita nisi, magnam incidunt ea
-          voluptate rem totam ex, eveniet id natus! Sit repellendus aliquid
-          dolor eligendi, quibusdam temporibus doloribus tempore quo deleniti
-          sapiente ullam nostrum, esse a magnam saepe sunt unde. Voluptatum
-          aspernatur reprehenderit doloremque deleniti velit commodi accusantium
-          a numquam. Temporibus, magni repellat sint laboriosam atque adipisci
-          error officiis in quae qui quibusdam earum facere inventore architecto
-          minus reiciendis excepturi. Animi et eaque nobis corporis obcaecati
-          fuga quae earum quia, tenetur cumque reiciendis. Ea molestiae dolor ut
-          minima iste voluptas harum incidunt nostrum susci Culpa quas delectus
-          voluptatibus a error distinctio debitis corrupti doloribus! Ducimus,
-          dolores doloremque! Ipsam sed non eaque? Molestias repellendus
-          laudantium nostrum quia, ad accusamus iusto omnis eum obcaecati itaque
-          expedita nisi, magnam incidunt ea voluptate rem totam ex, eveniet id
-          natus! Sit repellendus aliquid dolor eligendi, quibusdam temporibus
-          doloribus tempore quo deleniti sapiente ullam nostrum, esse a magnam
-          saepe sunt unde. Voluptatum aspernatur reprehenderit doloremque
-          deleniti velit commodi accusantium a numquam. Temporibus, magni
-          repellat sint laboriosam atque adipisci error officiis in quae qui
-          quibusdam earum facere inventore architecto minus reiciendis
-          excepturi. Animi et eaque nobis corporis obcaecati fuga quae earum
-          quia, tenetur cumque reiciendis. Ea molestiae dolor ut minima iste
-          voluptas harum incidunt nostrum susci
-        </p>
+    <div className="flex justify-center mt-6">
+      <div className="mx-5 p-3 rounded-xl shadow h-130 lg:h-142 overflow-auto story-panel w-full lg:w-1/4">
+        <div>
+          {story &&
+            story
+              .slice(0, visibleLines)
+              .map((item, index) => (
+                <TerminalLine
+                  key={item.id ?? index}
+                  item={item}
+                  isLast={index === visibleLines - 1}
+                />
+              ))}
+        </div>
+        <div className="p-4">
+          <button
+            className="teaser-component teaser-btn crt-text"
+            onClick={handleBack}
+          >
+            BACK
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

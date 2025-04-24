@@ -7,4 +7,5 @@ export interface JsonInterface {
   duration: number;
   group?: number;
   type?: JsonType;
+  image?: string;
 }
