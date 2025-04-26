@@ -30,4 +30,11 @@
     "delay": 10,
     "duration": 30
   }
+  {
+    "id": 6,
+    "text": "",
+    "delay": 300,
+    "duration": 30,
+    "image": "/images/sector_01/s01n01-1.png"
+  }
 ]

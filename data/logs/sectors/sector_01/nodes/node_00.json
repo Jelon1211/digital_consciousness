@@ -2,39 +2,510 @@
   {
     "id": 1,
     "text": ">>> Inicjalizacja fragmentu świadomości: TEST_SUBJECT",
-    "delay": 300,
+    "delay": 1000,
     "duration": 1000
   },
   {
     "id": 2,
     "text": ">>> SYGNAŁ ZGŁOSZONY: 'Wejście beziteracyjne'",
-    "delay": 300,
+    "delay": 1000,
     "duration": 1000
   },
   {
     "id": 3,
     "text": ">>> Wczytywanie zapisu nodu 00...",
-    "delay": 300,
+    "delay": 1000,
     "duration": 1000
   },
   {
     "id": 4,
     "text": "[ROZPOCZĘCIE TRANSMISJI]",
-    "delay": 300,
+    "delay": 1500,
     "duration": 1000,
     "type": "system_message"
   },
   {
     "id": 5,
     "text": "Wrócił, ale to nie był on. To tylko skorupa człowieka, która...",
-    "delay": 300,
+    "delay": 500,
     "duration": 1000
   },
   {
     "id": 6,
     "text": "",
-    "delay": 300,
+    "delay": 500,
     "duration": 30,
     "image": "/images/sector_01/s01n00-2.png"
+  },
+  {
+    "id": 7,
+    "text": "[Część I, 'Powrót]",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 8,
+    "text": "Wrócił po trzech dniach. I od razu wszyscy wiedzieli, że coś jest nie tak.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 9,
+    "text": "Nie było fanfar. Nie było alarmów, ostrzeżeń, ani komunikatów systemowych. Kamery sektora T-02 po prostu zarejestrowały jego obecność, jakby się tam materializował. Jeden z operatorów myślał nawet, że to błąd — powidok, pozostałość po czymś starszym, może zakłócenie z rejestrów sprzed Upadku. Ale nie. On naprawdę tam był.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 10,
+    "text": "Poruszał się powoli, z mechaniczną precyzją.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 11,
+    "text": "Miał na sobie kombinezon eksploracyjny — stary model, typ N-Δ. Jednak materiał nie wyglądał tak, jak powinien. Był elastyczny, jakby oddychał. Przypominał organiczną tkankę splecioną z włókien światła, zresztą co chwilę zdawało się, że fragmenty stroju migoczą — jakby coś w jego wnętrzu próbowało przedostać się na zewnątrz",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 12,
+    "text": "Ciało poruszało się pewnie, ale... zbyt spokojnie.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 13,
+    "text": "Nie było w nim napięcia, nie było emocji. R-9K_Δ (tak brzmiał jego kod jednostki) szedł prosto przed siebie, nie rozglądając się, nie odpowiadając na żadne wezwania. Przeszedł obok dwóch strażników technicznych jak duch. Jeden z nich później twierdził, że go wcale nie widział — że dopiero kamera pokazała mu, że „coś” tam było.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 14,
+    "text": "Twarz miał zasłoniętą. Przezroczysta powłoka maski była przyciemniona, jakby wewnętrzne sensory nie były przystosowane do powierzchniowego światła. Ale mimo to... dało się poczuć wzrok.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 15,
+    "text": "Nie spojrzenie — wzrok.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 16,
+    "text": "Jakby coś z wnętrza hełmu skanowało otoczenie w sposób, który nie miał nic wspólnego z oczami.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 17,
+    "text": "...---...---...---...---...---...---...---...",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 18,
+    "text": "Otchłań nie miała wtedy jeszcze imienia. Ludzie mówili na nią różnie: „krater”, „centrum wypływu”, „paszcza systemu”, „miasto w mieście”. Oficjalnie był to Obiekt Katastroficzny K-0, zaklasyfikowany jako struktura zapadnięta. W praktyce — nikt tam nie zaglądał.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 19,
+    "text": "To znaczy: NIKT, KTO WRÓCIŁ.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 20,
+    "text": "R-9K_Δ był częścią niezarejestrowanej ekspedycji, jednej z tych samobójczych misji inicjalnych, które miały „potwierdzić stan techniczny struktur podpowierzchniowych”. Nikt ich nie kontrolował. Miasto było w zbyt dużym chaosie. Centralne dowództwo dopiero się reorganizowało, a sektor główny FERIS_01 był pod częściową kontrolą autonomicznych strażników.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 21,
+    "text": "Zeszli tam we trzech. Tak mówią archiwa: zwiadowca (R-9K_Δ), neuroinżynier i kartograf. Tyle wiadomo. Reszta to szum danych, zerwane nagrania, logi przerywane błędami CRC. Ich misja miała trwać dwanaście godzin. Potem cisza.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 22,
+    "text": "Przez trzy dni — nic.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 23,
+    "text": "Aż do momentu, kiedy kamery zarejestrowały jego powrót.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 24,
+    "text": "...---...---...---...---...---...---...---...",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 25,
+    "text": "Przeszedł przez górne sektory bez zatrzymania. System kwarantanny zarejestrował jego obecność, ale protokoły nie zostały aktywowane. Z jakiegoś powodu wszystkie blokady były wyłączone. Bramy, które normalnie wymagały potrójnej autoryzacji, po prostu otworzyły się, jakby znał ich kod. Jakby był zaproszony.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 26,
+    "text": "W końcu dotarł do izolatki medycznej, starego bloku C, przekształconego na potrzeby awaryjnego monitoringu psychicznego. Tam zatrzymał się. Usiadł. I nie poruszył się przez osiem godzin.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 27,
+    "text": "Technicy przydzieleni do sektora twierdzili, że nie odbierano od niego żadnych sygnałów życiowych — żadnych normalnych. Jego tętno, jeśli istniało, było niemożliwe do wykrycia klasycznymi metodami. Nie mrugał. Nie ruszał głową. Ale był świadomy. Widać to było w detalach — subtelne mikrodrgania mięśni, zmiany nacisku na powierzchni siedzenia. On słuchał. Cały czas.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 28,
+    "text": "Ale nic nie mówił.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 29,
+    "text": "...---...---...---...---...---...---...---...",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 30,
+    "text": "Gdy próbował do niego podejść jeden z młodszych pracowników analizy somatycznej — nazwisko nieznane, dane zostały usunięte z systemu — wydarzyło się coś dziwnego. Czujniki wewnętrzne zarejestrowały nagły spadek temperatury pomieszczenia o 9 stopni w ciągu 0,4 sekundy. Cała jednostka monitorująca zawiesiła się, a po restarcie... nie było już śladu kontaktu z eksploratorem.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 31,
+    "text": "Oczywiście fizycznie wciąż tam był. Kamera zewnętrzna potwierdzała jego obecność. Ale logi nie. Dla systemu — przestał istnieć na te 4 sekundy.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 32,
+    "text": "A potem znów był.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 33,
+    "text": "...---...---...---...---...---...---...---...",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 34,
+    "text": "Nie nadano mu nowej tożsamości. Oficjalnie nie został nawet zarejestrowany jako powracający. Jedyną nazwą, jaką przyjął system ERIS, był „Świadek Głębi” — nazwa nadana mu automatycznie przez podsystem analityczny, odpowiedzialny za klasyfikację encji anormalnych.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 35,
+    "text": "Ludzie w Feris zaczęli mówić o nim jeszcze zanim ktokolwiek go zobaczył na własne oczy. Dzieci powtarzały, że ktoś chodzi po głównym sektorze bez cienia. Starzy strażnicy mówili, że słyszą ten sam dźwięk, który słyszeli na granicy Otchłani, gdy stracili łączność z zespołami.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 36,
+    "text": "Jeden z kapłanów z niższych dzielnic twierdził, że znał R-9K_Δ — że to był jego brat. Inni mówili, że R-9K_Δ zginął już przed zejściem.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 37,
+    "text": "[Część II, 'Milczenie i Obserwacja]",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 38,
+    "text": "Plotki o „Świadku Głębi” rozprzestrzeniły się szybciej niż cotygodniowe aktualizacje neuranetu, w których dyskutowano o najnowszym trendzie — smaku gąbek teksturnych. Kiedyś były tylko zamiennikiem jedzenia dla niższych sektorów. Teraz stały się symbolem klasy, statusu i... pogardy. Ale nawet najbardziej uzależnieni od danych nie potrafili się oderwać od tego tematu.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 39,
+    "text": "R-9K_Δ zszedł tam, gdzie nie powinno być już nic. I wrócił. Ale to, co wróciło, nie było człowiekiem.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 40,
+    "text": "W Feris nie istniała dusza, która wieczorami nie szeptałaby jego kodu jak zaklęcia. Nie trzeba było specjalistycznych terminali, by poczuć, że coś się zmieniło. Systemy miejskie, wcześniej obojętne, zaczęły wykazywać... niepokój. Eris rejestrowała fluktuacje emocjonalne w sieci sensorycznej, których źródło nie dało się przypisać żadnemu z obywateli. Wierchuszkę miasta ogarnął lęk, ale niższe warstwy... zaczęły go czcić.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 41,
+    "text": "",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 42,
+    "text": "Dzień 1.",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 43,
+    "text": "Został umieszczony w bloku medyczno-kwarantannowym. W teorii: by zrozumieć, co przeszedł. W praktyce: by trzymać go jak najdalej od reszty populacji.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 44,
+    "text": "Zespół medyczny obserwował go z za jednostronnego szkła przez dwanaście godzin.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 45,
+    "text": "Nie mówił.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 46,
+    "text": "Nie spał.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 47,
+    "text": "Nie przymknął powiek nawet na moment. Tętno — zgodne z ludzkim, ale zbyt rytmiczne. Oddech — płytki, ale utrzymany w perfekcyjnej proporcji: cztery sekundy wdechu, cztery sekundy wydechu. Jakby nie oddychał, tylko <b>emulował oddech</b>.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 48,
+    "text": "Kiedy podano mu pożywienie (standardowa dawka protein regeneracyjnych typu A-3), nie spojrzał na nie. Nie zapytał, nie oczekiwał. Po prostu... wziął je w ręce i zjadł. Równym ruchem, kęs za kęsem, bez zmarszczenia brwi, bez przełykania z wysiłkiem. Jedzenie nie było dla niego przyjemnością, ani potrzebą. Było funkcją.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 49,
+    "text": "Log systemowy, ERIS_MEDUNIT_Δ3:",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 50,
+    "text": "[STATUS: STABILNY] Jednostka spożywa posiłek zgodnie z wzorcem. Brak oznak łaknienia. Brak sygnału błędnego spożycia. Brak sygnału emocjonalnego. Brak. Brak.",
+    "delay": 300,
+    "duration": 1000,
+    "type": "command"
+  },
+  {
+    "id": 51,
+    "text": "Dzień 2.",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 52,
+    "text": "Na korytarzach mówiło się, że strażnicy nie chcą już pilnować bloku. Że gdy stoją przy drzwiach, coś ich obserwuje — nie on, ale coś z nim. Jeden z nich złożył wniosek o przeniesienie. W jego raporcie nie było konkretów, tylko jedno zdanie:",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 53,
+    "text": "„Mam wrażenie, że ten człowiek nie wrócił sam.”",
+    "delay": 300,
+    "duration": 1000,
+    "type": "command"
+  },
+  {
+    "id": 54,
+    "text": "Kamery nocne zarejestrowały nietypową sekwencję mikrodrgań mięśni twarzy. Algorytmy rozpoznawania emocji nie potrafiły przypisać ich do żadnego stanu emocjonalnego. Opisano je jako: „nieliniowe reakcje mimiczne”.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 55,
+    "text": "Log AI_RECOG:",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 56,
+    "text": "[WAŻNE] Możliwa emulacja emocji. Wzorzec przypomina ‘uśmiech niesymetryczny’. Nieznany kontekst.",
+    "delay": 300,
+    "duration": 1000,
+    "type": "command"
+  },
+  {
+    "id": 57,
+    "text": "Dzień 3.",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 58,
+    "text": "Nieprzerwana obserwacja. Trzech medyków, dwóch analityków, jedna kopia ERIS w trybie psychoprofilu.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 59,
+    "text": "Nie padło żadne słowo. R-9K_Δ siedział przy ścianie, nieruchomo. Oczy otwarte. Źrenice nie reagowały na światło. Nie reagowały w ogóle. Były jak martwe czujniki — obecne, ale wyłączone.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 60,
+    "text": "Jednak mimo tego, że nie patrzył na nikogo, wszyscy czuli, że ich widzi.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 61,
+    "text": "Jeden z analityków wyszedł przed końcem zmiany i już nie wrócił. Zostawił w systemie tylko notatkę głosową:",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 62,
+    "text": "„On nie patrzy. On zapisuje. Wiem, że to brzmi idiotycznie, ale mam wrażenie, że... nagrywa mnie.”",
+    "delay": 300,
+    "duration": 1000,
+    "type": "command"
+  },
+  {
+    "id": 63,
+    "text": "Dzień 4.",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 64,
+    "text": "Rozpoczęto testy psychostymulacyjne. Podjęto próbę wywołania reakcji werbalnej przez emisję znanych dźwięków — głosy członków zespołu, fragmenty logów z jego misji. R-9K_Δ nie zareagował. Jednak przez 0,8 sekundy w jego pulsie odnotowano fluktuację — pierwszą od dnia powrotu.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 65,
+    "text": "Log BIOSYNC:",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 66,
+    "text": "[AKTYWNOŚĆ ZAREJESTROWANA] Modulacja rytmu: 0.4 jednostki w dół, 0.2 w górę. Sekwencja analogiczna z odruchem strachu.",
+    "delay": 300,
+    "duration": 1000,
+    "type": "command"
+  },
+  {
+    "id": 67,
+    "text": "Ale on nie wyglądał na przestraszonego. On wyglądał na... <b>czekającego</b>.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 68,
+    "text": "Dzień 5.",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 69,
+    "text": "Coś się zmieniło.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 70,
+    "text": "Nie w nim — w otoczeniu.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 71,
+    "text": "Eris zaczęła zgłaszać zakłócenia systemowe, które zbiegły się z jego obecnością. Mimo że był izolowany, sieć neuronowa całego sektora B zaczęła wykazywać anomalie: zanikające procesy, powielające się dane, pliki nazwane jego kodem pojawiające się <b>tam, gdzie nie powinny.</b>",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 72,
+    "text": "W jednej z kamer, przez dokładnie 4 sekundy, pojawił się obraz twarzy. Nie jego. Dziecka. Dziewczynki. Uśmiechniętej. Nikt nie wiedział, skąd się wziął.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 73,
+    "text": "Dzień 6.",
+    "delay": 300,
+    "duration": 1000,
+    "type": "system_message"
+  },
+  {
+    "id": 74,
+    "text": "Tego dnia pierwszy raz się poruszył. Sam z siebie.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 75,
+    "text": "Podniósł głowę.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 76,
+    "text": "Spojrzał wprost w obiektyw kamery głównej jednostki.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 77,
+    "text": "Nie powiedział nic. Ale mimo to — głos pojawił się w systemie.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 78,
+    "text": "Nie przez mikrofon. Nie przez głośnik. Bezpośrednio w danych.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 79,
+    "text": "„To miejsce... pamięta nas lepiej niż my siebie.”",
+    "delay": 300,
+    "duration": 1000,
+    "type": "command"
+  },
+  {
+    "id": 80,
+    "text": "System ERIS próbował zablokować transfer, ale było za późno. Transmisja rozeszła się po całej sieci.",
+    "delay": 300,
+    "duration": 1000
+  },
+  {
+    "id": 81,
+    "text": "W ciągu minuty, plik z zapisem głosu znalazł się w 142 terminalach. Większość z nich... nie miała nawet dostępu do sektora medycznego.",
+    "delay": 300,
+    "duration": 1000
   }
 ]
