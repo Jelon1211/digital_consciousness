@@ -84,7 +84,6 @@ export default function Story() {
             BACK
           </button>
         </div>
-        ``
       </div>
     </div>
   );

@@ -20,14 +20,7 @@
   },
   {
     "id": 4,
-    "text": "'sector_01'",
-    "delay": 10,
-    "duration": 3,
-    "type": "command"
-  },
-  {
-    "id": 5,
-    "text": "Powrót -> 'logs'",
+    "text": "'sector_01', 'logs'",
     "delay": 10,
     "duration": 3,
     "type": "command"
