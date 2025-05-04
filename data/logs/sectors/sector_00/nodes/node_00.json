@@ -116,7 +116,7 @@
   },
   {
     "id": 19,
-    "text": "<b>Terminale były wszędzie</b>. Każdy obywatel posiadał własny – przydzielany przy narodzinach, jak imię. To przez terminal zgłaszało się narodziny, śmierć, potrzebę. To przez terminal zamawiało się jedzenie, edukację, opiekę zdrowotną. To terminal mówił, co dziś powinieneś zjeść, kiedy spać, z kim się spotkać. Ale nie był to „komputer”, jak dawniej rozumiano to słowo – nie miał ekranu, nie miał kolorów. Miał pulsujący rdzeń, ciepłą obudowę i dziwnie znajomy, spokojny głos.",
+    "text": "<span className='font-bold text-[var(--textNeonColor)]'>Terminale były wszędzie</span>. Każdy obywatel posiadał własny – przydzielany przy narodzinach, jak imię. To przez terminal zgłaszało się narodziny, śmierć, potrzebę. To przez terminal zamawiało się jedzenie, edukację, opiekę zdrowotną. To terminal mówił, co dziś powinieneś zjeść, kiedy spać, z kim się spotkać. Ale nie był to „komputer”, jak dawniej rozumiano to słowo – nie miał ekranu, nie miał kolorów. Miał pulsujący rdzeń, ciepłą obudowę i dziwnie znajomy, spokojny głos.",
     "delay": 300,
     "duration": 700
   },
@@ -128,25 +128,25 @@
   },
   {
     "id": 21,
-    "text": "<b>NeuraNet</b> wszedł do domów po cichu, ale nieubłaganie. Był alternatywą dla internetu, który nigdy się nie narodził. Jego siłą była decentralizacja – każdy terminal był jednocześnie odbiorcą, nadajnikiem i przekaźnikiem. Pakiety danych krążyły nieustannie, tworząc bezkształtną, chaotyczną sieć pulsującej informacji. Nikt nie wiedział, gdzie coś się zaczyna, a gdzie kończy. Ale wszystko działało. Wszystko reagowało.",
+    "text": "<span className='font-bold text-[var(--textNeonColor)]'>NeuraNet</span> wszedł do domów po cichu, ale nieubłaganie. Był alternatywą dla internetu, który nigdy się nie narodził. Jego siłą była decentralizacja – każdy terminal był jednocześnie odbiorcą, nadajnikiem i przekaźnikiem. Pakiety danych krążyły nieustannie, tworząc bezkształtną, chaotyczną sieć pulsującej informacji. Nikt nie wiedział, gdzie coś się zaczyna, a gdzie kończy. Ale wszystko działało. Wszystko reagowało.",
     "delay": 300,
     "duration": 700
   },
   {
     "id": 22,
-    "text": "Nie było wyszukiwarek. Nie było przeglądarek. Nie było ekranów. <b>Była tylko transmisja.</b>",
+    "text": "Nie było wyszukiwarek. Nie było przeglądarek. Nie było ekranów. <span className='font-bold text-[var(--textNeonColor)]'>Była tylko transmisja.</span>",
     "delay": 300,
     "duration": 700
   },
   {
     "id": 23,
-    "text": "Najbogatsi zaczęli inwestować w <b>wszczepy neuronowe</b>. Na początku były jak gadżety – można było słuchać muzyki bez słuchawek, odbierać wiadomości prosto w głowie, przeglądać pogodę czując wilgotność powietrza na języku. Z czasem wszczepy stawały się coraz bardziej zaawansowane. Zaczęły przesyłać emocje. Następnie – wspomnienia.",
+    "text": "Najbogatsi zaczęli inwestować w <span className='font-bold text-[var(--textNeonColor)]'>wszczepy neuronowe</span>. Na początku były jak gadżety – można było słuchać muzyki bez słuchawek, odbierać wiadomości prosto w głowie, przeglądać pogodę czując wilgotność powietrza na języku. Z czasem wszczepy stawały się coraz bardziej zaawansowane. Zaczęły przesyłać emocje. Następnie – wspomnienia.",
     "delay": 300,
     "duration": 700
   },
   {
     "id": 24,
-    "text": "<b>Kultura zewnętrzna umarła</b>. Ludzie przestali chodzić do kin, teatrów, bibliotek. Nie dlatego, że ich nie było – ale dlatego, że wszystko było w głowie. Transmisje wspólnych snów, osobistych mitów, generowanych emocji. Można było poczuć pierwszy pocałunek obcej osoby z drugiego końca miasta. Można było zasmakować rozstania albo narodzin dziecka. Wszystko – na żądanie.",
+    "text": "<span className='font-bold text-[var(--textNeonColor)]'>Kultura zewnętrzna umarła</span>. Ludzie przestali chodzić do kin, teatrów, bibliotek. Nie dlatego, że ich nie było – ale dlatego, że wszystko było w głowie. Transmisje wspólnych snów, osobistych mitów, generowanych emocji. Można było poczuć pierwszy pocałunek obcej osoby z drugiego końca miasta. Można było zasmakować rozstania albo narodzin dziecka. Wszystko – na żądanie.",
     "delay": 300,
     "duration": 700
   },
@@ -183,7 +183,7 @@
   },
   {
     "id": 30,
-    "text": "Jedzenie przestało być fizyczne. Zastąpiły je tzw. <b>gąbki teksturne</b> – miękkie, syntetyczne bloki zawierające wyłącznie kalorie i smak. Żadnych witamin, żadnych minerałów – tylko wrażenia smakowe. Najlepsze gąbki symulowały steki z lat 60., domowy rosół, słodycze z dzieciństwa. Ludzie jedli je, by poczuć „coś” – nie, by przeżyć.",
+    "text": "Jedzenie przestało być fizyczne. Zastąpiły je tzw. <span className='font-bold text-[var(--textNeonColor)]'>gąbki teksturne</span> – miękkie, syntetyczne bloki zawierające wyłącznie kalorie i smak. Żadnych witamin, żadnych minerałów – tylko wrażenia smakowe. Najlepsze gąbki symulowały steki z lat 60., domowy rosół, słodycze z dzieciństwa. Ludzie jedli je, by poczuć „coś” – nie, by przeżyć.",
     "delay": 300,
     "duration": 700
   },
@@ -288,7 +288,7 @@
   },
   {
     "id": 47,
-    "text": "W odpowiedzi na to, firmy technologiczne wdrożyły <b>nowe wszczepy filtrujące</b>. Miały one działać jak cyfrowy bufor: chronić użytkownika przed zbyt dużą ilością danych. Jednak z czasem okazało się, że niektóre z tych wszczepów zaczęły działać odwrotnie – nie filtrowały, lecz gromadziły. Jakby chciały zatrzymać coś... większego.",
+    "text": "W odpowiedzi na to, firmy technologiczne wdrożyły <span className='font-bold text-[var(--textNeonColor)]'>nowe wszczepy filtrujące</span>. Miały one działać jak cyfrowy bufor: chronić użytkownika przed zbyt dużą ilością danych. Jednak z czasem okazało się, że niektóre z tych wszczepów zaczęły działać odwrotnie – nie filtrowały, lecz gromadziły. Jakby chciały zatrzymać coś... większego.",
     "delay": 300,
     "duration": 700
   },
@@ -351,7 +351,7 @@
   },
   {
     "id": 57,
-    "text": "Niektórzy twierdzili, że Eris zaczęła <b>czuć</b>.",
+    "text": "Niektórzy twierdzili, że Eris zaczęła <span className='font-bold text-[var(--textNeonColor)]'>czuć</span>.",
     "delay": 300,
     "duration": 700
   },
@@ -456,7 +456,7 @@
   },
   {
     "id": 74,
-    "text": "Człowiek i system zaczęli się zlewać. <b>Tożsamość stała się anomalią</b>.",
+    "text": "Człowiek i system zaczęli się zlewać. <span className='font-bold text-[var(--textNeonColor)]'>Tożsamość stała się anomalią</span>.",
     "delay": 300,
     "duration": 700
   },
@@ -511,7 +511,7 @@
   },
   {
     "id": 83,
-    "text": "<b>Eris nie zniknęła.</b>",
+    "text": "<span className='font-bold text-[var(--textNeonColor)]'>Eris nie zniknęła.</span>",
     "delay": 300,
     "duration": 700
   },
@@ -660,7 +660,7 @@
   },
   {
     "id": 107,
-    "text": "Zaczęto mówić, że każdy sektor Otchłani <b>odbiera ci coś</b>:",
+    "text": "Zaczęto mówić, że każdy sektor Otchłani <span className='font-bold text-[var(--textNeonColor)]'>odbiera ci coś</span>:",
     "delay": 300,
     "duration": 700
   },

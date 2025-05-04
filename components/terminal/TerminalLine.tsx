@@ -5,6 +5,7 @@ import Image from "next/image";
 import { JsonInterface } from "@/types/JsonInterface";
 import { JsonType } from "@/enums/JsonEnum";
 import { useTerminal } from "@/context/TerminalContext";
+import parse from "html-react-parser";
 
 export default function TerminalLine({
   item,
@@ -43,9 +44,11 @@ export default function TerminalLine({
   };
 
   const formatText = () => {
-    if (item.type === JsonType.COMMAND) return `[${visibleText}]`;
-    if (item.type === JsonType.ERROR) return `❌ ${visibleText}`;
-    return visibleText;
+    const parsedText = parse(visibleText);
+
+    if (item.type === JsonType.COMMAND) return <span>[{parsedText}]</span>;
+    if (item.type === JsonType.ERROR) return <span>❌ {parsedText}</span>;
+    return <>{parsedText}</>;
   };
 
   if (item.image) {

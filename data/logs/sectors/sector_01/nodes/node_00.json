@@ -286,7 +286,7 @@
   },
   {
     "id": 47,
-    "text": "Nie przymknął powiek nawet na moment. Tętno — zgodne z ludzkim, ale zbyt rytmiczne. Oddech — płytki, ale utrzymany w perfekcyjnej proporcji: cztery sekundy wdechu, cztery sekundy wydechu. Jakby nie oddychał, tylko <b>emulował oddech</b>.",
+    "text": "Nie przymknął powiek nawet na moment. Tętno — zgodne z ludzkim, ale zbyt rytmiczne. Oddech — płytki, ale utrzymany w perfekcyjnej proporcji: cztery sekundy wdechu, cztery sekundy wydechu. Jakby nie oddychał, tylko <span className='font-bold text-[var(--textNeonColor)]'>emulował oddech</span>.",
     "delay": 300,
     "duration": 1000
   },
@@ -417,7 +417,7 @@
   },
   {
     "id": 67,
-    "text": "Ale on nie wyglądał na przestraszonego. On wyglądał na... <b>czekającego</b>.",
+    "text": "Ale on nie wyglądał na przestraszonego. On wyglądał na... <span className='font-bold text-[var(--textNeonColor)]'>czekającego</span>.",
     "delay": 300,
     "duration": 1000
   },
@@ -442,7 +442,7 @@
   },
   {
     "id": 71,
-    "text": "Eris zaczęła zgłaszać zakłócenia systemowe, które zbiegły się z jego obecnością. Mimo że był izolowany, sieć neuronowa całego sektora B zaczęła wykazywać anomalie: zanikające procesy, powielające się dane, pliki nazwane jego kodem pojawiające się <b>tam, gdzie nie powinny.</b>",
+    "text": "Eris zaczęła zgłaszać zakłócenia systemowe, które zbiegły się z jego obecnością. Mimo że był izolowany, sieć neuronowa całego sektora B zaczęła wykazywać anomalie: zanikające procesy, powielające się dane, pliki nazwane jego kodem pojawiające się <span className='font-bold text-[var(--textNeonColor)]'>tam, gdzie nie powinny.</span>",
     "delay": 300,
     "duration": 1000
   },
