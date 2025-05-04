@@ -9,6 +9,7 @@ export enum Phase {
 
 export interface EngineState {
   phase: Phase;
+  unitName: string;
   currentCommand: string;
   currentSector?: string;
   currentNode?: string;

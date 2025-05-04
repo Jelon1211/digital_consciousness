@@ -1,8 +1,9 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
+import { Commands } from "@/enums/Commands";
 import { Command } from "@/types/Command";
 
 export class MapCommand implements Command {
-  name = "map";
+  name = Commands.MAP;
 
   matches(input: string) {
     return input.trim().toLowerCase() === this.name;

@@ -25,13 +25,13 @@
   },
   {
     "id": 5,
-    "text": ">>> Wprowadź kod dostępu, by kontynuować.",
+    "text": ">>> Wprowadź kod jednostki, by kontynuować.",
     "delay": 1,
     "duration": 1
   },
   {
     "id": 6,
-    "text": "Wpisz 'start'",
+    "text": "Wpisz 'swoje imie'",
     "delay": 1,
     "duration": 1,
     "type": "command"

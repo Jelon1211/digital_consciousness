@@ -1,9 +1,10 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
+import { Commands } from "@/enums/Commands";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 import { Command } from "@/types/Command";
 
 export class BackCommand implements Command {
-  name = "back";
+  name = Commands.BACK;
 
   matches(input: string) {
     return input.trim().toLowerCase() === this.name;

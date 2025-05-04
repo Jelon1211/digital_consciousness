@@ -1,8 +1,12 @@
 import { useEngineStore } from "@/store/useEngineStore";
 import { CommandRegistry } from "../commands/CommandRegistry";
-import { EngineState } from "./EngineState";
+import { EngineState, Phase } from "./EngineState";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
-import { replaceCommand } from "@/lib/utils/replaceCommand";
+import {
+  replacePlaceholderObject,
+  replacePlaceholders,
+} from "@/lib/utils/replaceInputs";
+import { Commands } from "@/enums/Commands";
 
 export class Engine {
   constructor(private registry: CommandRegistry) {}
@@ -16,14 +20,22 @@ export class Engine {
   };
 
   async run(input: string) {
-    const command = this.registry.findMatching(input.trim());
+    let command = this.registry.findMatching(input.trim());
+
+    if (!command && this.state.phase === Phase.INIT) {
+      command = this.registry.getCommandByName(Commands.START);
+    }
+
     if (!command) {
       this.update({ currentCommand: input });
 
       const errorStory = await getStoryFromServer("/error.json");
 
       if (errorStory) {
-        const replacedStory = replaceCommand(errorStory, input);
+        const replacedStory = replacePlaceholders(
+          errorStory,
+          replacePlaceholderObject(input)
+        );
         this.update({ story: replacedStory });
       }
 
@@ -36,6 +48,6 @@ export class Engine {
 
     this.update({ currentCommand: command.name });
 
-    await command.execute(this.state, this.update);
+    await command.execute(this.state, this.update, input);
   }
 }

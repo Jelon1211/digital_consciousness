@@ -1,11 +1,12 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
+import { Commands } from "@/enums/Commands";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 import { Command } from "@/types/Command";
 
 export class SectorsCommand implements Command {
   private readonly allowedPhases: Phase[] = [Phase.MAIN, Phase.SECTOR];
 
-  name = "sectors";
+  name = Commands.SECTORS;
 
   matches(input: string) {
     return input.trim().toLowerCase() === this.name;

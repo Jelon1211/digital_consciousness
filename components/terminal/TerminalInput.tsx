@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTerminal } from "@/context/TerminalContext";
+import { useEngineStore } from "@/store/useEngineStore";
 
 export default function TerminalInput({
   onSubmit,
@@ -11,6 +12,7 @@ export default function TerminalInput({
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const { setInputFocused } = useTerminal();
+  const unitName = useEngineStore((state) => state.unitName);
 
   useEffect(() => {
     const focusInput = () => {
@@ -51,7 +53,9 @@ export default function TerminalInput({
 
   return (
     <div className="flex items-center space-x-2 mt-2">
-      <span className="text-green-400">Eris: </span>
+      <span className="text-green-400">
+        {unitName ? `${unitName}: ` : "Eris: "}
+      </span>
       <input
         ref={inputRef}
         type="text"

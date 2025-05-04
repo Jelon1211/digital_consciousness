@@ -6,6 +6,7 @@ export interface Command {
   canExecute: (state: EngineState) => boolean;
   execute: (
     state: EngineState,
-    update: (partial: Partial<EngineState>) => void
+    update: (partial: Partial<EngineState>) => void,
+    input: string
   ) => Promise<void>;
 }

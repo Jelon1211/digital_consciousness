@@ -15,6 +15,7 @@ export const useEngineStore = create<EngineStore>()(
   persist(
     (set) => ({
       phase: Phase.INIT,
+      unitName: "",
       currentCommand: "",
       currentSector: undefined,
       currentNode: undefined,
@@ -30,6 +31,7 @@ export const useEngineStore = create<EngineStore>()(
       name: "terminal-engine-store",
       partialize: (state) => ({
         phase: state.phase,
+        unitName: state.unitName,
         currentCommand: state.currentCommand,
         currentSector: state.currentSector,
         currentNode: state.currentNode,

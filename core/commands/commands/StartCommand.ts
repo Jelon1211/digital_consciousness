@@ -1,12 +1,13 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
+import { Commands } from "@/enums/Commands";
 import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
 import { Command } from "@/types/Command";
 
 export class StartCommand implements Command {
-  name = "start";
+  name = Commands.START;
 
-  matches(input: string) {
-    return input.trim().toLowerCase() === this.name;
+  matches() {
+    return true;
   }
 
   canExecute(state: EngineState) {
@@ -15,11 +16,14 @@ export class StartCommand implements Command {
 
   async execute(
     _state: EngineState,
-    update: (partial: Partial<EngineState>) => void
+    update: (partial: Partial<EngineState>) => void,
+    input: string
   ) {
+    const trimmedName = input.trim();
     const story = await getStoryFromServer("/introduction.json");
 
     update({
+      unitName: trimmedName,
       phase: Phase.MAIN,
       story,
     });

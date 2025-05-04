@@ -1,8 +1,9 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
+import { Commands } from "@/enums/Commands";
 import { Command } from "@/types/Command";
 
 export class HistoryCommand implements Command {
-  name = "history";
+  name = Commands.HISTORY;
 
   matches(input: string) {
     return input.trim().toLowerCase() === this.name;
