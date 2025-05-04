@@ -20,7 +20,7 @@
   },
   {
     "id": 4,
-    "text": "'sector_01', 'logs'",
+    "text": "'sector_01', 'sectors', 'logs'",
     "delay": 10,
     "duration": 3,
     "type": "command"

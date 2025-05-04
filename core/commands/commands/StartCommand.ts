@@ -1,13 +1,13 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
 import { Commands } from "@/enums/Commands";
-import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
-import { Command } from "@/types/Command";
+import { BaseCommand } from "./BaseCommand";
+import { Stories } from "@/enums/Stories";
 
-export class StartCommand implements Command {
+export class StartCommand extends BaseCommand {
   name = Commands.START;
 
   matches() {
-    return true;
+    return false;
   }
 
   canExecute(state: EngineState) {
@@ -20,12 +20,13 @@ export class StartCommand implements Command {
     input: string
   ) {
     const trimmedName = input.trim();
-    const story = await getStoryFromServer("/introduction.json");
+    const story = await this.getStoryFromServer(Stories.INTRODUCTION);
+    _state.unitName = trimmedName;
 
     update({
       unitName: trimmedName,
       phase: Phase.MAIN,
-      story,
+      story: story ? await this.replaceStory(story, _state, trimmedName) : null,
     });
   }
 }

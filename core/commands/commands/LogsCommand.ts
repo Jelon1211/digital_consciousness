@@ -1,9 +1,9 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
 import { Commands } from "@/enums/Commands";
-import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
-import { Command } from "@/types/Command";
+import { BaseCommand } from "./BaseCommand";
+import { Stories } from "@/enums/Stories";
 
-export class LogsCommand implements Command {
+export class LogsCommand extends BaseCommand {
   private readonly allowedPhases: Phase[] = [Phase.MAIN, Phase.SECTOR];
 
   name = Commands.LOGS;
@@ -18,13 +18,14 @@ export class LogsCommand implements Command {
 
   async execute(
     _state: EngineState,
-    update: (partial: Partial<EngineState>) => void
+    update: (partial: Partial<EngineState>) => void,
+    input: string
   ) {
-    const story = await getStoryFromServer("/logs/logs.json");
+    const story = await this.getStoryFromServer(Stories.LOGS);
 
     update({
       phase: Phase.MAIN,
-      story,
+      story: story ? await this.replaceStory(story, _state, input) : null,
     });
   }
 }

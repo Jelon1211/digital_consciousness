@@ -1,11 +1,12 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
-import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
-import { Command } from "@/types/Command";
+import { BaseCommand } from "../BaseCommand";
+import { Stories } from "@/enums/Stories";
 
-export class SectorCommand implements Command {
+export class SectorCommand extends BaseCommand {
   public readonly name: string;
 
   constructor(private sector: string) {
+    super();
     this.name = sector.toLowerCase();
   }
 
@@ -19,15 +20,16 @@ export class SectorCommand implements Command {
 
   async execute(
     _state: EngineState,
-    update: (partial: Partial<EngineState>) => void
+    update: (partial: Partial<EngineState>) => void,
+    input: string
   ) {
-    const path = `/logs/sectors/${this.sector}/${this.sector}.json`;
-    const story = await getStoryFromServer(path);
+    const path = `${Stories.BASE_SECTORS}/${this.sector}/${this.sector}.json`;
+    const story = await this.getStoryFromServer(path);
 
     update({
       phase: Phase.SECTOR,
       currentSector: this.sector,
-      story,
+      story: story ? await this.replaceStory(story, _state, input) : null,
     });
   }
 }

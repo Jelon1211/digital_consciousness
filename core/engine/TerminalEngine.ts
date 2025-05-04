@@ -22,7 +22,7 @@ export class Engine {
   async run(input: string) {
     let command = this.registry.findMatching(input.trim());
 
-    if (!command && this.state.phase === Phase.INIT) {
+    if (this.state.phase === Phase.INIT) {
       command = this.registry.getCommandByName(Commands.START);
     }
 
