@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Loading from "../base/Loading";
 import { useEngineStore } from "@/store/useEngineStore";
 import { JsonInterface } from "@/types/JsonInterface";
-import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
+import { getStory } from "@/lib/actions/getStory";
 import TerminalLine from "../terminal/TerminalLine";
 
 export default function Story() {
@@ -17,7 +17,7 @@ export default function Story() {
 
   useEffect(() => {
     const fetchStory = async () => {
-      const storyData = await getStoryFromServer(
+      const storyData = await getStory(
         `/logs/sectors/${state.currentSector}/nodes/${state.currentNode}.json`
       );
       if (storyData) {

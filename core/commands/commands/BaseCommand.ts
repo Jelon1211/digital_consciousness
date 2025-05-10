@@ -5,7 +5,7 @@ import {
 } from "@/lib/utils/replaceInputs";
 import { Command } from "@/types/Command";
 import { JsonInterface } from "@/types/JsonInterface";
-import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
+import { getStory } from "@/lib/actions/getStory";
 
 export abstract class BaseCommand implements Command {
   abstract name: string;
@@ -31,6 +31,8 @@ export abstract class BaseCommand implements Command {
   protected async getStoryFromServer(
     path: string
   ): Promise<JsonInterface[] | null> {
-    return await getStoryFromServer(path);
+    console.log("wewnątrz getStoryFromServer", path);
+
+    return await getStory(path);
   }
 }

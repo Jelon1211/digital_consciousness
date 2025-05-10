@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import TerminalLine from "./TerminalLine";
 import TerminalInput from "./TerminalInput";
-import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
+import { getStory } from "@/lib/actions/getStory";
 import { TerminalProvider } from "@/context/TerminalContext";
 import { useEngineStore } from "@/store/useEngineStore";
 import { engine } from "@/lib/utils/engineInstance";
@@ -48,7 +48,7 @@ export default function Terminal() {
       return;
     }
 
-    const initStory = await getStoryFromServer("/init.json");
+    const initStory = await getStory("/init.json");
     if (initStory) {
       useEngineStore.getState().setStory(initStory);
       setIsTerminalInitialized(true);

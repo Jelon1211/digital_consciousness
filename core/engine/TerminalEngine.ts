@@ -1,7 +1,7 @@
 import { useEngineStore } from "@/store/useEngineStore";
 import { CommandRegistry } from "../commands/CommandRegistry";
 import { EngineState, Phase } from "./EngineState";
-import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
+import { getStory } from "@/lib/actions/getStory";
 import {
   replacePlaceholderObject,
   replacePlaceholders,
@@ -29,7 +29,7 @@ export class Engine {
     if (!command) {
       this.update({ currentCommand: input });
 
-      const errorStory = await getStoryFromServer("/error.json");
+      const errorStory = await getStory("/error.json");
 
       if (errorStory) {
         const replacedStory = replacePlaceholders(

@@ -1,6 +1,6 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
 import { Commands } from "@/enums/Commands";
-import { getStoryFromServer } from "@/lib/actions/getStoryFromServer";
+import { getStory } from "@/lib/actions/getStory";
 import { Command } from "@/types/Command";
 
 export class HelpCommand implements Command {
@@ -18,7 +18,7 @@ export class HelpCommand implements Command {
     _state: EngineState,
     update: (partial: Partial<EngineState>) => void
   ) {
-    const story = await getStoryFromServer("/help.json");
+    const story = await getStory("/help.json");
 
     update({
       phase: Phase.MAIN,
