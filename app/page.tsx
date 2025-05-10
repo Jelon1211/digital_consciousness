@@ -1,8 +1,10 @@
+import AudioPlayer from "@/components/base/AudioPlayer";
 import MainWrapper from "@/components/base/MainWrapper";
 
 export default async function Home() {
   return (
     <>
+      <AudioPlayer />
       <div className="">
         <div className="flex justify-center items-center w-full ">
           <h1 className="crt-text" data-text="ERIS">

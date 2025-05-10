@@ -13,5 +13,6 @@ export interface EngineState {
   currentCommand: string;
   currentSector?: string;
   currentNode?: string;
+  isEntered: boolean;
   story?: JsonInterface[] | null;
 }

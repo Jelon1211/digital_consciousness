@@ -1,6 +1,6 @@
 @import "./terminal.css";
 @import "./glitch.css";
-/* @import "./gridLines.css"; */
+@import "./gridLines.css";
 @import "./crt.css";
 @import "./teaser.css";
 @import "./story.css";

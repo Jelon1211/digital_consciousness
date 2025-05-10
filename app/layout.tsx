@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "../styles/index.css";
-import "../styles/gridLines.css";
 
 const orbitron = localFont({
   src: "../fonts/Orbitron-Regular.ttf",

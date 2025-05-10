@@ -26,6 +26,8 @@ export class NodeCommand extends BaseCommand {
     const path = `${Stories.BASE_SECTORS}/${this.sector}/nodes/${this.node}.json`;
     const story = await this.getStoryFromServer(path);
 
+    console.log("czy jest?", path, story);
+
     update({
       phase: Phase.NODE,
       currentSector: this.sector,

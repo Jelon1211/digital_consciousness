@@ -10,6 +10,7 @@ import { engine } from "@/lib/utils/engineInstance";
 
 export default function Terminal() {
   const story = useEngineStore((state) => state.story);
+  const setIsEntered = useEngineStore((state) => state.setIsEntered);
 
   const [isTerminalInitialized, setIsTerminalInitialized] =
     useState<boolean>(false);
@@ -40,6 +41,7 @@ export default function Terminal() {
 
   const handleInit = async () => {
     setTerminalLoading(true);
+    setIsEntered(true);
 
     if (Array.isArray(story) && story.length > 0) {
       setIsTerminalInitialized(true);

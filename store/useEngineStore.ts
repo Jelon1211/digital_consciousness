@@ -9,6 +9,7 @@ export interface EngineStore extends EngineState {
   setSector: (sector: string) => void;
   setNode: (node: string) => void;
   setStory: (story: JsonInterface[]) => void;
+  setIsEntered: (isEntered: boolean) => void;
 }
 
 export const useEngineStore = create<EngineStore>()(
@@ -20,12 +21,14 @@ export const useEngineStore = create<EngineStore>()(
       currentSector: undefined,
       currentNode: undefined,
       story: undefined,
+      isEntered: false,
 
       setPhase: (phase) => set({ phase }),
       setCommand: (command) => set({ currentCommand: command }),
       setSector: (sector) => set({ currentSector: sector }),
       setNode: (node) => set({ currentNode: node }),
       setStory: (story) => set({ story }),
+      setIsEntered: (isEntered) => set({ isEntered }),
     }),
     {
       name: "terminal-engine-store",
