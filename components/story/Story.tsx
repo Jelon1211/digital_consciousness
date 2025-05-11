@@ -12,22 +12,23 @@ export default function Story() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [visibleLines, setVisibleLines] = useState<number>(0);
   const [story, setStory] = useState<JsonInterface[] | null>(null);
-
-  const state = useEngineStore.getState();
+  const currentNode = useEngineStore((state) => state.currentNode);
+  const currentSector = useEngineStore((state) => state.currentSector);
+  const stateSetStory = useEngineStore((state) => state.setStory);
 
   useEffect(() => {
     const fetchStory = async () => {
       const storyData = await getStory(
-        `/logs/sectors/${state.currentSector}/nodes/${state.currentNode}.json`
+        `/logs/sectors/${currentSector}/nodes/${currentNode}.json`
       );
       if (storyData) {
         setStory(storyData);
-        state.setStory(storyData);
+        stateSetStory(storyData);
       }
     };
 
     fetchStory();
-  }, []);
+  }, [currentNode, currentSector, stateSetStory]);
 
   useEffect(() => {
     if (!story || story.length === 0) return;

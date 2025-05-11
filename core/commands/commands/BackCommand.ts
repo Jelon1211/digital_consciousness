@@ -1,5 +1,6 @@
 import { EngineState, Phase } from "@/core/engine/EngineState";
 import { Commands } from "@/enums/Commands";
+import { Stories } from "@/enums/Stories";
 import { getStory } from "@/lib/actions/getStory";
 import { Command } from "@/types/Command";
 
@@ -18,7 +19,7 @@ export class BackCommand implements Command {
     _state: EngineState,
     update: (partial: Partial<EngineState>) => void
   ) {
-    const story = await getStory("/logs/sectors/sectors.json");
+    const story = await getStory(Stories.LOGS);
 
     update({
       phase: Phase.SECTOR,

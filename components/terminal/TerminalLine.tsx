@@ -50,7 +50,7 @@ export default function TerminalLine({
     }, item.duration / Math.max(1, text.length));
 
     return () => clearInterval(interval);
-  }, [text, item.duration, item.image]);
+  }, [text, item.duration, item.image, isNode, playBeep]);
 
   const getClassName = () => {
     let base = "inline-block whitespace-pre-wrap break-words";

@@ -2,7 +2,7 @@
 
 import { Phase } from "@/core/engine/EngineState";
 import { useEngineStore } from "@/store/useEngineStore";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AppConfig } from "@/config/appConfig";
 
@@ -14,10 +14,12 @@ export default function AudioPlayer() {
   const isEntered = useEngineStore((state) => state.isEntered);
   const isPhaseNode = useEngineStore((state) => state.phase === Phase.NODE);
 
-  const getVolume = () =>
-    isPhaseNode ? AppConfig.musicNodeVolume : AppConfig.musicMainVolume;
+  const getVolume = useCallback(
+    () => (isPhaseNode ? AppConfig.musicNodeVolume : AppConfig.musicMainVolume),
+    [isPhaseNode]
+  );
 
-  const playAudio = () => {
+  const playAudio = useCallback(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
@@ -25,7 +27,7 @@ export default function AudioPlayer() {
     audio.volume = getVolume();
     audio.play().catch(() => {});
     setIsAudioEnabled(true);
-  };
+  }, [getVolume]);
 
   const pauseAudio = () => {
     const audio = audioRef.current;
@@ -50,7 +52,7 @@ export default function AudioPlayer() {
     if (isEntered && audioRef.current?.paused) {
       playAudio();
     }
-  }, [isEntered]);
+  }, [isEntered, playAudio]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -70,7 +72,7 @@ export default function AudioPlayer() {
       audio.addEventListener("canplaythrough", handleCanPlay);
       audio.load();
     }
-  }, [isPhaseNode]);
+  }, [isPhaseNode, playAudio]);
 
   return (
     <div

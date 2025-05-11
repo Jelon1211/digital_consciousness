@@ -6,4 +6,5 @@ export enum Commands {
   LOGS = "logs",
   HISTORY = "history",
   BACK = "back",
+  HELP = "help",
 }
