@@ -24,11 +24,8 @@ export class NodeCommand extends BaseCommand {
     input: string
   ) {
     const path = `${Stories.BASE_SECTORS}/${this.sector}/nodes/${this.node}.json`;
-    console.log("przed");
 
     const story = await this.getStoryFromServer(path);
-
-    console.log("czy jest?", path, story);
 
     update({
       phase: Phase.NODE,

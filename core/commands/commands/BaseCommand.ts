@@ -31,8 +31,6 @@ export abstract class BaseCommand implements Command {
   protected async getStoryFromServer(
     path: string
   ): Promise<JsonInterface[] | null> {
-    console.log("wewnątrz getStoryFromServer", path);
-
     return await getStory(path);
   }
 }
