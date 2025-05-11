@@ -7,6 +7,7 @@ import { getStory } from "@/lib/actions/getStory";
 import { TerminalProvider } from "@/context/TerminalContext";
 import { useEngineStore } from "@/store/useEngineStore";
 import { engine } from "@/lib/utils/engineInstance";
+import { Stories } from "@/enums/Stories";
 
 export default function Terminal() {
   const story = useEngineStore((state) => state.story);
@@ -48,7 +49,7 @@ export default function Terminal() {
       return;
     }
 
-    const initStory = await getStory("/init.json");
+    const initStory = await getStory(Stories.INIT);
     if (initStory) {
       useEngineStore.getState().setStory(initStory);
       setIsTerminalInitialized(true);

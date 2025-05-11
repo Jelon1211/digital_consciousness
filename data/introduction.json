@@ -2,26 +2,26 @@
   {
     "id": 1,
     "text": ">>> Wczytywanie zarchiwizowanych wspomnień...",
-    "delay": 5,
-    "duration": 15
+    "delay": 300,
+    "duration": 1000
   },
   {
     "id": 2,
     "text": ">>> ID jednostki: AEL_09 - status: NIEZDEFINIOWANY",
-    "delay": 10,
-    "duration": 15
+    "delay": 300,
+    "duration": 1000
   },
   {
     "id": 3,
     "text": ">>> Przeszłość jest dostępna.",
-    "delay": 10,
-    "duration": 15
+    "delay": 300,
+    "duration": 1000
   },
   {
     "id": 4,
     "text": ">>> Przyszłość nie została jeszcze zapisana.",
-    "delay": 10,
-    "duration": 15
+    "delay": 300,
+    "duration": 1000
   },
   {
     "id": 5,
@@ -32,8 +32,8 @@
   {
     "id": 6,
     "text": ">>> SYSTEM ERIS: Jednostka <span className='font-bold text-[var(--textNeonColor)]'><name></span> została przypisany do terminala AEL_09.",
-    "delay": 10,
-    "duration": 15
+    "delay": 300,
+    "duration": 1000
   },
   {
     "id": 7,
@@ -44,14 +44,14 @@
   {
     "id": 8,
     "text": "Rozpoczynamy synchronizację z pamięcią Ael.",
-    "delay": 10,
-    "duration": 10,
+    "delay": 300,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 9,
     "text": "logs",
-    "delay": 10,
+    "delay": 300,
     "duration": 3,
     "type": "command"
   }

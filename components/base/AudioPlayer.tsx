@@ -4,29 +4,57 @@ import { Phase } from "@/core/engine/EngineState";
 import { useEngineStore } from "@/store/useEngineStore";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { AppConfig } from "@/config/appConfig";
 
 export default function AudioPlayer() {
-  const [isAudioEnabled, setIsAudioEnabled] = useState<boolean>(false);
-  const [audioSrc, setAudioSrc] = useState("/audio/evil.mp3");
+  const [isAudioEnabled, setIsAudioEnabled] = useState(false);
+  const [audioSrc, setAudioSrc] = useState(AppConfig.audioEvil);
 
   const audioRef = useRef<HTMLAudioElement>(null);
   const isEntered = useEngineStore((state) => state.isEntered);
   const isPhaseNode = useEngineStore((state) => state.phase === Phase.NODE);
 
-  useEffect(() => {
+  const getVolume = () =>
+    isPhaseNode ? AppConfig.musicNodeVolume : AppConfig.musicMainVolume;
+
+  const playAudio = () => {
     const audio = audioRef.current;
-    if (isEntered && audio && audio.paused) {
-      audio.muted = false;
-      audio.volume = 0.05;
-      audio.play();
-      setIsAudioEnabled(true);
+    if (!audio) return;
+
+    audio.muted = false;
+    audio.volume = getVolume();
+    audio.play().catch(() => {});
+    setIsAudioEnabled(true);
+  };
+
+  const pauseAudio = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.pause();
+    setIsAudioEnabled(false);
+  };
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (audio.paused) {
+      playAudio();
+    } else {
+      pauseAudio();
+    }
+  };
+
+  useEffect(() => {
+    if (isEntered && audioRef.current?.paused) {
+      playAudio();
     }
   }, [isEntered]);
 
   useEffect(() => {
     const audio = audioRef.current;
-    const newSrc = isPhaseNode ? "/audio/apathias.mp3" : "/audio/evil.mp3";
-
+    const newSrc = isPhaseNode ? AppConfig.audioApathias : AppConfig.audioEvil;
     if (!audio || audio.src === window.location.origin + newSrc) return;
 
     const wasPlaying = !audio.paused;
@@ -36,54 +64,26 @@ export default function AudioPlayer() {
 
     if (wasPlaying) {
       const handleCanPlay = () => {
-        audio.muted = false;
-        audio.volume = isPhaseNode ? 0.05 : 0.03;
-        audio.play();
+        playAudio();
         audio.removeEventListener("canplaythrough", handleCanPlay);
       };
-
       audio.addEventListener("canplaythrough", handleCanPlay);
       audio.load();
     }
   }, [isPhaseNode]);
 
-  const togglePlay = () => {
-    const audio = audioRef.current;
-    if (audio && audio.paused) {
-      audio.muted = false;
-      audio.volume = isPhaseNode ? 0.05 : 0.3;
-      audio.play();
-      setIsAudioEnabled(true);
-    } else {
-      if (audio) {
-        audio.pause();
-        setIsAudioEnabled(false);
-      }
-    }
-  };
-
   return (
     <div
       className="cursor-pointer crt-text w-fit absolute top-1 -right-15 hover:scale-105 transition-all duration-300 ease-in-out"
-      onClick={() => togglePlay()}
+      onClick={togglePlay}
     >
-      {isAudioEnabled ? (
-        <Image
-          src="/stop.svg"
-          width={40}
-          height={40}
-          alt="stop icon"
-          className="invert sepia brightness-200 hue-rotate-[120deg]"
-        />
-      ) : (
-        <Image
-          src="/play.svg"
-          width={40}
-          height={40}
-          alt="start icon"
-          className="invert sepia brightness-200 hue-rotate-[120deg]"
-        />
-      )}
+      <Image
+        src={isAudioEnabled ? AppConfig.stopSVG : AppConfig.playSVG}
+        width={40}
+        height={40}
+        alt={isAudioEnabled ? "stop icon" : "start icon"}
+        className="invert sepia brightness-200 hue-rotate-[120deg]"
+      />
       <audio
         ref={audioRef}
         src={audioSrc}

@@ -15,6 +15,7 @@ export default function Grid() {
 
       grid.classList.remove("resetting");
 
+      // Magic numbers do not touch
       const x = (e.clientX / window.innerWidth - 0.5) * 2;
       const y = (e.clientY / window.innerHeight - 0.5) * 2;
 

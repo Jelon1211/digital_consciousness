@@ -6,6 +6,10 @@ import { JsonInterface } from "@/types/JsonInterface";
 import { JsonType } from "@/enums/JsonEnum";
 import { useTerminal } from "@/context/TerminalContext";
 import parse from "html-react-parser";
+import { useTerminalSoundManager } from "@/hooks/useTerminalSoundManager";
+import { useEngineStore } from "@/store/useEngineStore";
+import { Phase } from "@/core/engine/EngineState";
+import { AppConfig } from "@/config/appConfig";
 
 export default function TerminalLine({
   item,
@@ -17,15 +21,28 @@ export default function TerminalLine({
   const text = item.text || "";
   const [visibleText, setVisibleText] = useState("");
   const { inputFocused } = useTerminal();
+  const { playBeep } = useTerminalSoundManager();
+  const isNode = useEngineStore((state) => state.phase === Phase.NODE);
 
   useEffect(() => {
-    if (item.image) {
-      return;
-    }
+    if (item.image) return;
 
     let i = 0;
+    let lastBeep = 0;
+
     const interval = setInterval(() => {
       setVisibleText(text.slice(0, i + 1));
+
+      const now = Date.now();
+      if (
+        now - lastBeep > AppConfig.beepInterval &&
+        text[i] !== " " &&
+        !isNode
+      ) {
+        playBeep();
+        lastBeep = now;
+      }
+
       i++;
       if (i >= text.length) {
         clearInterval(interval);
