@@ -61,7 +61,9 @@ export default function Terminal() {
     return (
       <div className="mt-10 flex lg:block justify-center">
         {terminalLoading ? (
-          <div className="crt-text">Loading...</div>
+          <div className="teaser-component teaser-btn crt-text !cursor-default">
+            Loading...
+          </div>
         ) : (
           <button
             className="teaser-component teaser-btn crt-text"
