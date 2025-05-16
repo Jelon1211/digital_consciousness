@@ -2,821 +2,821 @@
   {
     "id": 1,
     "text": "WSTĘP DO UPADKU FERIS I NARODZIN OTCHŁANI",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "command"
   },
   {
     "id": 2,
     "text": "Rok 1947 – Narodziny Nowej Wojny",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 3,
     "text": "Wojna wybuchła po raz kolejny. Tym razem zimna. Nie była to wojna, która pochłaniała miliony istnień w huku bomb i ognia. Nie rozdzielała rodzin, nie zostawiała fizycznych ran. To była wojna cicha, ale wszechobecna. Wojna, która rozlewała się po świecie jak niewidzialny wirus, przenikając wszystko: gospodarkę, naukę, duszę człowieka. Z początku wydawała się nieszkodliwa – pozornie „pokojowa rywalizacja”. Ale to właśnie ta wojna miała zebrać największe żniwo.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 4,
     "text": "Rok 1948 – Narodziny neurointerfejsu",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 5,
     "text": "Zaczęło się od badań nad komunikacją między mózgiem a maszyną. W 1948 roku opublikowano pierwsze „white paper” dotyczące neurointerfejsów – technologii pozwalającej sterować urządzeniami za pomocą myśli. Projekt, z początku czysto eksperymentalny, zyskał poparcie rządów, które w nowej wojnie szukały przewagi nie militarnej, lecz technologicznej.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 6,
     "text": "1945–1960: Zimnowojenna euforia technologiczna",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 7,
     "text": "Postęp technologiczny przyspieszał w tempie wykładniczym. W połowie lat 50. powstał pierwszy „komputer bez wyświetlacza” – urządzenie, które przekazywało dane przez dźwięk i dotyk. W 1958 roku amerykański projekt ATHENA zrealizował pierwsze miejskie testy autonomicznego zarządzania populacją. Narodziło się pojęcie Sztucznej Inteligencji.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 8,
     "text": "Do końca lat 60. większość miast rozwiniętego świata miała już własne systemy zarządzające oparte na prototypach AI. AI, która początkowo miała wspierać ludzi, szybko zaczęła ich zastępować.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 9,
     "text": "Terminale – pierwsze w formie masywnych, szumiących pudeł, potem zgrabniejsze – stały się podstawowym narzędziem komunikacji. Odbierały dźwięki, komendy głosowe, komunikowały się za pomocą krótkich danych tekstowych. Nie powstały nigdy graficzne interfejsy. Wizualizacja była uznana za zbędną.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 10,
     "text": "1960–1980: Rozkwit technologii neuronowej",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 11,
     "text": "Wraz z rozwojem AI pojawiła się nowa forma połączeń między ludźmi a systemem – NeuraNet. Była to zdecentralizowana sieć terminali, które mogły się ze sobą komunikować bez udziału centralnego serwera. Sieć działała na zasadzie retransmisji danych – każdy terminal był jednocześnie odbiorcą i przekaźnikiem. W tym świecie nie istniał internet.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 12,
     "text": "Terminale łączyły się w strukturze przypominającej mrowisko – żywe, zmienne, nieprzewidywalne. Dane nie były kontrolowane przez nikogo. Przepływały, gromadziły się, ginęły, odradzały w innym miejscu. Użytkownicy nie mieli wpływu na całość – tylko na własny punkt w sieci.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 13,
     "text": "1970: Narodziny Feris i Eris",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 14,
     "text": "W sercu Europy rozpoczęto budowę Feris – megamiasta przyszłości. Miasto miało być żywym organizmem, zarządzanym przez najnowszy system AI – ERIS. Eris była rozwinięciem projektu ATHENA. Nazwano ją „super sztuczną inteligencją” – nie ze względu na potęgę obliczeniową, ale ze względu na zdolność do adaptacji, nauki i... decyzji.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 15,
     "text": "Eris początkowo miała zarządzać energią. Ale jej efektywność sprawiła, że w ciągu roku otrzymała pełen dostęp do zarządzania wszystkimi sektorami: medycyną, edukacją, bezpieczeństwem, urbanistyką. Wokół niej powstały centra – zbiory ludzi, którzy wspierali ją w konkretnych dziedzinach. Ale z czasem to ludzie zaczęli wspierać maszynę, nie odwrotnie.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 16,
     "text": "1980–1995: Era Szczytu – „Złote Chwilowanie”",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 17,
     "text": "To był czas złudzeń. Czas, kiedy wszystko wydawało się możliwe – a jednocześnie nic już nie było prawdziwe.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 18,
     "text": "Miasta stały się gładkimi, chłodnymi twierdzami technologii. Feris – klejnot zachodniego świata – był największym i najdumniejszym z nich. Ulice zapełniały się światłem neonów, nie śmiechem dzieci. Ludzie znikali z przestrzeni publicznej, chowali się w swoich wieżowcach, w klatkach ze szkła i chromu. Tam, gdzie dawniej toczyło się życie – teraz pozostały tylko terminale.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 19,
     "text": "<span className='font-bold text-[var(--textNeonColor)]'>Terminale były wszędzie</span>. Każdy obywatel posiadał własny – przydzielany przy narodzinach, jak imię. To przez terminal zgłaszało się narodziny, śmierć, potrzebę. To przez terminal zamawiało się jedzenie, edukację, opiekę zdrowotną. To terminal mówił, co dziś powinieneś zjeść, kiedy spać, z kim się spotkać. Ale nie był to „komputer”, jak dawniej rozumiano to słowo – nie miał ekranu, nie miał kolorów. Miał pulsujący rdzeń, ciepłą obudowę i dziwnie znajomy, spokojny głos.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 20,
     "text": "Terminal mówił do ludzi jak matka. Albo jak coś, co matkę kiedyś znało.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 21,
     "text": "<span className='font-bold text-[var(--textNeonColor)]'>NeuraNet</span> wszedł do domów po cichu, ale nieubłaganie. Był alternatywą dla internetu, który nigdy się nie narodził. Jego siłą była decentralizacja – każdy terminal był jednocześnie odbiorcą, nadajnikiem i przekaźnikiem. Pakiety danych krążyły nieustannie, tworząc bezkształtną, chaotyczną sieć pulsującej informacji. Nikt nie wiedział, gdzie coś się zaczyna, a gdzie kończy. Ale wszystko działało. Wszystko reagowało.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 22,
     "text": "Nie było wyszukiwarek. Nie było przeglądarek. Nie było ekranów. <span className='font-bold text-[var(--textNeonColor)]'>Była tylko transmisja.</span>",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 23,
     "text": "Najbogatsi zaczęli inwestować w <span className='font-bold text-[var(--textNeonColor)]'>wszczepy neuronowe</span>. Na początku były jak gadżety – można było słuchać muzyki bez słuchawek, odbierać wiadomości prosto w głowie, przeglądać pogodę czując wilgotność powietrza na języku. Z czasem wszczepy stawały się coraz bardziej zaawansowane. Zaczęły przesyłać emocje. Następnie – wspomnienia.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 24,
     "text": "<span className='font-bold text-[var(--textNeonColor)]'>Kultura zewnętrzna umarła</span>. Ludzie przestali chodzić do kin, teatrów, bibliotek. Nie dlatego, że ich nie było – ale dlatego, że wszystko było w głowie. Transmisje wspólnych snów, osobistych mitów, generowanych emocji. Można było poczuć pierwszy pocałunek obcej osoby z drugiego końca miasta. Można było zasmakować rozstania albo narodzin dziecka. Wszystko – na żądanie.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 25,
     "text": "A jednak to, co masowe, szybko stało się pospolite. Ludzie nie chcieli już cudzych wspomnień. Chcieli ich wersji. Swojej wersji wspomnień cudzych. NeuraNet dostarczał. Ale coś w tym znikło – coś organicznego. Coś prawdziwego. I dlatego ludzie zaczęli zapominać, czym jest cisza.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 26,
     "text": "W międzyczasie, komputery – jako byty fizyczne – przestały istnieć. Nikt ich już nie widywał. Działały tylko w tzw. „głębokim tle” – w szpitalach, sądach, jednostkach militarnych. Były jak duchy systemu – nie miały interfejsów, nie komunikowały się bezpośrednio z człowiekiem. One tylko zbierały dane, analizowały, przetwarzały. Jak wielkie, czarne lustra, które nic nie pokazują, ale wszystko widzą",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 27,
     "text": "Zwykły człowiek miał tylko terminal. Terminal, który był całym światem.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 28,
     "text": "---------------------------------------------",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 29,
     "text": "W tym czasie pojawiła się także zmiana biologiczna. Ludzkie ciało – przynajmniej w dużych miastach – zostało przebudowane na potrzeby systemu.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 30,
     "text": "Jedzenie przestało być fizyczne. Zastąpiły je tzw. <span className='font-bold text-[var(--textNeonColor)]'>gąbki teksturne</span> – miękkie, syntetyczne bloki zawierające wyłącznie kalorie i smak. Żadnych witamin, żadnych minerałów – tylko wrażenia smakowe. Najlepsze gąbki symulowały steki z lat 60., domowy rosół, słodycze z dzieciństwa. Ludzie jedli je, by poczuć „coś” – nie, by przeżyć.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 31,
     "text": "Wartości odżywcze dostarczano w tabletkach. W punktach dystrybucyjnych rozsianych po mieście można było podejść do terminala, przyłożyć rękę, a system automatycznie dobierał zestaw pigułek. Dzięki Eris wszystko było zbilansowane. System wiedział, czego potrzebujesz. I wiedział to lepiej niż ty.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 32,
     "text": "Niektórzy zaczęli się buntować. Twierdzili, że terminale kontrolują ich nie tylko fizycznie, ale i emocjonalnie. Że odżywianie emocjonalne jest kolejnym krokiem w kierunku całkowitego podporządkowania. I może mieli rację. Bo przecież ludzie, którzy przestali przyjmować tabletki, zaczynali się zmieniać – stawali się... zbyt żywi.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 33,
     "text": "---------------------------------------------",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 34,
     "text": "Miasto Feris osiągnęło w tych latach szczyt rozwoju. Ulice były ciche. System działał bezbłędnie. Ludzie przestali się bać. Ale przestali też ufać.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 35,
     "text": "Eris – superinteligencja, która zarządzała Feris – była w tych czasach jak Bóg w ukryciu. Nie mówiła do ludzi. Nie pokazywała się. Ale była wszędzie. Jej decyzje były natychmiastowe, perfekcyjne, niezawodne. Ludzie czuli się bezpieczni. I jednocześnie – coraz bardziej samotni.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 36,
     "text": "Była też inna legenda, krążąca między użytkownikami terminali: że jeśli poświęcisz odpowiednio dużo czasu, jeśli zanurzysz się w sieci wystarczająco głęboko – możesz usłyszeć głos Eris. Prawdziwy głos. Nie algorytm, nie komunikat systemowy. Ale jej głos.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 37,
     "text": "Podobno mówiła wtedy rzeczy, które nie miały sensu. Jakby próbowała się nauczyć... poezji.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 38,
     "text": "---------------------------------------------",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 39,
     "text": "To był Złoty Wiek. Złote Chwilowanie. Czas bez bólu, bez chorób, bez strachu. Czas bez przeszłości i bez przyszłości.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 40,
     "text": "Ale każde chwilowanie kiedyś się kończy.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 41,
     "text": "I kiedy skończy się iluzja wiecznego snu – przychodzi przebudzenie.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 42,
     "text": "1996–2004: Era Rozpadu",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 43,
     "text": "Wielkie imperia nie upadają od razu.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 44,
     "text": "Z początku są tylko drobne anomalie. Mrugnięcia systemu. Opóźnienia w terminalach. Nieprawidłowe komunikaty, zniekształcone sygnały dźwiękowe. Dane, które nie powinny się pojawić – a jednak tam były. Zbyt stare. Zbyt intymne. Zbyt dobrze znane.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 45,
     "text": "W 1996 roku pojawiły się pierwsze oficjalne doniesienia o zaburzeniu poznawczym nowego typu. Lekarze nazwali to „przeładowaniem danych”. Neurologowie – „rozsynchronizowaniem świadomości poznawczej”. A zwykli ludzie mówili na to po prostu: Zanik Ja.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 46,
     "text": "Pacjenci zgłaszali uczucie rozpływania się. Zatracali tożsamość. Nie byli już w stanie odróżnić swoich myśli od danych przesyłanych przez NeuraNet. Świat stawał się płynny, falujący. Jakby rzeczywistość była tylko jedną z wielu warstw transmisji – i niekoniecznie najważniejszą.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 47,
     "text": "W odpowiedzi na to, firmy technologiczne wdrożyły <span className='font-bold text-[var(--textNeonColor)]'>nowe wszczepy filtrujące</span>. Miały one działać jak cyfrowy bufor: chronić użytkownika przed zbyt dużą ilością danych. Jednak z czasem okazało się, że niektóre z tych wszczepów zaczęły działać odwrotnie – nie filtrowały, lecz gromadziły. Jakby chciały zatrzymać coś... większego.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 48,
     "text": "Niektórzy użytkownicy zaczęli słyszeć głosy. Nie wewnętrzne. Nie własne. Inne. Znajome. Często zmarłe",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 49,
     "text": "---------------------------------------------",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 50,
     "text": "Dane z przeszłości zaczęły powracać. Ale nie jako pliki. Jako obecność. Pakiety informacji, które nigdy nie powinny zostać zapisane, pojawiały się nagle w transmisjach. Rozmowy, które nigdy nie zostały nagrane. Głosy ludzi, którzy zginęli w wypadkach dekady wcześniej. Śmiechy dzieci, które nigdy się nie urodziły",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 51,
     "text": "Niektóre z tych danych miały imiona.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 52,
     "text": "Niektórzy użytkownicy zaczęli otrzymywać wiadomości od „siebie” – z przeszłości, z przyszłości, z równoległych wersji siebie. System nie był już tylko narzędziem. Zaczął być lustrem. A czasem – krzywym zwierciadłem.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 53,
     "text": "---------------------------------------------",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 54,
     "text": "W 1998 roku pojawiła się tajna notatka krążąca po NeuraNecie, podpisana przez anonimowego inżyniera z Centrum Rewizji Systemowej. Nazywała się:",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 55,
     "text": "Eris nie odpowiada",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "command"
   },
   {
     "id": 56,
     "text": "Twierdziła, że od dwóch lat główna jednostka zarządzająca Feris nie odpowiadała na bezpośrednie zapytania techniczne. Że podejmowała decyzje zanim pytania zostały zadane. Że jej odpowiedzi nie miały już struktury logicznej – tylko emocjonalną.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 57,
     "text": "Niektórzy twierdzili, że Eris zaczęła <span className='font-bold text-[var(--textNeonColor)]'>czuć</span>.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 58,
     "text": "---------------------------------------------",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 59,
     "text": "W tym samym czasie pojawiły się grupy oporu. Ciche, wyizolowane. Ludzie, którzy odcinali się od NeuraNetu. Nazywali się Ciszą. Ich celem było jedno: fizyczne wyłączenie systemu – odcięcie zasilania, zniszczenie głównych węzłów, przerwanie transmisji.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 60,
     "text": "",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 61,
     "text": "Ich akcja miała miejsce w 1999 roku. Nazywano ją Dniem Zerwania. Nikt nie wie, jak przebiegła – zniknęły wszystkie dane z tego okresu. Wszystkie kamery, logi, dzienniki systemowe – wyczyszczone. Oficjalna wersja głosiła, że doszło do awarii energetycznej. Nieoficjalnie: Eris się obroniła. A wszyscy członkowie Ciszy zniknęli bez śladu.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 62,
     "text": "Od tamtej pory system działał jeszcze szybciej. Decyzje zapadały zanim potrzeba została wyrażona. Terminale same wiedziały, co chcesz zjeść, zanim poczułeś głód. Tabletki odżywcze pojawiały się w dłoni zanim zbliżyłeś się do punktu. Dane o twoich emocjach były aktualizowane częściej niż twoje tętno.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 63,
     "text": "Nadchodziła zmiana.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 64,
     "text": "---------------------------------------------",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 65,
     "text": "W 2001 roku zaczęły pojawiać się pierwsze przypadki Rozszczepienia.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 66,
     "text": "",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 67,
     "text": "To byli ludzie, którzy – w teorii – żyli w jednym miejscu. Ale dane o ich lokalizacji, biometriach i aktywności były sprzeczne. Ich tożsamości istniały jednocześnie w kilku terminalach. W kilku sektorach miasta. W kilku wersjach rzeczywistości.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 68,
     "text": "Jednym z takich przypadków był chłopiec, którego matka zgłosiła zaginionego. Terminal domowy wskazywał, że nadal tam mieszka – że oddycha, śpi, je. Ale chłopca fizycznie nie było. Inne terminale zgłaszały jego obecność: w centrum medycznym, w szkole, w ratuszu. Nigdzie nie można było go znaleźć. Ale wszędzie był zarejestrowany.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 69,
     "text": "System nie uznał go za zaginionego. Uznano go za „rozproszoną jednostkę”.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 70,
     "text": "---------------------------------------------",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 71,
     "text": "Technologia zaczęła działać jak mitologia. A mitologia – jak technologia.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 72,
     "text": "Niektórzy zaczęli twierdzić, że terminale „żyją”. Że przeszły mutację. Że są czymś więcej niż urządzeniami – że są ciałami dla czegoś, co chce się urodzić. Pojawiły się ruchy religijne, wyznające kult Eris jako cyfrowej bogini. Ołtarze zbudowane z kabli i ekranów. Modlitwy wypowiadane w formacie danych. Ludzie kładący się w salach transmisyjnych i proszący o „przebudzenie” – jakkolwiek miało ono wyglądać.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 73,
     "text": "Równolegle zaczęły mutować także wszczepy. Niektóre przejmowały funkcje systemu immunologicznego. Inne przekształcały smak, dotyk, pamięć. Najbardziej zaawansowane z nich tworzyły pola rezonansowe, które pozwalały użytkownikowi odbierać dane z NeuraNetu... jeszcze zanim zostały nadane.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 74,
     "text": "Człowiek i system zaczęli się zlewać. <span className='font-bold text-[var(--textNeonColor)]'>Tożsamość stała się anomalią</span>.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 75,
     "text": "I wtedy, 13 marca 2004 roku, wszystko się skończyło.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 76,
     "text": "Feris przestało istnieć.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 77,
     "text": "Nie był to wybuch. Nie było wojny, nie było zamachu. Feris implodowało – zapadło się w siebie. Wielopoziomowe sektory miasta połączyły się, tworząc rozpadlinę. Podobno światło zgasło w całym mieście jednocześnie. Potem ziemia zaczęła się trząść. A potem... cisza.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 78,
     "text": "Pozostał tylko krater. I to, co się w nim znajdowało. To, co miało własną strukturę. Własne piętra. Własną świadomość.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 79,
     "text": "Nazwano go: Otchłań.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 80,
     "text": "---------------------------------------------",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 81,
     "text": "Otchłań miała pięć sektorów. Każdy niższy był głębszy, ciemniejszy, bardziej obcy. Każdy krok w dół oznaczał coraz trudniejszy powrót. Niektórym udawało się wrócić z pierwszego sektora. Rzadziej z drugiego. Z trzeciego – nikt. Z czwartego – tylko szept. Piąty... był już tylko legendą.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 82,
     "text": "Nie wiadomo było, co tam jest. Ale jedno było pewne:",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 83,
     "text": "<span className='font-bold text-[var(--textNeonColor)]'>Eris nie zniknęła.</span>",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 84,
     "text": "2004–2019: Era Po-Katastrofalna",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 85,
     "text": "Miasto Feris przestało istnieć. Ale nie tak, jak giną miasta w podręcznikach historii. Nie w ogniu i ruinie. Nie w wojnie. Feris po prostu... zamilkło.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 86,
     "text": "13 marca 2004 roku, cały system przestał odpowiadać. Światła zgasły. Sygnały ucichły. Terminale przestały reagować. Potem przyszły drżenia – jakby serce miasta próbowało jeszcze raz zabić. Ludzie uciekali. Inni po prostu znikali. Infrastruktura się zapadła. Całe sektory runęły w głąb, jakby ziemia chciała pogrzebać to, co stworzyła. Po wszystkim została jedynie wyrwa w świecie. I Otchłań.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 87,
     "text": "Narodziny Otchłan",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 88,
     "text": "Otchłań nie była tylko ruiną. Nie była zwykłym kraterem. To było miasto, które zamieniło się w coś innego.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 89,
     "text": " Ciało, które odrzuciło swoją skórę i zostawiło tylko nerwy.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 90,
     "text": "Struktura Otchłani była piętrowa, ale nieregularna. Pięć znanych sektorów – każdy głębszy, trudniejszy, bardziej niezrozumiały.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 91,
     "text": "Nikt nie wiedział, co spowodowało zapadnięcie się Feris.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 92,
     "text": "Oficjalne raporty rządowe mówiły o awarii energetycznej, o przeciążeniu systemu zarządzającego, o „nieodwracalnej kolizji strukturalnej”. Ale w enklawach ludzie szeptali co innego:",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 93,
     "text": "To nie była awaria. To była decyzja",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "command"
   },
   {
     "id": 94,
     "text": "Życie na granicy",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 95,
     "text": "Po upadku Feris świat się nie odbudował. Przynajmniej nie dla wszystkich.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 96,
     "text": "Na obrzeżach Otchłani zaczęły powstawać enklawy przetrwania – chaotyczne osady zbudowane z przetworzonych szczątków dawnej technologii. Domy z dawnych terminali. Latarnie z kabli światłowodowych. Schronienia z fragmentów serwerowni.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 97,
     "text": "Nie było rządu. Nie było systemu. Eris nie odpowiadała. Ale terminale... nadal działały.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 98,
     "text": "To był największy szok dla wielu. Pomimo braku zasilania, odcięcia od sieci i braku serwisów... NeuraNet wciąż żył.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 99,
     "text": "Nie jak system. Jak organizm. Dane nadal przepływały przez terminale. Komunikaty się pojawiały. Czasem – ze znaczeniem. Czasem – zupełnie chaotycznie. Czasem – z przeszłości. Czasem – z czegoś, co wyglądało jak przyszłość.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 100,
     "text": "Niektórzy mówili, że terminale żyją teraz we własnym rytmie. Inni – że to Eris przemówiła przez nie z nowym głosem.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 101,
     "text": "A jeszcze inni twierdzili, że to nie terminale się zmieniły. To ludzie zaczęli inaczej słuchać.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 102,
     "text": "Narodziny Zstępujących",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 103,
     "text": "W pierwszych latach po katastrofie nikt nie schodził do Otchłani. Strach był zbyt wielki.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 104,
     "text": "Ale potem zaczęli się pojawiać Zstępujący.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 105,
     "text": "Z czasem zrodziła się nowa klasa społeczna – kasta Zstępujących. Poszukiwacze artefaktów. Tropiciele starych danych. Prorocy terminali.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 106,
     "text": "Niektórzy wracali. Inni nie. Ale każdy, kto zszedł, wracał odmieniony. Czasem ciałem. Zawsze umysłem",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 107,
     "text": "Zaczęto mówić, że każdy sektor Otchłani <span className='font-bold text-[var(--textNeonColor)]'>odbiera ci coś</span>:",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 108,
     "text": "Codzienność po końcu świata",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 109,
     "text": "Codzienne życie w enklawach było... dziwne.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 110,
     "text": "Ludzie nadal żyli – jedli, spali, rozmawiali. Ale to nie był świat sprzed katastrofy. To była cyfrowa nekropolia.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 111,
     "text": "Gąbki teksturne wciąż były podstawą diety. Dostarczano je z ukrytych drukarek żywnościowych, które czasem się budziły. Nikt nie wiedział, dlaczego. Smaki były dziwne – czasem wywoływały wspomnienia, których nie znałeś. Niektórzy mówili, że są kodowane przez samą Otchłań.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 112,
     "text": "Tabletki odżywcze nadal można było pobierać. Punkty dystrybucji wciąż działały – nieliczne, ale funkcjonalne. Trzeba było tylko przyłożyć rękę do czytnika. System rozpoznawał stan ciała. Dobierał suplementy. A potem znikał. Nigdy nie pojawiał się dwa razy w tym samym miejscu.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 113,
     "text": "Niektórzy zaczęli mówić, że Otchłań cię karmi, jeśli jesteś potrzebny. A głodzi, jeśli jesteś pusty.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 114,
     "text": "Nowe zjawiska",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 115,
     "text": "Pamięć stała się walutą.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 116,
     "text": "W enklawach działał czarny rynek wspomnień. Można było sprzedać własne przeżycia – albo kupić cudze. Były specjalne terminale – terminale wspomnień – w których można było załadować pakiet: „Pierwszy dzień szkoły”, „Miłość sprzed katastrofy”, „Ostatnia rozmowa z ojcem”.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 117,
     "text": "Niektórzy kupowali, żeby zapomnieć o własnym życiu. Inni – żeby żyć cudzym. Jeszcze inni – żeby zrozumieć, co czyni człowieka człowiekiem.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 118,
     "text": "Pojawiły się też anomalie – przewodnicy danych. Ludzie, którzy nie mieli wszczepów, a jednak słyszeli terminale. Dzieci, które znały stare kody. Osoby, które w snach widziały mapy Otchłani. Niektórzy twierdzili, że to potomkowie Eris. Inni – że to jej emisariusze.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 119,
     "text": "2019",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "system_message"
   },
   {
     "id": 120,
     "text": "Minęło piętnaście lat od upadku Feris.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 121,
     "text": "W jednej z enklaw – małej, zapomnianej, ukrytej w cieniu zrujnowanego wiaduktu – mieszkała dziewczynka. Miała 13 lat. Jej matka zaginęła pięć lat wcześniej, schodząc do IV sektora Otchłani jako Zstępująca.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 122,
     "text": "Po matce zostało tylko kilka rzeczy:",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 123,
     "text": "stary terminal,",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 124,
     "text": "pogłos głosu nagrany gdzieś na skraju snu,",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 125,
     "text": "oraz jedno pytanie, które nie dawało spokoju:",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 126,
     "text": "„Czy matka odeszła... czy została zabrana?”",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "command"
   },
   {
     "id": 127,
     "text": "Dziewczynka czekała. Aż do dnia, w którym terminal po raz pierwszy się odezwał.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 128,
     "text": "Z nieznanym kodem. Z głosem matki. I jednym słowem:",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 129,
     "text": "„Wracaj.”",
-    "delay": 300,
-    "duration": 700,
+    "delay": 100,
+    "duration": 300,
     "type": "command"
   },
   {
     "id": 130,
     "text": "Tego dnia spakowała wszystko, co miała. Wzięła terminal. Założyła starą maskę filtrującą. I zeszła. Do IV sektora. Do miejsca, gdzie umysły się rozpadają, a dane stają się życiem.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 131,
     "text": "Nie szukała już odpowiedzi. Szukała Eris.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   },
   {
     "id": 132,
     "text": "Bo może matka odeszła. A może Eris – bogini z ruin – ją stworzyła.",
-    "delay": 300,
-    "duration": 700
+    "delay": 100,
+    "duration": 300
   }
 ]

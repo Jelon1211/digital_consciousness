@@ -64,7 +64,7 @@ export default function Story() {
 
   return (
     <div className="flex justify-center mt-6">
-      <div className="mx-5 p-3 rounded-xl shadow h-130 lg:h-142 overflow-auto story-panel w-full lg:w-1/4">
+      <div className="mx-5 p-3 rounded-xl shadow h-[55svh] lg:h-[65svh] overflow-auto story-panel w-full lg:w-1/4">
         <div className="flex flex-col">
           {story &&
             story
