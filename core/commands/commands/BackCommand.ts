@@ -22,7 +22,7 @@ export class BackCommand implements Command {
     const story = await getStory(Stories.LOGS);
 
     update({
-      phase: Phase.SECTOR,
+      phase: Phase.MAIN,
       story,
     });
   }
