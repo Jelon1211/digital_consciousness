@@ -14,5 +14,6 @@ export interface EngineState {
   currentSector?: string;
   currentNode?: string;
   isEntered: boolean;
+  isMusic: boolean;
   story?: JsonInterface[] | null;
 }

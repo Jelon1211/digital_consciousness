@@ -10,6 +10,7 @@ export interface EngineStore extends EngineState {
   setNode: (node: string) => void;
   setStory: (story: JsonInterface[]) => void;
   setIsEntered: (isEntered: boolean) => void;
+  setIsMusic: (isMusic: boolean) => void;
 }
 
 export const useEngineStore = create<EngineStore>()(
@@ -22,6 +23,7 @@ export const useEngineStore = create<EngineStore>()(
       currentNode: undefined,
       story: undefined,
       isEntered: false,
+      isMusic: true,
 
       setPhase: (phase) => set({ phase }),
       setCommand: (command) => set({ currentCommand: command }),
@@ -29,6 +31,7 @@ export const useEngineStore = create<EngineStore>()(
       setNode: (node) => set({ currentNode: node }),
       setStory: (story) => set({ story }),
       setIsEntered: (isEntered) => set({ isEntered }),
+      setIsMusic: (isMusic) => set({ isMusic }),
     }),
     {
       name: "terminal-engine-store",
@@ -39,6 +42,8 @@ export const useEngineStore = create<EngineStore>()(
         currentSector: state.currentSector,
         currentNode: state.currentNode,
         story: state.story,
+        isEntered: state.isEntered,
+        isMusic: state.isMusic,
       }),
     }
   )

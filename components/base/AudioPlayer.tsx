@@ -13,6 +13,8 @@ export default function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const isEntered = useEngineStore((state) => state.isEntered);
   const isPhaseNode = useEngineStore((state) => state.phase === Phase.NODE);
+  const isMusic = useEngineStore((state) => state.isMusic);
+  const setIsMusic = useEngineStore((state) => state.setIsMusic);
 
   const getVolume = useCallback(
     () => (isPhaseNode ? AppConfig.musicNodeVolume : AppConfig.musicMainVolume),
@@ -42,14 +44,16 @@ export default function AudioPlayer() {
     if (!audio) return;
 
     if (audio.paused) {
+      setIsMusic(true);
       playAudio();
     } else {
+      setIsMusic(false);
       pauseAudio();
     }
   };
 
   useEffect(() => {
-    if (isEntered && audioRef.current?.paused) {
+    if (isEntered && audioRef.current?.paused && isMusic) {
       playAudio();
     }
   }, [isEntered, playAudio]);
