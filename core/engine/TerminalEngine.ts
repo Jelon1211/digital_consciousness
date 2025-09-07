@@ -20,8 +20,6 @@ export class Engine {
   };
 
   async run(input: string) {
-    console.log("tu", this.state);
-
     let command = this.registry.findMatching(input.trim());
 
     if (this.state.phase === Phase.INIT) {
