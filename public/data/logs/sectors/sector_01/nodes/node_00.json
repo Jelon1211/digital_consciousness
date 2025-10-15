@@ -52,7 +52,7 @@
   },
   {
     "id": 9,
-    "text": "Nie było fanfar. Nie było alarmów, ostrzeżeń, ani komunikatów systemowych. Kamery sektora T-02 po prostu zarejestrowały jego obecność, jakby się tam materializował. Jeden z operatorów myślał nawet, że to błąd — powidok, pozostałość po czymś starszym, może zakłócenie z rejestrów sprzed Upadku. Ale nie. On naprawdę tam był.",
+    "text": "Nie było fanfar. Nie było alarmów, ostrzeżeń, ani komunikatów systemowych. Kamery sektora T-02 po prostu zarejestrowały jego obecność, jakby się tam materializował. Jeden z operatorów myślał nawet, że to błąd, powidok, pozostałość po czymś starszym, może zakłócenie z rejestrów sprzed Upadku. Ale nie. On naprawdę tam był.",
     "delay": 300,
     "duration": 300
   },
@@ -64,7 +64,7 @@
   },
   {
     "id": 11,
-    "text": "Miał na sobie kombinezon eksploracyjny — stary model, typ N-Δ. Jednak materiał nie wyglądał tak, jak powinien. Był elastyczny, jakby oddychał. Przypominał organiczną tkankę splecioną z włókien światła, zresztą co chwilę zdawało się, że fragmenty stroju migoczą — jakby coś w jego wnętrzu próbowało przedostać się na zewnątrz",
+    "text": "Miał na sobie kombinezon eksploracyjny, stary model, typ N-Δ. Jednak materiał nie wyglądał tak, jak powinien. Był elastyczny, jakby oddychał. Przypominał organiczną tkankę splecioną z włókien światła, zresztą co chwilę zdawało się, że fragmenty stroju migoczą, jakby coś w jego wnętrzu próbowało przedostać się na zewnątrz",
     "delay": 300,
     "duration": 300
   },
@@ -76,7 +76,7 @@
   },
   {
     "id": 13,
-    "text": "Nie było w nim napięcia, nie było emocji. R-9K_Δ (tak brzmiał jego kod jednostki) szedł prosto przed siebie, nie rozglądając się, nie odpowiadając na żadne wezwania. Przeszedł obok dwóch strażników technicznych jak duch. Jeden z nich później twierdził, że go wcale nie widział — że dopiero kamera pokazała mu, że „coś” tam było.",
+    "text": "Nie było w nim napięcia, nie było emocji. R-9K_Δ (tak brzmiał jego kod jednostki) szedł prosto przed siebie, nie rozglądając się, nie odpowiadając na żadne wezwania. Przeszedł obok dwóch strażników technicznych jak duch. Jeden z nich później twierdził, że go wcale nie widział, że dopiero kamera pokazała mu, że „coś” tam było.",
     "delay": 300,
     "duration": 300
   },
@@ -88,7 +88,7 @@
   },
   {
     "id": 15,
-    "text": "Nie spojrzenie — wzrok.",
+    "text": "Nie spojrzenie, wzrok.",
     "delay": 300,
     "duration": 300
   },
@@ -107,7 +107,7 @@
   },
   {
     "id": 18,
-    "text": "Otchłań nie miała wtedy jeszcze imienia. Ludzie mówili na nią różnie: „krater”, „centrum wypływu”, „paszcza systemu”, „miasto w mieście”. Oficjalnie był to Obiekt Katastroficzny K-0, zaklasyfikowany jako struktura zapadnięta. W praktyce — nikt tam nie zaglądał.",
+    "text": "Otchłań nie miała wtedy jeszcze imienia. Ludzie mówili na nią różnie: „krater”, „centrum wypływu”, „paszcza systemu”, „miasto w mieście”. Oficjalnie był to Obiekt Katastroficzny K-0, zaklasyfikowany jako struktura zapadnięta. W praktyce, nikt tam nie zaglądał.",
     "delay": 300,
     "duration": 300
   },
@@ -131,7 +131,7 @@
   },
   {
     "id": 22,
-    "text": "Przez trzy dni — nic.",
+    "text": "Przez trzy dni, nic.",
     "delay": 300,
     "duration": 300
   },
@@ -162,7 +162,7 @@
   },
   {
     "id": 27,
-    "text": "Technicy przydzieleni do sektora twierdzili, że nie odbierano od niego żadnych sygnałów życiowych — żadnych normalnych. Jego tętno, jeśli istniało, było niemożliwe do wykrycia klasycznymi metodami. Nie mrugał. Nie ruszał głową. Ale był świadomy. Widać to było w detalach — subtelne mikrodrgania mięśni, zmiany nacisku na powierzchni siedzenia. On słuchał. Cały czas.",
+    "text": "Technicy przydzieleni do sektora twierdzili, że nie odbierano od niego żadnych sygnałów życiowych, żadnych normalnych. Jego tętno, jeśli istniało, było niemożliwe do wykrycia klasycznymi metodami. Nie mrugał. Nie ruszał głową. Ale był świadomy. Widać to było w detalach, subtelne mikrodrgania mięśni, zmiany nacisku na powierzchni siedzenia. On słuchał. Cały czas.",
     "delay": 300,
     "duration": 300
   },
@@ -181,13 +181,13 @@
   },
   {
     "id": 30,
-    "text": "Gdy próbował do niego podejść jeden z młodszych pracowników analizy somatycznej — nazwisko nieznane, dane zostały usunięte z systemu — wydarzyło się coś dziwnego. Czujniki wewnętrzne zarejestrowały nagły spadek temperatury pomieszczenia o 9 stopni w ciągu 0,4 sekundy. Cała jednostka monitorująca zawiesiła się, a po restarcie... nie było już śladu kontaktu z eksploratorem.",
+    "text": "Gdy próbował do niego podejść jeden z młodszych pracowników analizy somatycznej,<span className='font-bold text-[var(--textNeonColorSecondary)]'> nazwisko nieznane, dane zostały usunięte z systemu </span>, wydarzyło się coś dziwnego. Czujniki wewnętrzne zarejestrowały nagły spadek temperatury pomieszczenia o 9 stopni w ciągu 0,4 sekundy. Cała jednostka monitorująca zawiesiła się, a po restarcie... nie było już śladu kontaktu z eksploratorem.",
     "delay": 300,
     "duration": 300
   },
   {
     "id": 31,
-    "text": "Oczywiście fizycznie wciąż tam był. Kamera zewnętrzna potwierdzała jego obecność. Ale logi nie. Dla systemu — przestał istnieć na te 4 sekundy.",
+    "text": "Oczywiście fizycznie wciąż tam był. Kamera zewnętrzna potwierdzała jego obecność. Ale logi nie. Dla systemu, przestał istnieć.",
     "delay": 300,
     "duration": 300
   },
@@ -206,7 +206,7 @@
   },
   {
     "id": 34,
-    "text": "Nie nadano mu nowej tożsamości. Oficjalnie nie został nawet zarejestrowany jako powracający. Jedyną nazwą, jaką przyjął system ERIS, był „Świadek Głębi” — nazwa nadana mu automatycznie przez podsystem analityczny, odpowiedzialny za klasyfikację encji anormalnych.",
+    "text": "Nie nadano mu nowej tożsamości. Oficjalnie nie został nawet zarejestrowany jako powracający. Jedyną nazwą, jaką przyjął system ERIS, był „Świadek Głębi”, nazwa nadana mu automatycznie przez podsystem analityczny, odpowiedzialny za klasyfikację encji anormalnych.",
     "delay": 300,
     "duration": 300
   },
@@ -218,7 +218,7 @@
   },
   {
     "id": 36,
-    "text": "Jeden z kapłanów z niższych dzielnic twierdził, że znał R-9K_Δ — że to był jego brat. Inni mówili, że R-9K_Δ zginął już przed zejściem.",
+    "text": "Jeden z kapłanów z niższych dzielnic twierdził, że znał R-9K_Δ, że to był jego brat. Inni mówili, że R-9K_Δ zginął już przed zejściem.",
     "delay": 300,
     "duration": 300
   },
@@ -231,7 +231,7 @@
   },
   {
     "id": 38,
-    "text": "Plotki o „Świadku Głębi” rozprzestrzeniły się szybciej niż cotygodniowe aktualizacje neuranetu, w których dyskutowano o najnowszym trendzie — smaku gąbek teksturnych. Kiedyś były tylko zamiennikiem jedzenia dla niższych sektorów. Teraz stały się symbolem klasy, statusu i... pogardy. Ale nawet najbardziej uzależnieni od danych nie potrafili się oderwać od tego tematu.",
+    "text": "Plotki o „Świadku Głębi” rozprzestrzeniły się szybciej niż cotygodniowe aktualizacje neuranetu, w których dyskutowano o najnowszym trendzie, smaku gąbek teksturnych. Kiedyś były tylko zamiennikiem jedzenia. Teraz stały się symbolem klasy, statusu i... pogardy. Ale nawet najbardziej uzależnieni od danych nie potrafili się oderwać od tego tematu.",
     "delay": 300,
     "duration": 300
   },
@@ -243,7 +243,7 @@
   },
   {
     "id": 40,
-    "text": "W Feris nie istniała dusza, która wieczorami nie szeptałaby jego kodu jak zaklęcia. Nie trzeba było specjalistycznych terminali, by poczuć, że coś się zmieniło. Systemy miejskie, wcześniej obojętne, zaczęły wykazywać... niepokój. Eris rejestrowała fluktuacje emocjonalne w sieci sensorycznej, których źródło nie dało się przypisać żadnemu z obywateli. Wierchuszkę miasta ogarnął lęk, ale niższe warstwy... zaczęły go czcić.",
+    "text": "W Feris nie istniała dusza, która wieczorami nie szeptałaby jego kodu jak zaklęcia. Nie trzeba było specjalistycznych terminali, by poczuć, że coś się zmieniło. Systemy miejskie, wcześniej obojętne, zaczęły wykazywać... niepokój. Eris rejestrowała fluktuacje emocjonalne w sieci sensorycznej, których źródło nie dało się przypisać żadnemu z obywateli. Wierchuszkę miasta ogarnął lęk, ale niektórzy... zaczęli go czcić.",
     "delay": 300,
     "duration": 300
   },
@@ -286,7 +286,7 @@
   },
   {
     "id": 47,
-    "text": "Nie przymknął powiek nawet na moment. Tętno — zgodne z ludzkim, ale zbyt rytmiczne. Oddech — płytki, ale utrzymany w perfekcyjnej proporcji: cztery sekundy wdechu, cztery sekundy wydechu. Jakby nie oddychał, tylko <span className='font-bold text-[var(--textNeonColor)]'>emulował oddech</span>.",
+    "text": "Nie przymknął powiek nawet na moment. Tętno, zgodne z ludzkim, ale zbyt rytmiczne. Oddech, płytki, ale utrzymany w perfekcyjnej proporcji: cztery sekundy wdechu, cztery sekundy wydechu. Jakby nie oddychał, tylko <span className='font-bold text-[var(--textNeonColor)]'>emulował oddech</span>.",
     "delay": 300,
     "duration": 300
   },
@@ -305,7 +305,7 @@
   },
   {
     "id": 50,
-    "text": "[STATUS: STABILNY] Jednostka spożywa posiłek zgodnie z wzorcem. Brak oznak łaknienia. Brak sygnału błędnego spożycia. Brak sygnału emocjonalnego. Brak. Brak.",
+    "text": "[STATUS: STABILNY] Jednostka spożywa posiłek zgodnie ze wzorcem. Brak oznak łaknienia. Brak sygnału błędnego spożycia. Brak sygnału emocjonalnego. Brak. Brak.",
     "delay": 300,
     "duration": 300,
     "type": "command"
@@ -319,7 +319,7 @@
   },
   {
     "id": 52,
-    "text": "Na korytarzach mówiło się, że strażnicy nie chcą już pilnować bloku. Że gdy stoją przy drzwiach, coś ich obserwuje — nie on, ale coś z nim. Jeden z nich złożył wniosek o przeniesienie. W jego raporcie nie było konkretów, tylko jedno zdanie:",
+    "text": "Na korytarzach mówiło się, że strażnicy nie chcą już pilnować bloku. Że gdy stoją przy drzwiach, coś ich obserwuje, nie on, ale coś z nim. Jeden z nich złożył wniosek o przeniesienie. W jego raporcie nie było konkretów, tylko jedno zdanie:",
     "delay": 300,
     "duration": 300
   },
@@ -365,7 +365,7 @@
   },
   {
     "id": 59,
-    "text": "Nie padło żadne słowo. R-9K_Δ siedział przy ścianie, nieruchomo. Oczy otwarte. Źrenice nie reagowały na światło. Nie reagowały w ogóle. Były jak martwe czujniki — obecne, ale wyłączone.",
+    "text": "Nie padło żadne słowo. R-9K_Δ siedział przy ścianie, nieruchomo. Oczy otwarte. Źrenice nie reagowały na światło. Nie reagowały w ogóle. Były jak martwe czujniki, obecne, ale wyłączone.",
     "delay": 300,
     "duration": 300
   },
@@ -397,7 +397,7 @@
   },
   {
     "id": 64,
-    "text": "Rozpoczęto testy psychostymulacyjne. Podjęto próbę wywołania reakcji werbalnej przez emisję znanych dźwięków — głosy członków zespołu, fragmenty logów z jego misji. R-9K_Δ nie zareagował. Jednak przez 0,8 sekundy w jego pulsie odnotowano fluktuację — pierwszą od dnia powrotu.",
+    "text": "Rozpoczęto testy psychostymulacyjne. Podjęto próbę wywołania reakcji werbalnej przez emisję znanych dźwięków, głosy członków zespołu, fragmenty logów z jego misji. R-9K_Δ nie zareagował. Jednak przez krótką chwilę, niespłena sekundę, w jego pulsie odnotowano fluktuację, pierwszą od dnia powrotu.",
     "delay": 300,
     "duration": 300
   },
@@ -436,7 +436,7 @@
   },
   {
     "id": 70,
-    "text": "Nie w nim — w otoczeniu.",
+    "text": "Nie w nim, w otoczeniu.",
     "delay": 300,
     "duration": 300
   },
@@ -479,7 +479,7 @@
   },
   {
     "id": 77,
-    "text": "Nie powiedział nic. Ale mimo to — głos pojawił się w systemie.",
+    "text": "Nie powiedział nic. Ale mimo to, głos pojawił się w systemie.",
     "delay": 300,
     "duration": 300
   },
@@ -504,7 +504,7 @@
   },
   {
     "id": 81,
-    "text": "W ciągu minuty, plik z zapisem głosu znalazł się w 142 terminalach. Większość z nich... nie miała nawet dostępu do sektora medycznego.",
+    "text": "W ciągu minuty, plik z zapisem głosu rozszedł się po prawie wszyskich terminalach znajdujących się w mieście Feris. Większość z nich... nie miała nawet dostępu do sektora medycznego.",
     "delay": 300,
     "duration": 300
   },
@@ -542,7 +542,7 @@
   },
   {
     "id": 87,
-    "text": "Kamery, które do tej pory przesyłały pełen obraz z jego celi, nagle zgłaszają brak sygnału — choć technicznie są sprawne. Czujniki termiczne rejestrują „obecność bez lokalizacji”. Dane z biometryki stają się błędne, jakby organizm przestał funkcjonować w znanych granicach parametrów biologicznych.",
+    "text": "Kamery, które do tej pory przesyłały pełen obraz z jego celi, nagle zgłaszają brak sygnału, choć technicznie są sprawne. Czujniki termiczne rejestrują „obecność bez lokalizacji”. Dane z biometryki stają się błędne, jakby organizm przestał funkcjonować w znanych granicach parametrów biologicznych.",
     "delay": 300,
     "duration": 300
   },
@@ -607,7 +607,7 @@
   },
   {
     "id": 97,
-    "text": "Gdy zespół medyczny wszedł do środka, przez chwilę wszyscy stali w milczeniu, jakby ich umysły potrzebowały kilku sekund na przeliczenie tego, co widzą — a raczej, czego nie widzą.",
+    "text": "Gdy zespół medyczny wszedł do środka, przez chwilę wszyscy stali w milczeniu, jakby ich umysły potrzebowały kilku sekund na przeliczenie tego, co widzą, a raczej, czego nie widzą.",
     "delay": 300,
     "duration": 300
   },
@@ -619,13 +619,13 @@
   },
   {
     "id": 99,
-    "text": "Łóżko nieruszone. Materac zimny. Konsola medyczna pusta. W szklance — wciąż pół łyka płynu regeneracyjnego z dnia poprzedniego.",
+    "text": "Łóżko nieruszone. Materac zimny. Konsola medyczna pusta. W szklance, wciąż pół łyka płynu regeneracyjnego z dnia poprzedniego.",
     "delay": 300,
     "duration": 300
   },
   {
     "id": 100,
-    "text": "To niemożliwe — powiedział pierwszy technik. Sprawdziliśmy logi. Przeszliśmy po kodach zabezpieczeń. Sprawdziliśmy system śluz. Żadnych przerw w zasilaniu, żadnych anomalii strukturalnych. Zwyczajnie… zniknął.",
+    "text": "To niemożliwe, powiedział pierwszy technik. Sprawdziliśmy logi. Przeszliśmy po kodach zabezpieczeń. Sprawdziliśmy system śluz. Żadnych przerw w zasilaniu, żadnych anomalii strukturalnych. Zwyczajnie… zniknął.",
     "delay": 300,
     "duration": 300
   },
@@ -637,7 +637,7 @@
   },
   {
     "id": 102,
-    "text": "Na ekranie monitora przy łóżku — wypalone w martwym fosforze trzy słowa:",
+    "text": "Na ekranie monitora przy łóżku, wypalone w martwym fosforze trzy słowa:",
     "delay": 300,
     "duration": 300
   },
@@ -669,28 +669,28 @@
   },
   {
     "id": 107,
-    "text": "[07:41:12] — Obiekt R-9K_Δ nieobecny.",
+    "text": "[07:41:12], Obiekt R-9K_Δ nieobecny.",
     "delay": 300,
     "duration": 300,
     "type": "system_message"
   },
   {
     "id": 108,
-    "text": "[07:41:13] — Błąd lokalizacji biologicznej.",
+    "text": "[07:41:13], Błąd lokalizacji biologicznej.",
     "delay": 300,
     "duration": 300,
     "type": "system_message"
   },
   {
     "id": 109,
-    "text": "[07:41:14] — Status: Niezdefiniowany.",
+    "text": "[07:41:14], Status: Niezdefiniowany.",
     "delay": 300,
     "duration": 300,
     "type": "system_message"
   },
   {
     "id": 110,
-    "text": "[07:41:16] — Wartość poznawcza: Pozostałości aktywne.",
+    "text": "[07:41:16], Wartość poznawcza: Pozostałości aktywne.",
     "delay": 300,
     "duration": 300,
     "type": "system_message"
@@ -761,13 +761,13 @@
   },
   {
     "id": 121,
-    "text": "Pracownicy sektora transmisji zauważyli, że przy uruchamianiu niektórych terminali przez ułamek sekundy pojawia się cień sylwetki. Półprofil. Ramiona opuszczone. Głowa lekko uniesiona, oczy — jak wtedy — nie skupione na niczym, ale widzące wszystko.",
+    "text": "Pracownicy sektora transmisji zauważyli, że przy uruchamianiu niektórych terminali przez ułamek sekundy pojawia się cień sylwetki. Półprofil. Ramiona opuszczone. Głowa lekko uniesiona, oczy, jak wtedy, nie skupione na niczym, ale widzące wszystko.",
     "delay": 300,
     "duration": 300
   },
   {
     "id": 122,
-    "text": "Nocą ktoś słyszał w zewnętrznym sektorze mechaniczne kroki, choć system nie zarejestrował żadnych jednostek poruszających się po strefie. Dzieci w niższych sektorach zaczęły rysować postać w czerni z białą linią na piersi.",
+    "text": "Nocą ktoś słyszał w zewnętrznym sektorze mechaniczne kroki, choć system nie zarejestrował żadnych jednostek poruszających się po strefie. Dzieci zaczęły rysować postać w czerni z białą linią na piersi.",
     "delay": 300,
     "duration": 300
   },
@@ -786,7 +786,7 @@
   },
   {
     "id": 125,
-    "text": "W starym klasztorze danych, w zachowanych fragmentach przedupadkowego archiwum, jeden z Węzłowych — stary mężczyzna o imieniu Ikraan — opublikował raport prywatny, który krążył po sieci tylko przez kilka godzin, zanim został usunięty przez system bezpieczeństwa.",
+    "text": "W starym klasztorze danych, w zachowanych fragmentach przedupadkowego archiwum, jeden z Węzłowych, stary mężczyzna o imieniu Ikraan, opublikował raport prywatny, który krążył po sieci tylko przez kilka godzin, zanim został usunięty przez system bezpieczeństwa.",
     "delay": 300,
     "duration": 300
   },
@@ -913,7 +913,7 @@
   },
   {
     "id": 144,
-    "text": "Tak kończy się opowieść o R-9K_Δ. Albo raczej — jego obecność. Bo w Feris nie istnieją końce. Tylko kolejne uruchomienia.",
+    "text": "Tak kończy się opowieść o R-9K_Δ. Albo raczej, jego obecność. Bo w Feris nie istnieją końce. Tylko kolejne uruchomienia.",
     "delay": 300,
     "duration": 300
   },
