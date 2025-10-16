@@ -54,10 +54,22 @@ export default function TerminalLine({
 
   const getClassName = () => {
     let base = "inline-block whitespace-pre-wrap break-words";
-    if (item.type === JsonType.COMMAND) base += " text-green-800 glitch";
-    if (item.type === JsonType.SYSTEM_MESSAGE) base += " text-cyan-500 italic";
-    if (item.type === JsonType.ERROR) base += " text-red-500 font-bold";
-    return base;
+
+    switch (item.type) {
+      case JsonType.COMMAND:
+        base += " text-green-800 glitch";
+        break;
+      case JsonType.SYSTEM_MESSAGE:
+        base += " text-cyan-500 italic";
+        break;
+      case JsonType.ERROR:
+        base += " text-red-500 font-bold";
+        break;
+      default:
+        break;
+    }
+    
+   return base;
   };
 
   const formatText = () => {
