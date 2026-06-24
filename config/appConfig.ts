@@ -1,6 +1,6 @@
 export const AppConfig = {
-  musicMainVolume: 0.05,
-  musicNodeVolume: 0.13,
+  musicMainVolume: 1.0,
+  musicNodeVolume: 1.0,
   beepVolume: 0.015,
   audioEvil: "/audio/evil.mp3",
   audioApathias: "/audio/apathias.mp3",

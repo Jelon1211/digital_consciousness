@@ -3,6 +3,17 @@ import { JsonInterface } from "@/types/JsonInterface";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
+const initialEngineState: EngineState = {
+  phase: Phase.INIT,
+  unitName: "",
+  currentCommand: "",
+  currentSector: undefined,
+  currentNode: undefined,
+  story: undefined,
+  isEntered: false,
+  isMusic: true,
+};
+
 export interface EngineStore extends EngineState {
   setPhase: (phase: Phase) => void;
   setCommand: (command: string) => void;
@@ -11,19 +22,14 @@ export interface EngineStore extends EngineState {
   setStory: (story: JsonInterface[]) => void;
   setIsEntered: (isEntered: boolean) => void;
   setIsMusic: (isMusic: boolean) => void;
+
+  resetEngine: () => void;
 }
 
 export const useEngineStore = create<EngineStore>()(
   persist(
     (set) => ({
-      phase: Phase.INIT,
-      unitName: "",
-      currentCommand: "",
-      currentSector: undefined,
-      currentNode: undefined,
-      story: undefined,
-      isEntered: false,
-      isMusic: true,
+      ...initialEngineState,
 
       setPhase: (phase) => set({ phase }),
       setCommand: (command) => set({ currentCommand: command }),
@@ -32,6 +38,8 @@ export const useEngineStore = create<EngineStore>()(
       setStory: (story) => set({ story }),
       setIsEntered: (isEntered) => set({ isEntered }),
       setIsMusic: (isMusic) => set({ isMusic }),
+
+      resetEngine: () => set({ ...initialEngineState }),
     }),
     {
       name: "terminal-engine-store",
@@ -45,6 +53,6 @@ export const useEngineStore = create<EngineStore>()(
         isEntered: state.isEntered,
         isMusic: state.isMusic,
       }),
-    }
-  )
+    },
+  ),
 );

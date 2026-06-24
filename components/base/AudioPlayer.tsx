@@ -5,6 +5,7 @@ import { useEngineStore } from "@/store/useEngineStore";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { AppConfig } from "@/config/appConfig";
+import { useAudioSettingsStore } from "@/store/useAudioSettingsStore";
 
 export default function AudioPlayer() {
   const [isAudioEnabled, setIsAudioEnabled] = useState(false);
@@ -16,14 +17,20 @@ export default function AudioPlayer() {
   const isMusic = useEngineStore((state) => state.isMusic);
   const setIsMusic = useEngineStore((state) => state.setIsMusic);
 
+  const musicVolume = useAudioSettingsStore((state) => state.musicVolume);
+
   const getVolume = useCallback(
-    () => (isPhaseNode ? AppConfig.musicNodeVolume : AppConfig.musicMainVolume),
-    [isPhaseNode]
+    () =>
+      (isPhaseNode ? AppConfig.musicNodeVolume : AppConfig.musicMainVolume) *
+      musicVolume,
+    [isPhaseNode, musicVolume],
   );
 
   const playAudio = useCallback(() => {
     const audio = audioRef.current;
-    if (!audio) return;
+    if (!audio) {
+      return;
+    }
 
     audio.muted = false;
     audio.volume = getVolume();
@@ -33,7 +40,9 @@ export default function AudioPlayer() {
 
   const pauseAudio = () => {
     const audio = audioRef.current;
-    if (!audio) return;
+    if (!audio) {
+      return;
+    }
 
     audio.pause();
     setIsAudioEnabled(false);
@@ -41,7 +50,9 @@ export default function AudioPlayer() {
 
   const togglePlay = () => {
     const audio = audioRef.current;
-    if (!audio) return;
+    if (!audio) {
+      return;
+    }
 
     if (audio.paused) {
       setIsMusic(true);
@@ -53,15 +64,26 @@ export default function AudioPlayer() {
   };
 
   useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) {
+      return;
+    }
+
+    audio.volume = getVolume();
+  }, [getVolume]);
+
+  useEffect(() => {
     if (isEntered && audioRef.current?.paused && isMusic) {
       playAudio();
     }
-  }, [isEntered, playAudio]);
+  }, [isEntered, isMusic, playAudio]);
 
   useEffect(() => {
     const audio = audioRef.current;
     const newSrc = isPhaseNode ? AppConfig.audioApathias : AppConfig.audioEvil;
-    if (!audio || audio.src === window.location.origin + newSrc) return;
+    if (!audio || audio.src === window.location.origin + newSrc) {
+      return;
+    }
 
     const wasPlaying = !audio.paused;
     audio.pause();
@@ -80,7 +102,7 @@ export default function AudioPlayer() {
 
   return (
     <div
-      className="cursor-pointer crt-text w-fit absolute top-1 -right-15 hover:scale-105 transition-all duration-300 ease-in-out"
+      className="cursor-pointer crt-text w-fit absolute top-5 -right-5 hover:scale-105 transition-all duration-300 ease-in-out"
       onClick={togglePlay}
     >
       <Image

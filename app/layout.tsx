@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${orbitron.variable} ${vcr.variable} ${mega.variable} antialiased min-h-dvh mt-5`}
+        className={`${orbitron.variable} ${vcr.variable} ${mega.variable} antialiased min-h-dvh`}
       >
         {/* <h4
           style={{
