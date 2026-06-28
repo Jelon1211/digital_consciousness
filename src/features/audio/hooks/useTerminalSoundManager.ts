@@ -12,13 +12,17 @@ export function useTerminalSoundManager() {
   }, []);
 
   const playBeep = useCallback(() => {
-    if (beepSoundsRef.current.length === 0) return;
+    if (beepSoundsRef.current.length === 0) {
+      return;
+    }
 
     const random = Math.floor(Math.random() * beepSoundsRef.current.length);
     const sound = beepSoundsRef.current[random].cloneNode() as HTMLAudioElement;
 
     sound.volume = AppConfig.beepVolume;
-    sound.play().catch(() => {});
+    sound.play().catch(() => {
+      console.warn("Catch on sound.play()");
+    });
   }, []);
 
   return {

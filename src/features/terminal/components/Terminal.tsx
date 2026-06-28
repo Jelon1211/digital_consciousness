@@ -46,7 +46,7 @@ export default function Terminal() {
 
   if (!isTerminalReady) {
     return (
-      <div className="mt-10 flex lg:block justify-center">
+      <div className="mt-10 flex justify-center">
         {terminalLoading ? (
           <div className="teaser-component teaser-btn crt-text !cursor-default">
             Loading...

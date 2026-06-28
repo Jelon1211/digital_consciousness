@@ -40,7 +40,7 @@ export default function TerminalTextLine({
         lastBeepRef.current = now;
       }
     },
-    [isNode, playBeep]
+    [isNode, playBeep],
   );
 
   const visibleText = useTypewriterText(text, {
@@ -71,8 +71,14 @@ export default function TerminalTextLine({
   const formatText = () => {
     const parsedText = parse(visibleText);
 
-    if (item.type === JsonType.COMMAND) return <span>[{parsedText}]</span>;
-    if (item.type === JsonType.ERROR) return <span>ERR {parsedText}</span>;
+    if (item.type === JsonType.COMMAND) {
+      return <span>[{parsedText}]</span>;
+    }
+
+    if (item.type === JsonType.ERROR) {
+      return <span>ERR {parsedText}</span>;
+    }
+
     return <>{parsedText}</>;
   };
 

@@ -6,18 +6,19 @@ import { Stories } from "@/domain/content/storyPaths";
 export class StartCommand extends BaseCommand {
   name = Commands.START;
 
-  matches() {
-    return false;
+  matches(input: string) {
+    return input.trim().toLowerCase() === this.name;
   }
 
   canExecute(state: EngineState) {
-    return state.phase === Phase.INIT;
+    const canExecuteInStates = [Phase.INIT, Phase.MAIN];
+    return canExecuteInStates.includes(state.phase);
   }
 
   async execute(
     _state: EngineState,
     update: (partial: Partial<EngineState>) => void,
-    input: string
+    input: string,
   ) {
     const trimmedName = input.trim();
     const story = await this.getStoryFromServer(Stories.INTRODUCTION);
@@ -26,7 +27,9 @@ export class StartCommand extends BaseCommand {
     update({
       unitName: trimmedName,
       phase: Phase.MAIN,
-      story: story ? await this.replaceStory(story, nextState, trimmedName) : null,
+      story: story
+        ? await this.replaceStory(story, nextState, trimmedName)
+        : null,
     });
   }
 }

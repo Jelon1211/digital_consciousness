@@ -12,6 +12,7 @@ export default function Menu() {
 
   const unitName = useEngineStore((state) => state.unitName);
   const resetEngine = useEngineStore((state) => state.resetEngine);
+  const isMusic = useEngineStore((state) => state.isMusic);
 
   return (
     <>
@@ -54,7 +55,48 @@ export default function Menu() {
               </span>
 
               <span className="text-neon-secondary text-xs">
-                {Math.round(musicVolume * 100)}%
+                {Math.round(musicVolume * 100)}% / {isMusic ? "ON" : "OFF"}
+              </span>
+            </div>
+
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value={Math.round(musicVolume * 100)}
+              onChange={(event) =>
+                setMusicVolume(Number(event.target.value) / 100)
+              }
+              className="
+                w-full h-2 rounded-full appearance-none cursor-pointer bg-background caret-transparent
+
+                [&::-webkit-slider-thumb]:appearance-none
+                [&::-webkit-slider-thumb]:w-5
+                [&::-webkit-slider-thumb]:h-5
+                [&::-webkit-slider-thumb]:rounded-full
+                [&::-webkit-slider-thumb]:bg-neon-secondary
+                [&::-webkit-slider-thumb]:border
+                [&::-webkit-slider-thumb]:border-neon
+                [&::-webkit-slider-thumb]:shadow-[0_0_12px_var(--textNeonColorSecondary)]
+
+                [&::-moz-range-thumb]:w-5
+                [&::-moz-range-thumb]:h-5
+                [&::-moz-range-thumb]:rounded-full
+                [&::-moz-range-thumb]:bg-neon-secondary
+                [&::-moz-range-thumb]:border
+                [&::-moz-range-thumb]:border-neon
+                [&::-moz-range-thumb]:shadow-[0_0_12px_var(--textNeonColorSecondary)]
+              "
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-neon-secondary text-xs uppercase tracking-widest">
+                Music
+              </span>
+
+              <span className="text-neon-secondary text-xs">
+                {Math.round(musicVolume * 100)}% / {isMusic ? "ON" : "OFF"}
               </span>
             </div>
 

@@ -35,7 +35,7 @@ export class Engine {
       if (errorStory) {
         const replacedStory = replacePlaceholders(
           errorStory,
-          replacePlaceholderObject(input)
+          replacePlaceholderObject(input),
         );
         this.update({ story: replacedStory });
       }

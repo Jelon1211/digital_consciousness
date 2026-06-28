@@ -53,7 +53,7 @@ export default function TerminalInput({
 
   return (
     <div className="flex items-center space-x-2 mt-2">
-      <span className="text-green-400">
+      <span className="text-green-400 text-nowrap">
         {unitName ? `${unitName}: ` : "Eris: "}
       </span>
       <input
@@ -68,6 +68,7 @@ export default function TerminalInput({
         }}
         onFocus={() => setInputFocused(true)}
         className="terminal bg-black text-green-400 border-none outline-none w-full"
+        name="command"
       />
     </div>
   );
