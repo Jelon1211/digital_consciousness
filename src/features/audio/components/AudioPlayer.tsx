@@ -14,10 +14,10 @@ export default function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const isEntered = useEngineStore((state) => state.isEntered);
   const isPhaseNode = useEngineStore((state) => state.phase === Phase.NODE);
-  const isMusic = useEngineStore((state) => state.isMusic);
-  const setIsMusic = useEngineStore((state) => state.setIsMusic);
 
+  const isMusic = useAudioSettingsStore((state) => state.isMusic);
   const musicVolume = useAudioSettingsStore((state) => state.musicVolume);
+  const setIsMusic = useAudioSettingsStore((state) => state.setIsMusic);
 
   const getVolume = useCallback(
     () =>

@@ -1,5 +1,6 @@
 import { AppConfig } from "@/shared/config/appConfig";
 import { useRef, useEffect, useCallback } from "react";
+import { useAudioSettingsStore } from "@/features/audio/audio.store";
 
 export function useTerminalSoundManager() {
   const beepSoundsRef = useRef<HTMLAudioElement[]>([]);
@@ -18,8 +19,9 @@ export function useTerminalSoundManager() {
 
     const random = Math.floor(Math.random() * beepSoundsRef.current.length);
     const sound = beepSoundsRef.current[random].cloneNode() as HTMLAudioElement;
+    const { beepVolume } = useAudioSettingsStore.getState();
 
-    sound.volume = AppConfig.beepVolume;
+    sound.volume = Math.min(1, AppConfig.beepVolume * beepVolume);
     sound.play().catch(() => {
       console.warn("Catch on sound.play()");
     });

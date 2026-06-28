@@ -4,15 +4,38 @@ import { useState } from "react";
 import { useAudioSettingsStore } from "@/features/audio/audio.store";
 import { useEngineStore } from "@/domain/engine/engine.store";
 
+const sliderClassName = `
+  w-full h-2 rounded-full appearance-none cursor-pointer bg-background caret-transparent
+
+  [&::-webkit-slider-thumb]:appearance-none
+  [&::-webkit-slider-thumb]:w-5
+  [&::-webkit-slider-thumb]:h-5
+  [&::-webkit-slider-thumb]:rounded-full
+  [&::-webkit-slider-thumb]:bg-neon-secondary
+  [&::-webkit-slider-thumb]:border
+  [&::-webkit-slider-thumb]:border-neon
+  [&::-webkit-slider-thumb]:shadow-[0_0_12px_var(--textNeonColorSecondary)]
+
+  [&::-moz-range-thumb]:w-5
+  [&::-moz-range-thumb]:h-5
+  [&::-moz-range-thumb]:rounded-full
+  [&::-moz-range-thumb]:bg-neon-secondary
+  [&::-moz-range-thumb]:border
+  [&::-moz-range-thumb]:border-neon
+  [&::-moz-range-thumb]:shadow-[0_0_12px_var(--textNeonColorSecondary)]
+`;
+
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
+  const isMusic = useAudioSettingsStore((state) => state.isMusic);
   const musicVolume = useAudioSettingsStore((state) => state.musicVolume);
+  const beepVolume = useAudioSettingsStore((state) => state.beepVolume);
   const setMusicVolume = useAudioSettingsStore((state) => state.setMusicVolume);
+  const setBeepVolume = useAudioSettingsStore((state) => state.setBeepVolume);
 
   const unitName = useEngineStore((state) => state.unitName);
   const resetEngine = useEngineStore((state) => state.resetEngine);
-  const isMusic = useEngineStore((state) => state.isMusic);
 
   return (
     <>
@@ -67,36 +90,17 @@ export default function Menu() {
               onChange={(event) =>
                 setMusicVolume(Number(event.target.value) / 100)
               }
-              className="
-                w-full h-2 rounded-full appearance-none cursor-pointer bg-background caret-transparent
-
-                [&::-webkit-slider-thumb]:appearance-none
-                [&::-webkit-slider-thumb]:w-5
-                [&::-webkit-slider-thumb]:h-5
-                [&::-webkit-slider-thumb]:rounded-full
-                [&::-webkit-slider-thumb]:bg-neon-secondary
-                [&::-webkit-slider-thumb]:border
-                [&::-webkit-slider-thumb]:border-neon
-                [&::-webkit-slider-thumb]:shadow-[0_0_12px_var(--textNeonColorSecondary)]
-
-                [&::-moz-range-thumb]:w-5
-                [&::-moz-range-thumb]:h-5
-                [&::-moz-range-thumb]:rounded-full
-                [&::-moz-range-thumb]:bg-neon-secondary
-                [&::-moz-range-thumb]:border
-                [&::-moz-range-thumb]:border-neon
-                [&::-moz-range-thumb]:shadow-[0_0_12px_var(--textNeonColorSecondary)]
-              "
+              className={sliderClassName}
             />
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between gap-4">
               <span className="text-neon-secondary text-xs uppercase tracking-widest">
-                Music
+                Beep
               </span>
 
               <span className="text-neon-secondary text-xs">
-                {Math.round(musicVolume * 100)}% / {isMusic ? "ON" : "OFF"}
+                {Math.round(beepVolume * 100)}%
               </span>
             </div>
 
@@ -104,30 +108,11 @@ export default function Menu() {
               type="range"
               min="0"
               max="100"
-              value={Math.round(musicVolume * 100)}
+              value={Math.round(beepVolume * 100)}
               onChange={(event) =>
-                setMusicVolume(Number(event.target.value) / 100)
+                setBeepVolume(Number(event.target.value) / 100)
               }
-              className="
-                w-full h-2 rounded-full appearance-none cursor-pointer bg-background caret-transparent
-
-                [&::-webkit-slider-thumb]:appearance-none
-                [&::-webkit-slider-thumb]:w-5
-                [&::-webkit-slider-thumb]:h-5
-                [&::-webkit-slider-thumb]:rounded-full
-                [&::-webkit-slider-thumb]:bg-neon-secondary
-                [&::-webkit-slider-thumb]:border
-                [&::-webkit-slider-thumb]:border-neon
-                [&::-webkit-slider-thumb]:shadow-[0_0_12px_var(--textNeonColorSecondary)]
-
-                [&::-moz-range-thumb]:w-5
-                [&::-moz-range-thumb]:h-5
-                [&::-moz-range-thumb]:rounded-full
-                [&::-moz-range-thumb]:bg-neon-secondary
-                [&::-moz-range-thumb]:border
-                [&::-moz-range-thumb]:border-neon
-                [&::-moz-range-thumb]:shadow-[0_0_12px_var(--textNeonColorSecondary)]
-              "
+              className={sliderClassName}
             />
           </div>
 
