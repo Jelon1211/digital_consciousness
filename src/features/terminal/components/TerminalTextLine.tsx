@@ -8,12 +8,12 @@ import { useTerminalSoundManager } from "@/features/audio/hooks/useTerminalSound
 import { useEngineStore } from "@/domain/engine/engine.store";
 import { Phase } from "@/domain/engine/EngineState";
 import { AppConfig } from "@/shared/config/appConfig";
-import { JsonInterface } from "@/domain/content/story.types";
+import { PreparedStoryI } from "@/domain/content/story.types";
 import { useTypewriterText } from "./useTypewriterText";
 import TerminalCursor from "./TerminalCursor";
 
 type TerminalTextLineProps = {
-  item: JsonInterface;
+  item: PreparedStoryI;
   isLast: boolean;
 };
 

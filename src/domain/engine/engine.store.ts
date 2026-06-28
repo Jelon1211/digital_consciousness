@@ -1,5 +1,5 @@
 import { EngineState, Phase } from "@/domain/engine/EngineState";
-import { JsonInterface } from "@/domain/content/story.types";
+import { PreparedStoryI } from "@/domain/content/story.types";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
@@ -18,7 +18,7 @@ export interface EngineStore extends EngineState {
   setCommand: (command: string) => void;
   setSector: (sector: string) => void;
   setNode: (node: string) => void;
-  setStory: (story: JsonInterface[]) => void;
+  setStory: (story: PreparedStoryI[]) => void;
   setIsEntered: (isEntered: boolean) => void;
 
   resetEngine: () => void;

@@ -1,4 +1,4 @@
-import { JsonInterface } from "@/domain/content/story.types";
+import { PreparedStoryI } from "@/domain/content/story.types";
 
 export enum Phase {
   INIT = "init",
@@ -14,5 +14,5 @@ export interface EngineState {
   currentSector?: string;
   currentNode?: string;
   isEntered: boolean;
-  story?: JsonInterface[] | null;
+  story?: PreparedStoryI[] | null;
 }

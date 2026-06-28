@@ -1,38 +1,32 @@
 [
   {
-    "id": 1,
     "text": ">>> ERIS: Konsola pomocnicza aktywna.",
     "delay": 100,
     "duration": 1000
   },
   {
-    "id": 2,
     "text": "Możesz połączyć się z systemem pamięci.",
     "delay": 200,
     "duration": 1000
   },
   {
-    "id": 3,
     "text": "Aby rozpocząć synchronizację wpisz:",
     "delay": 200,
     "duration": 1000
   },
   {
-    "id": 4,
     "text": "logs",
     "delay": 200,
     "duration": 400,
     "type": "command"
   },
   {
-    "id": 5,
     "text": "W każdej chwili możesz podjerzeć dostepne komendy, zaznaczone są kwadratowymi nawiasami <span className='font-bold text-[var(--textNeonColor)]'>[command]</span>.",
     "delay": 200,
     "duration": 1000
   },
-  { "id": 6, "text": "Dostępne komendy:", "delay": 200, "duration": 500 },
+  { "text": "Dostępne komendy:", "delay": 200, "duration": 500 },
   {
-    "id": 7,
     "text": "start, logs, sectors, help",
     "delay": 200,
     "duration": 1000,

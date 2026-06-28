@@ -4,7 +4,7 @@ import {
   replacePlaceholders,
 } from "@/domain/content/placeholder";
 import { Command } from "@/domain/engine/command.types";
-import { JsonInterface } from "@/domain/content/story.types";
+import { PreparedStoryI } from "@/domain/content/story.types";
 import { getStory } from "@/domain/content/actions/getStory";
 
 export abstract class BaseCommand implements Command {
@@ -14,23 +14,23 @@ export abstract class BaseCommand implements Command {
   abstract execute(
     state: EngineState,
     update: (partial: Partial<EngineState>) => void,
-    input: string
+    input: string,
   ): Promise<void>;
 
   protected async replaceStory(
-    story: JsonInterface[],
+    story: PreparedStoryI[],
     state: EngineState,
-    input: string
-  ): Promise<JsonInterface[]> {
+    input: string,
+  ): Promise<PreparedStoryI[]> {
     return replacePlaceholders(
       story,
-      replacePlaceholderObject(input, state.unitName)
+      replacePlaceholderObject(input, state.unitName),
     );
   }
 
   protected async getStoryFromServer(
-    path: string
-  ): Promise<JsonInterface[] | null> {
+    path: string,
+  ): Promise<PreparedStoryI[] | null> {
     return await getStory(path);
   }
 }

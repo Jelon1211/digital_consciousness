@@ -1,25 +1,21 @@
 [
   {
-    "id": 1,
     "text": ">>> Inicjalizacja interfejsu eksploracyjnego...",
     "delay": 300,
     "duration": 1000
   },
   {
-    "id": 2,
     "text": ">>> Dostępne sektory miasta Feris zidentyfikowane:",
     "delay": 300,
     "duration": 1000
   },
   {
-    "id": 3,
     "text": "[sector_01] Osad Danych",
     "delay": 300,
     "duration": 1000,
     "type": "system_message"
   },
   {
-    "id": 4,
     "text": "'sector_01', 'logs'",
     "delay": 300,
     "duration": 1000,

@@ -11,9 +11,6 @@ export class CommandRegistry {
 
   findMatching(input: string, state: EngineState): Command | undefined {
     return this.commands.find((command) => {
-      console.log(
-        `${JSON.stringify(command)} czy matches -> ${command.matches(input, state)}`,
-      );
       return command.matches(input, state) && command.canExecute(state);
     });
   }

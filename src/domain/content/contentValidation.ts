@@ -8,7 +8,7 @@ const getTypeName = (value: unknown) =>
 
 export function validateStoryContent(
   data: unknown,
-  source: string
+  source: string,
 ): JsonInterface[] {
   if (!Array.isArray(data)) {
     throw new Error(`${source}: expected an array of story lines`);
@@ -24,31 +24,33 @@ export function validateStoryContent(
 
     const item = line as Record<string, unknown>;
 
-    if (typeof item.id !== "number") {
-      errors.push(`[${index}].id expected number, got ${getTypeName(item.id)}`);
-    }
-
     if (typeof item.text !== "string") {
       errors.push(
-        `[${index}].text expected string, got ${getTypeName(item.text)}`
+        `[${index}].text expected string, got ${getTypeName(item.text)}`,
       );
     }
 
     if (typeof item.delay !== "number") {
       errors.push(
-        `[${index}].delay expected number, got ${getTypeName(item.delay)}`
+        `[${index}].delay expected number, got ${getTypeName(item.delay)}`,
       );
     }
 
     if (typeof item.duration !== "number") {
       errors.push(
-        `[${index}].duration expected number, got ${getTypeName(item.duration)}`
+        `[${index}].duration expected number, got ${getTypeName(item.duration)}`,
+      );
+    }
+
+    if (item.group !== undefined && typeof item.group !== "number") {
+      errors.push(
+        `[${index}].group expected number, got ${getTypeName(item.group)}`,
       );
     }
 
     if (item.type !== undefined && typeof item.type !== "string") {
       errors.push(
-        `[${index}].type expected string, got ${getTypeName(item.type)}`
+        `[${index}].type expected string, got ${getTypeName(item.type)}`,
       );
     }
 
@@ -58,13 +60,15 @@ export function validateStoryContent(
 
     if (item.image !== undefined && typeof item.image !== "string") {
       errors.push(
-        `[${index}].image expected string, got ${getTypeName(item.image)}`
+        `[${index}].image expected string, got ${getTypeName(item.image)}`,
       );
     }
   });
 
   if (errors.length > 0) {
-    throw new Error(`${source} content validation failed:\n${errors.join("\n")}`);
+    throw new Error(
+      `${source} content validation failed:\n${errors.join("\n")}`,
+    );
   }
 
   return data as JsonInterface[];

@@ -1,6 +1,7 @@
 import path from "path";
 import { readFile } from "fs/promises";
 import { validateStoryContent } from "./contentValidation";
+import { JsonInterface } from "./story.types";
 
 const DATA_ROOT = path.join(process.cwd(), "public", "data");
 
@@ -17,10 +18,12 @@ function resolveDataPath(relativePath: string) {
   return filePath;
 }
 
-export async function loadStoryContent(relativePath: string) {
+export async function loadStoryContent(
+  relativePath: string,
+): Promise<JsonInterface[]> {
   const filePath = resolveDataPath(relativePath);
   const json = await readFile(filePath, "utf-8");
-  const data = JSON.parse(json) as unknown;
+  const data = JSON.parse(json);
 
   return validateStoryContent(data, relativePath);
 }

@@ -1,7 +1,7 @@
-import { JsonInterface } from "@/domain/content/story.types";
+import { PreparedStoryI } from "@/domain/content/story.types";
 import { useEffect, useState } from "react";
 
-export function useTimedLines(story: JsonInterface[] | null | undefined) {
+export function useTimedLines(story: PreparedStoryI[] | null | undefined) {
   const [visibleLines, setVisibleLines] = useState(0);
 
   useEffect(() => {

@@ -1,57 +1,48 @@
 [
   {
-    "id": 1,
     "text": ">>> Połączenie z bazą archiwalną: ustanowione.",
     "delay": 300,
     "duration": 1000
   },
   {
-    "id": 2,
     "text": ">>> Analiza dostępnych modułów informacyjnych...",
     "delay": 300,
     "duration": 1000
   },
   {
-    "id": 3,
     "text": ">>> Zlokalizowano 3 aktywne moduły danych:",
     "delay": 300,
     "duration": 1000
   },
   {
-    "id": 4,
     "text": "[history] Historia świata po Upadku",
     "delay": 300,
     "duration": 1000,
     "type": "system_message"
   },
   {
-    "id": 5,
     "text": "[map] Mapa sektorów głębi",
     "delay": 300,
     "duration": 1000,
     "type": "system_message"
   },
   {
-    "id": 6,
     "text": "[sectors] Zapiski świadomości z sektorów",
     "delay": 300,
     "duration": 1000,
     "type": "system_message"
   },
   {
-    "id": 7,
     "text": ">>> Ostrzeżenie: niektóre dane mogą wpłynąć na stabilność poznawczą.",
     "delay": 300,
     "duration": 1000
   },
   {
-    "id": 8,
     "text": ">>> Do którego sektora chcesz uzyskać dostęp.",
     "delay": 300,
     "duration": 100
   },
   {
-    "id": 9,
     "text": "'history', 'map', 'sectors'",
     "delay": 300,
     "duration": 1000,

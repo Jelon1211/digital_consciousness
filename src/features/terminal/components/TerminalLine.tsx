@@ -1,6 +1,6 @@
 "use client";
 
-import { JsonInterface } from "@/domain/content/story.types";
+import { PreparedStoryI } from "@/domain/content/story.types";
 import TerminalImageLine from "./TerminalImageLine";
 import TerminalTextLine from "./TerminalTextLine";
 
@@ -8,7 +8,7 @@ export default function TerminalLine({
   item,
   isLast,
 }: {
-  item: JsonInterface;
+  item: PreparedStoryI;
   isLast: boolean;
 }) {
   if (item.image) {

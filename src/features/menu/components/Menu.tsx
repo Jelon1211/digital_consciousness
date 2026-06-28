@@ -74,7 +74,7 @@ export default function Menu() {
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between gap-4">
               <span className="text-neon-secondary text-xs uppercase tracking-widest">
-                Music
+                Muzyka
               </span>
 
               <span className="text-neon-secondary text-xs">
@@ -96,7 +96,7 @@ export default function Menu() {
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between gap-4">
               <span className="text-neon-secondary text-xs uppercase tracking-widest">
-                Beep
+                Dźwięk
               </span>
 
               <span className="text-neon-secondary text-xs">
