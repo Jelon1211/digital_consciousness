@@ -57,7 +57,7 @@ export default function Story() {
   }
 
   return (
-    <div className="flex justify-center px-5 h-[calc(100dvh-8rem)] ">
+    <div className="flex justify-center px-5 h-[calc(100dvh-6rem)] ">
       <div className="p-3 rounded-xl shadow story-panel w-full sm:w-[90%] md:w-[80%] lg:w-[70%] max-w-5xl flex flex-col min-h-0">
         <div className="flex-1 overflow-auto min-h-0 pt-4 overflow-x-hidden">
           <div className="flex flex-col">
@@ -74,9 +74,9 @@ export default function Story() {
           </div>
         </div>
 
-        <div className="px-4 pb-2 shrink-0">
+        <div className="p-4 shrink-0">
           <button
-            className="teaser-component teaser-btn crt-text"
+            className="teaser-component teaser-btn crt-text mt-0"
             onClick={handleBack}
           >
             BACK

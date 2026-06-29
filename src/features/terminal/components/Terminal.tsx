@@ -48,12 +48,12 @@ export default function Terminal() {
     return (
       <div className="mt-10 flex justify-center">
         {terminalLoading ? (
-          <div className="teaser-component teaser-btn crt-text !cursor-default">
+          <div className="teaser-component teaser-btn crt-text mt-[3rem] !cursor-default">
             Loading...
           </div>
         ) : (
           <button
-            className="teaser-component teaser-btn crt-text"
+            className="teaser-component teaser-btn crt-text mt-[3rem]"
             onClick={handleInit}
           >
             ENTER
