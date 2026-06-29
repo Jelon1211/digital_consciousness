@@ -57,21 +57,24 @@ export default function Story() {
   }
 
   return (
-    <div className="flex justify-center mt-10">
-      <div className="mx-5 p-3 rounded-xl shadow h-[calc(100vh-7rem)] overflow-auto story-panel w-full sm:w-[90%] md:w-[80%] lg:w-[70%] max-w-5xl">
-        <div className="flex flex-col">
-          {story &&
-            story
-              .slice(0, visibleLines)
-              .map((item, index) => (
-                <TerminalLine
-                  key={item.id ?? index}
-                  item={item}
-                  isLast={index === visibleLines - 1}
-                />
-              ))}
+    <div className="flex justify-center px-5 h-[calc(100dvh-8rem)] ">
+      <div className="p-3 rounded-xl shadow story-panel w-full sm:w-[90%] md:w-[80%] lg:w-[70%] max-w-5xl flex flex-col min-h-0">
+        <div className="flex-1 overflow-auto min-h-0 pt-4 overflow-x-hidden">
+          <div className="flex flex-col">
+            {story &&
+              story
+                .slice(0, visibleLines)
+                .map((item, index) => (
+                  <TerminalLine
+                    key={item.id ?? index}
+                    item={item}
+                    isLast={index === visibleLines - 1}
+                  />
+                ))}
+          </div>
         </div>
-        <div className="p-4">
+
+        <div className="px-4 pb-2 shrink-0">
           <button
             className="teaser-component teaser-btn crt-text"
             onClick={handleBack}
