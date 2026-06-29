@@ -1,12 +1,12 @@
 [
   {
-    "text": "Nieznana komenda: <command>",
+    "text": ">>> Nieznana komenda: <command>",
     "delay": 100,
     "duration": 1000,
     "type": "error"
   },
   {
-    "text": ">>> To polecenie nie zostało przewidziane.",
+    "text": "To polecenie nie zostało przewidziane.",
     "delay": 200,
     "duration": 1000
   },

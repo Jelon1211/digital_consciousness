@@ -9,6 +9,9 @@ import TerminalLine from "@/features/terminal/components/TerminalLine";
 import { getNodeById } from "@/domain/content/contentManifest";
 import { useTimedLines } from "@/shared/hooks/useTimedLines";
 
+const LOADING_TIME =
+  process.env.NEXT_PUBLIC_API_URL === "production" ? 3000 : 1000;
+
 export default function Story() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const story = useEngineStore((state) => state.story);
@@ -40,7 +43,7 @@ export default function Story() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, LOADING_TIME);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -54,8 +57,8 @@ export default function Story() {
   }
 
   return (
-    <div className="flex justify-center mt-6">
-      <div className="mx-5 p-3 rounded-xl shadow h-[55svh] lg:h-[65svh] overflow-auto story-panel w-full lg:w-1/4">
+    <div className="flex justify-center mt-10">
+      <div className="mx-5 p-3 rounded-xl shadow h-[calc(100vh-7rem)] overflow-auto story-panel w-full sm:w-[90%] md:w-[80%] lg:w-[70%] max-w-5xl">
         <div className="flex flex-col">
           {story &&
             story

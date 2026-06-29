@@ -10,7 +10,7 @@
     "duration": 1000
   },
   {
-    "text": "Aby rozpocząć synchronizację wpisz:",
+    "text": ">>> Aby rozpocząć synchronizację wpisz:",
     "delay": 200,
     "duration": 1000
   },
@@ -25,7 +25,7 @@
     "delay": 200,
     "duration": 1000
   },
-  { "text": "Dostępne komendy:", "delay": 200, "duration": 500 },
+  { "text": ">>> Dostępne komendy:", "delay": 200, "duration": 500 },
   {
     "text": "start, logs, sectors, help",
     "delay": 200,
