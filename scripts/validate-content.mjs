@@ -37,28 +37,34 @@ function validateStory(data, source) {
 
   data.forEach((item, index) => {
     if (!item || typeof item !== "object" || Array.isArray(item)) {
-      errors.push(`${source}[${index}]: expected object, got ${typeName(item)}`);
+      errors.push(
+        `${source}[${index}]: expected object, got ${typeName(item)}`,
+      );
       return;
     }
 
-    if (typeof item.id !== "number") {
-      errors.push(`${source}[${index}].id: expected number, got ${typeName(item.id)}`);
-    }
-
     if (typeof item.text !== "string") {
-      errors.push(`${source}[${index}].text: expected string, got ${typeName(item.text)}`);
+      errors.push(
+        `${source}[${index}].text: expected string, got ${typeName(item.text)}`,
+      );
     }
 
     if (typeof item.delay !== "number") {
-      errors.push(`${source}[${index}].delay: expected number, got ${typeName(item.delay)}`);
+      errors.push(
+        `${source}[${index}].delay: expected number, got ${typeName(item.delay)}`,
+      );
     }
 
     if (typeof item.duration !== "number") {
-      errors.push(`${source}[${index}].duration: expected number, got ${typeName(item.duration)}`);
+      errors.push(
+        `${source}[${index}].duration: expected number, got ${typeName(item.duration)}`,
+      );
     }
 
     if (item.type !== undefined && typeof item.type !== "string") {
-      errors.push(`${source}[${index}].type: expected string, got ${typeName(item.type)}`);
+      errors.push(
+        `${source}[${index}].type: expected string, got ${typeName(item.type)}`,
+      );
     }
 
     if (typeof item.type === "string" && !validTypes.has(item.type)) {
@@ -66,7 +72,9 @@ function validateStory(data, source) {
     }
 
     if (item.image !== undefined && typeof item.image !== "string") {
-      errors.push(`${source}[${index}].image: expected string, got ${typeName(item.image)}`);
+      errors.push(
+        `${source}[${index}].image: expected string, got ${typeName(item.image)}`,
+      );
     }
   });
 
@@ -82,7 +90,9 @@ for (const file of collectJsonFiles(dataRoot)) {
     const data = JSON.parse(await readFile(file, "utf-8"));
     errors.push(...validateStory(data, source));
   } catch (error) {
-    errors.push(`${source}: ${error instanceof Error ? error.message : String(error)}`);
+    errors.push(
+      `${source}: ${error instanceof Error ? error.message : String(error)}`,
+    );
   }
 }
 

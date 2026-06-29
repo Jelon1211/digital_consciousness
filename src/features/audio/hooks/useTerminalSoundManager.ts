@@ -23,6 +23,7 @@ export function useTerminalSoundManager() {
 
     sound.volume = Math.min(1, AppConfig.beepVolume * beepVolume);
     sound.play().catch(() => {
+      // TODO: fix that, it is called too often
       console.warn("Catch on sound.play()");
     });
   }, []);
