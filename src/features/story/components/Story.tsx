@@ -8,6 +8,7 @@ import { getStory } from "@/domain/content/actions/getStory";
 import TerminalLine from "@/features/terminal/components/TerminalLine";
 import { getNodeById } from "@/domain/content/contentManifest";
 import { useTimedLines } from "@/shared/hooks/useTimedLines";
+import { hasNextStoryTarget } from "@/domain/content/navigation/getNextStoryTarget";
 
 const LOADING_TIME =
   process.env.NEXT_PUBLIC_API_URL === "production" ? 3000 : 1000;
@@ -52,6 +53,11 @@ export default function Story() {
     await engine.run("back");
   };
 
+  const handleNext = async () => {
+    await engine.run("next");
+  };
+
+  const hasNextNode = hasNextStoryTarget(currentSector, currentNode);
   if (isLoading) {
     return <Loading />;
   }
@@ -74,13 +80,21 @@ export default function Story() {
           </div>
         </div>
 
-        <div className="p-4 shrink-0">
+        <div className="flex flex-col sm:flex-row px-4 pt-4 shrink-0 justify-between gap-2">
           <button
             className="teaser-component teaser-btn crt-text mt-0"
             onClick={handleBack}
           >
             BACK
           </button>
+          {hasNextNode && (
+            <button
+              className="teaser-component teaser-btn crt-text mt-0"
+              onClick={handleNext}
+            >
+              NEXT
+            </button>
+          )}
         </div>
       </div>
     </div>

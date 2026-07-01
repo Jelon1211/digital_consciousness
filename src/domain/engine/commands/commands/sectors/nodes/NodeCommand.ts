@@ -7,7 +7,7 @@ export class NodeCommand extends BaseCommand {
 
   constructor(
     private sector: ContentSector,
-    private node: ContentNode
+    private node: ContentNode,
   ) {
     super();
     this.name = node.id.toLowerCase();
@@ -27,7 +27,7 @@ export class NodeCommand extends BaseCommand {
   async execute(
     _state: EngineState,
     update: (partial: Partial<EngineState>) => void,
-    input: string
+    input: string,
   ) {
     const story = await this.getStoryFromServer(this.node.storyPath);
 

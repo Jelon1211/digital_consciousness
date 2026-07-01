@@ -3,6 +3,7 @@ import { HelpCommand } from "./commands/HelpCommand";
 import { HistoryCommand } from "./commands/HistoryCommand";
 import { LogsCommand } from "./commands/LogsCommand";
 import { MapCommand } from "./commands/MapCommand";
+import { NextCommand } from "./commands/NextCommand";
 import { NodeCommand } from "./commands/sectors/nodes/NodeCommand";
 import { SectorCommand } from "./commands/sectors/SectorCommand";
 import { SectorsCommand } from "./commands/SectorsCommand";
@@ -12,7 +13,7 @@ import { contentManifest } from "@/domain/content/contentManifest";
 const dynamicCommands = [
   ...contentManifest.sectors.map((sector) => new SectorCommand(sector)),
   ...contentManifest.sectors.flatMap((sector) =>
-    sector.nodes.map((node) => new NodeCommand(sector, node))
+    sector.nodes.map((node) => new NodeCommand(sector, node)),
   ),
 ];
 
@@ -22,6 +23,7 @@ export const allCommands = [
   new SectorsCommand(),
   new HelpCommand(),
   new BackCommand(),
+  new NextCommand(),
   new HistoryCommand(),
   new MapCommand(),
   ...dynamicCommands,
